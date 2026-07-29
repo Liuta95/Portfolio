@@ -255,17 +255,21 @@ ul { list-style: none; }
 
 :root[data-theme="dark"] .hero__bg {
   background:
-    radial-gradient(ellipse 60% 50% at 15% 8%, rgba(124, 58, 237, 0.35) 0%, transparent 60%),
-    radial-gradient(ellipse 55% 45% at 88% 18%, rgba(219, 39, 119, 0.28) 0%, transparent 60%),
-    radial-gradient(ellipse 65% 55% at 50% 100%, rgba(234, 88, 12, 0.16) 0%, transparent 60%),
+    linear-gradient(180deg, transparent 0%, transparent 58%, var(--bg) 94%),
+    radial-gradient(ellipse 95% 78% at 16% -10%, rgba(124, 58, 237, 0.34) 0%, transparent 72%),
+    radial-gradient(ellipse 90% 72% at 98% 6%, rgba(219, 39, 119, 0.25) 0%, transparent 72%),
+    radial-gradient(ellipse 120% 95% at 50% 38%, rgba(109, 40, 217, 0.14) 0%, transparent 78%),
+    radial-gradient(ellipse 100% 85% at 42% 118%, rgba(234, 88, 12, 0.16) 0%, transparent 74%),
     var(--bg);
 }
 
 :root[data-theme="light"] .hero__bg {
   background:
-    radial-gradient(ellipse 70% 55% at 15% 0%, #e4d3f2 0%, transparent 55%),
-    radial-gradient(ellipse 75% 60% at 85% 20%, #f0d9ec 0%, transparent 55%),
-    radial-gradient(ellipse 80% 60% at 50% 100%, #fbe3d3 0%, transparent 55%),
+    linear-gradient(180deg, transparent 0%, transparent 58%, var(--bg) 94%),
+    radial-gradient(ellipse 95% 78% at 16% -10%, #e4d3f2 0%, transparent 68%),
+    radial-gradient(ellipse 90% 72% at 98% 6%, #f0d9ec 0%, transparent 68%),
+    radial-gradient(ellipse 120% 95% at 50% 38%, #ece1f7 0%, transparent 75%),
+    radial-gradient(ellipse 100% 85% at 42% 118%, #fbe3d3 0%, transparent 70%),
     var(--bg);
 }
 
