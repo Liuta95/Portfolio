@@ -235,22 +235,32 @@ ul { list-style: none; }
    ============================================ */
 .hero {
   min-height: 100vh;
-  padding: 120px 48px 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   position: relative;
   overflow: hidden;
-  max-width: 1400px;
-  margin: 0 auto;
+  width: 100%;
   color: var(--ink);
 }
 
+/* Full-bleed background layer — spans the entire viewport width,
+   independent of the centered content column below. */
 .hero__bg {
   position: absolute;
   inset: 0;
   z-index: -1;
   transition: opacity 0.4s ease;
+}
+
+/* Centered content column — everything readable stays inside
+   the same max-width the rest of the page uses. */
+.hero__inner {
+  min-height: 100vh;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 120px 48px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
 }
 
 :root[data-theme="dark"] .hero__bg {
@@ -927,7 +937,7 @@ ul { list-style: none; }
   .topnav { padding: 8px 8px 8px 14px; gap: 10px; }
   .topnav__center { display: none; }
 
-  .hero { padding: 100px 20px 40px; }
+  .hero__inner { padding: 100px 20px 40px; }
   .hero__intro { gap: 14px; margin-top: 24px; }
   .hero__avatar { width: 56px; height: 56px; font-size: 18px; }
   .hero__line:nth-child(2) { padding-left: 30px; }
