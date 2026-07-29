@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PetPal — Case Study · Anastasiia Liuta</title>
+  <meta name="description" content="PetPal — a pet-sitter marketplace case study. Product strategy, UX flows, and design system work by Anastasiia Liuta, Product Designer." />
+  <meta property="og:title" content="PetPal — Case Study · Anastasiia Liuta" />
+  <meta property="og:description" content="A pet-sitter marketplace designed to make trusting a stranger with your pet feel safe and simple." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- TOP NAV -->
+  <nav class="topnav">
+    <a href="index.html" class="topnav__logo">
+      <span class="logo-icon">✦</span>
+      <span>Anastasiia Liuta</span>
+    </a>
+    <div class="topnav__center">
+      <span class="dot"></span>
+      <span>Available for projects</span>
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">
+      <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <a href="mailto:anasssta9@gmail.com" class="topnav__cta">Let's talk</a>
+  </nav>
+
+  <!-- CASE HERO -->
+  <header class="case-hero">
+    <div class="case-hero__bg" aria-hidden="true"></div>
+
+    <div class="case-hero__inner">
+      <a href="index.html#work" class="case-back">← Back to Selected Work</a>
+
+      <span class="case-hero__eyebrow">Case Study · Product Design</span>
+      <h1 class="case-hero__title">PetPal</h1>
+      <p class="case-hero__tagline">
+        A pet-sitter marketplace designed to make trusting a stranger with your pet
+        feel safe, simple, and reassured — from first search to the walk itself.
+      </p>
+
+      <div class="case-hero__actions">
+        <a href="https://petpal-ivory.vercel.app" target="_blank" rel="noopener" class="case-hero__link">View live project ↗</a>
+        <a href="https://github.com/Liuta95/Petpal" target="_blank" rel="noopener" class="case-hero__link case-hero__link--ghost">View code ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+
+    <!-- ROLE / TIMELINE / TEAM / SCOPE -->
+    <section class="case-meta reveal">
+      <div class="case-meta__item">
+        <span class="case-meta__label">Role</span>
+        <span class="case-meta__value">Product Designer</span>
+      </div>
+      <div class="case-meta__item">
+        <span class="case-meta__label">Timeline</span>
+        <span class="case-meta__value">4 weeks</span>
+      </div>
+      <div class="case-meta__item">
+        <span class="case-meta__label">Team</span>
+        <span class="case-meta__value">Solo project</span>
+      </div>
+      <div class="case-meta__item">
+        <span class="case-meta__label">Scope</span>
+        <span class="case-meta__value">Product strategy · UX flows · Visual design · Design system</span>
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="case-section reveal" id="overview">
+      <div class="section__head">
+        <span class="section__label">Overview</span>
+        <span class="section__count">01</span>
+      </div>
+      <div class="case-section__body">
+        <p>
+          PetPal connects pet owners with verified, local sitters for walks, drop-in visits,
+          and boarding. The product's core bet: booking pet care should feel closer to
+          asking a trusted friend than gambling on a stranger's profile photo — so trust
+          signals had to be designed in from search all the way through to the walk itself,
+          not bolted on as a review score at the end.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROBLEM / CHALLENGE -->
+    <section class="case-section reveal" id="challenge">
+      <div class="section__head">
+        <span class="section__label">The Challenge</span>
+        <span class="section__count">02</span>
+      </div>
+      <div class="case-section__body">
+        <p>
+          Existing options for pet care sit at two extremes: informal networks (word of mouth,
+          neighborhood Facebook groups) that don't scale past people you already know, or
+          generic service marketplaces that treat a pet sitter like any other gig — sorted by
+          price and star rating, with no way to judge fit before you hand over your keys and
+          your dog.
+        </p>
+        <p>
+          Owners aren't just choosing a service, they're choosing who they trust in their home
+          with something they can't supervise. The interface had to answer three questions before
+          price ever came up: <strong>is this person verified, are they right for my pet, and will
+          I know what's happening while I'm not there?</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- PROCESS / APPROACH -->
+    <section class="case-section reveal" id="approach">
+      <div class="section__head">
+        <span class="section__label">Approach</span>
+        <span class="section__count">03</span>
+      </div>
+      <div class="case-section__body">
+        <p>
+          I mapped the owner's journey as a trust curve, not a funnel — search, compare, book,
+          during-care reassurance, and after-care review each needed their own trust signal, not
+          just a rating carried over from the last step.
+        </p>
+        <ul class="case-list">
+          <li>Led with location, dates, and pet type as the primary filters, since those narrow results far more usefully than a generic keyword search.</li>
+          <li>Designed an optional AI-match path alongside manual filtering, so browsing never becomes the only way to decide when a list feels overwhelming.</li>
+          <li>Surfaced verification badges, reviews, and availability on the sitter profile ahead of price — trust signals first, transaction second.</li>
+          <li>Extended reassurance past the booking confirmation with real-time updates and GPS-tracked walks, so trust doesn't drop off the moment payment clears.</li>
+          <li>Built a small reusable design system — cards, filters, trust badges, and status states — shared across the owner and sitter-facing sides of the product.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- KEY SCREENS -->
+    <section class="case-section reveal" id="screens">
+      <div class="section__head">
+        <span class="section__label">Key Screens</span>
+        <span class="section__count">04</span>
+      </div>
+
+      <div class="case-screens">
+        <div class="case-screen">
+          <div class="case-screen__art case-screen__art--1"><span class="case-screen__mark">01</span></div>
+          <div class="case-screen__body">
+            <span class="case-screen__tag">Entry</span>
+            <h3 class="case-screen__title">Search &amp; Discover</h3>
+            <p class="case-screen__desc">Filters lead with location, dates, and pet type — the three inputs that actually narrow results, instead of a generic keyword search.</p>
+          </div>
+        </div>
+
+        <div class="case-screen">
+          <div class="case-screen__art case-screen__art--2"><span class="case-screen__mark">02</span></div>
+          <div class="case-screen__body">
+            <span class="case-screen__tag">Decision point</span>
+            <h3 class="case-screen__title">AI Match &amp; Filtering</h3>
+            <p class="case-screen__desc">A one-tap "Try AI Match" sits next to manual filters, so owners can browse themselves or offload the decision when the list feels overwhelming.</p>
+          </div>
+        </div>
+
+        <div class="case-screen">
+          <div class="case-screen__art case-screen__art--3"><span class="case-screen__mark">03</span></div>
+          <div class="case-screen__body">
+            <span class="case-screen__tag">Core action</span>
+            <h3 class="case-screen__title">Sitter Profile &amp; Booking</h3>
+            <p class="case-screen__desc">Verification badges, reviews, and availability are visible before price — trust signals come first, not the transaction.</p>
+          </div>
+        </div>
+
+        <div class="case-screen">
+          <div class="case-screen__art case-screen__art--4"><span class="case-screen__mark">04</span></div>
+          <div class="case-screen__body">
+            <span class="case-screen__tag">Outcome</span>
+            <h3 class="case-screen__title">Confirmed &amp; Live Tracking</h3>
+            <p class="case-screen__desc">Confirmation isn't the end of the reassurance — GPS-tracked walks and real-time photo updates carry trust through the actual care session.</p>
+          </div>
+        </div>
+
+        <div class="case-screen case-screen--edge">
+          <div class="case-screen__art case-screen__art--5"><span class="case-screen__mark">05</span></div>
+          <div class="case-screen__body">
+            <span class="case-screen__tag">Edge case</span>
+            <h3 class="case-screen__title">No Sitters Available</h3>
+            <p class="case-screen__desc">An empty search state suggests broadening dates or radius instead of a dead end, so the funnel never just stops.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTCOMES -->
+    <section class="case-section reveal" id="outcomes">
+      <div class="section__head">
+        <span class="section__label">Outcomes</span>
+        <span class="section__count">05</span>
+      </div>
+      <div class="case-section__body">
+        <p>
+          Shipped a complete owner-facing experience — search, AI-assisted matching, sitter
+          profiles, booking, and real-time care tracking — as a working prototype, backed by a
+          small reusable design system rather than one-off screens.
+        </p>
+        <ul class="case-list">
+          <li>A trust-first information hierarchy: verification and availability read before price on every sitter profile.</li>
+          <li>An edge-case-aware search flow, not just a happy-path demo.</li>
+          <li>A component set (cards, filters, badges, status states) reused consistently across owner and sitter surfaces.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- REFLECTION -->
+    <section class="case-reflection reveal" id="reflection">
+      <div class="section__head">
+        <span class="section__label">Reflection</span>
+        <span class="section__count">06</span>
+      </div>
+      <blockquote class="case-reflection__quote">
+        Designing for trust taught me that reassurance has to be continuous, not just
+        upfront — the signals that matter <em>during</em> a booking turned out to carry as
+        much weight as the verification badge someone sees before it.
+      </blockquote>
+    </section>
+
+    <!-- CASE NAV FOOTER -->
+    <section class="case-nav-footer reveal">
+      <a href="index.html#work" class="case-nav-footer__link">← All Selected Work</a>
+      <a href="mailto:anasssta9@gmail.com" class="case-nav-footer__cta">Let's talk about your project →</a>
+    </section>
+
+  </main>
+
+  <!-- BOTTOM LINKS -->
+  <footer class="bottom-links">
+    <div class="bottom-links__row">
+      <a href="mailto:anasssta9@gmail.com">anasssta9@gmail.com</a>
+      <a href="tel:+48577202312">+48 577 202 312</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="#" target="_blank" rel="noopener">Behance ↗</a>
+    </div>
+    <p class="bottom-links__copyright">© 2026 Anastasiia Liuta · Kraków, Poland</p>
+  </footer>
+
+  <script>
+    var themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', function () {
+        var current = document.documentElement.getAttribute('data-theme');
+        var next = current === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+      });
+    }
+
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+      document.documentElement.classList.add('has-reveal');
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+    }
+  </script>
+
+</body>
+</html>
