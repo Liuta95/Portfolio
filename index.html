@@ -98,296 +98,187 @@
 
   </header>
 
-  <!-- DASHBOARD / BENTO GRID -->
-  <main class="dashboard">
-
-    <!-- toolbar / window chrome -->
-    <div class="dashboard__toolbar">
-      <div class="dashboard__dots">
-        <span class="dashboard__dot dashboard__dot--red"></span>
-        <span class="dashboard__dot dashboard__dot--yellow"></span>
-        <span class="dashboard__dot dashboard__dot--green"></span>
-      </div>
-      <div class="dashboard__title">
-        <span class="logo-icon">✦</span>
-        <span>portfolio.app</span>
-      </div>
-      <div class="dashboard__actions">
-        <button class="dashboard__icon-btn" aria-label="Search">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-        </button>
-        <button class="dashboard__icon-btn" aria-label="More">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/></svg>
-        </button>
-      </div>
+  <!-- POSITIONING STRIP -->
+  <section class="positioning reveal">
+    <p class="positioning__statement">
+      Product Designer specializing in <strong>AI-driven SaaS</strong>, <strong>healthcare</strong>,
+      and <strong>CRM</strong> products — turning complex workflows into interfaces that feel inevitable.
+    </p>
+    <div class="positioning__tags">
+      <span class="tag">SaaS</span>
+      <span class="tag">Healthcare</span>
+      <span class="tag">CRM</span>
+      <span class="tag">AI Features</span>
     </div>
+  </section>
 
-    <div class="bento">
+  <main class="content">
 
-      <!-- ABOUT -->
-      <section class="tile tile--about" id="about">
-        <div class="block__head">
-          <span class="block__label">About</span>
-          <span class="block__count">01</span>
+    <!-- SELECTED WORK -->
+    <section class="work reveal" id="work">
+      <div class="section__head">
+        <span class="section__label">Selected Work</span>
+        <span class="section__count">01</span>
+      </div>
+
+      <div class="work-grid">
+        <a href="#" class="case-card case-card--featured">
+          <div class="case-card__art case-card__art--1">
+            <span class="case-card__mark">AI</span>
+          </div>
+          <div class="case-card__body">
+            <div class="case-card__tags">
+              <span>Enterprise SaaS</span><span>AI Chat</span>
+            </div>
+            <h3 class="case-card__title">AI Document Analysis</h3>
+            <p class="case-card__desc">Enterprise chat for document analysis — answer validation, references, and a scalable design system.</p>
+            <span class="case-card__badge">Case study — in progress</span>
+          </div>
+        </a>
+
+        <div class="work-grid__side">
+          <a href="#" class="case-card case-card--small">
+            <div class="case-card__art case-card__art--2">
+              <span class="case-card__mark">IP</span>
+            </div>
+            <div class="case-card__body">
+              <h3 class="case-card__title">Internal AI Platform</h3>
+              <p class="case-card__desc">Apps &amp; Skills integration · design tokens at scale</p>
+              <span class="case-card__badge">Case study — in progress</span>
+            </div>
+          </a>
+
+          <a href="#" class="case-card case-card--small">
+            <div class="case-card__art case-card__art--3">
+              <span class="case-card__mark">HC</span>
+            </div>
+            <div class="case-card__body">
+              <h3 class="case-card__title">HealthConnect</h3>
+              <p class="case-card__desc">Multi-role healthcare platform · web + mobile</p>
+              <span class="case-card__badge">Case study — in progress</span>
+            </div>
+          </a>
         </div>
-        <div class="about">
-          <p class="about__lead">
-            Product Designer with <strong>4+ years of experience</strong> designing complex
-            B2B and B2C digital products — including SaaS, healthcare, and CRM systems.
-          </p>
+      </div>
+    </section>
+
+    <!-- ABOUT + STRENGTHS -->
+    <section class="about-strengths reveal" id="about">
+      <div class="section__head">
+        <span class="section__label">About</span>
+        <span class="section__count">02</span>
+      </div>
+
+      <div class="about-strengths__grid">
+        <div class="about-strengths__bio">
           <p>
-            I specialize in improving user workflows, reducing friction, and delivering
-            scalable design solutions. Recently focused on <strong>AI-powered features</strong> —
-            defining how people prompt, trust, and collaborate with intelligent systems.
-          </p>
-          <p>
-            I work fast with AI prototyping tools like <strong>Figma Make</strong> and
-            <strong>Lovable</strong>, and partner closely with engineers and PMs to ship
-            products that feel inevitable.
+            Product Designer with <strong>4+ years of experience</strong> designing complex B2B and B2C
+            products — including SaaS, healthcare, and CRM systems. Recently focused on
+            <strong>AI-powered features</strong>: how people prompt, trust, and collaborate with
+            intelligent systems. I work fast with AI prototyping tools like Figma Make and Lovable,
+            partnering closely with engineers and PMs to ship products that feel inevitable.
           </p>
         </div>
-      </section>
 
-      <!-- SKILLS -->
-      <section class="tile tile--skills" id="skills">
-        <div class="block__head">
-          <span class="block__label">Skills &amp; Tools</span>
-          <span class="block__count">02</span>
-        </div>
-
-        <div class="row-list">
-          <div class="row">
-            <div class="row__icon">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="7" r="4"/><path d="M16 11.5a4 4 0 1 0 0-8m-13 18a8 8 0 0 1 13 0M22 21a8 8 0 0 0-5-7.4"/></svg>
-            </div>
-            <div class="row__body">
-              <div class="row__title">UX Research</div>
-              <div class="row__desc">User Research · Usability Testing · IA · User Flows · CJM · A/B Testing</div>
+        <div class="about-strengths__skills">
+          <div class="skill-group">
+            <span class="skill-group__label">UX Research</span>
+            <div class="pills">
+              <span class="tag">User Research</span><span class="tag">Usability Testing</span>
+              <span class="tag">IA</span><span class="tag">User Flows</span><span class="tag">CJM</span>
             </div>
           </div>
-
-          <div class="row">
-            <div class="row__icon">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-            </div>
-            <div class="row__body">
-              <div class="row__title">Interface &amp; Systems</div>
-              <div class="row__desc">Design Systems · Responsive · Accessibility · Typography · Color · Layout</div>
+          <div class="skill-group">
+            <span class="skill-group__label">Interface &amp; Systems</span>
+            <div class="pills">
+              <span class="tag">Design Systems</span><span class="tag">Accessibility</span>
+              <span class="tag">Typography</span><span class="tag">Layout</span>
             </div>
           </div>
-
-          <div class="row">
-            <div class="row__icon">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-            </div>
-            <div class="row__body">
-              <div class="row__title">AI &amp; Automation</div>
-              <div class="row__desc">AI-assisted UX · Prompt design · AI feature design · Figma Make · Lovable</div>
+          <div class="skill-group">
+            <span class="skill-group__label">AI &amp; Automation</span>
+            <div class="pills">
+              <span class="tag">Prompt Design</span><span class="tag">AI Feature Design</span>
+              <span class="tag">Figma Make</span><span class="tag">Lovable</span>
             </div>
           </div>
-
-          <div class="row">
-            <div class="row__icon">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94L14.7 6.3z"/></svg>
-            </div>
-            <div class="row__body">
-              <div class="row__title">Toolkit</div>
-              <div class="row__desc">Figma · FigJam · Miro · Webflow · Jira · ClickUp · Adobe Photoshop</div>
+          <div class="skill-group">
+            <span class="skill-group__label">Toolkit</span>
+            <div class="pills">
+              <span class="tag">Figma</span><span class="tag">FigJam</span><span class="tag">Miro</span>
+              <span class="tag">Webflow</span><span class="tag">Jira</span>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- EXPERIENCE -->
-      <section class="tile tile--experience" id="experience">
-        <div class="block__head">
-          <span class="block__label">Experience</span>
-          <span class="block__count">03</span>
+    <!-- EXPERIENCE (compact) -->
+    <section class="experience reveal" id="experience">
+      <div class="section__head">
+        <span class="section__label">Experience</span>
+        <span class="section__count">03</span>
+      </div>
+
+      <div class="experience-list">
+        <div class="exp-row">
+          <span class="exp-row__date">2025 → Now</span>
+          <span class="exp-row__role">Product Designer <em>· Internal AI Platform</em></span>
+          <span class="exp-row__impact">Led design system rework and shipped the Apps &amp; Skills integration inside the AI chat environment.</span>
         </div>
-
-        <div class="row-list">
-
-          <article class="row row--job">
-            <div class="row__date">2025 → Now</div>
-            <div class="row__body">
-              <div class="row__title">Product Designer</div>
-              <div class="row__company">Internal AI Platform · Enterprise</div>
-              <ul class="row__list">
-                <li>Designed "Apps" and "Skills" integration features inside the AI chat environment.</li>
-                <li>Led design system improvements: restructured UI kit, variables, and design tokens.</li>
-                <li>Created component guidelines and documentation to support cross-team alignment.</li>
-                <li>Collaborated with PMs and developers to align design with product requirements.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="row row--job">
-            <div class="row__date">2025</div>
-            <div class="row__body">
-              <div class="row__title">Product Designer</div>
-              <div class="row__company">AI Document Analysis Platform · Enterprise SaaS</div>
-              <ul class="row__list">
-                <li>Designed end-to-end AI chat experience: answer validation, references, error states.</li>
-                <li>Defined UX patterns for AI interactions (prompting, re-asking, flagged responses).</li>
-                <li>Leveraged AI prototyping tools (Figma Make, Lovable) to accelerate concept validation.</li>
-                <li>Built CRM-style tables with advanced filtering, sorting, and search.</li>
-                <li>Created and maintained a scalable design system.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="row row--job">
-            <div class="row__date">2024 → 25</div>
-            <div class="row__body">
-              <div class="row__title">UX/UI Designer</div>
-              <div class="row__company">HealthConnect · Healthcare SaaS</div>
-              <ul class="row__list">
-                <li>Designed multi-role system (Doctor, Patient, Attorney) with tailored experiences.</li>
-                <li>Created end-to-end patient journey: onboarding, scheduling, video consultations.</li>
-                <li>Designed mobile app with step-based flows to improve form completion rates.</li>
-                <li>Built design system and reusable UI components.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="row row--job">
-            <div class="row__date">2023 → 24</div>
-            <div class="row__body">
-              <div class="row__title">UX/UI Designer</div>
-              <div class="row__company">BrandingOptics · CRM Platform</div>
-              <ul class="row__list">
-                <li>Designed CRM platform for booking, subscriptions, and client communication.</li>
-                <li>Created user flows, sitemaps, and high-fidelity prototypes.</li>
-                <li>Redesigned UI components (modals, emails, buttons) to improve usability.</li>
-                <li>Developed UI guidelines and style system.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="row row--job">
-            <div class="row__date">2022 → 23</div>
-            <div class="row__body">
-              <div class="row__title">UX/UI Designer · Junior</div>
-              <div class="row__company">Pigeebak · Social Platform</div>
-              <ul class="row__list">
-                <li>Conducted user research (interviews, surveys).</li>
-                <li>Designed core features for media sharing and collaboration.</li>
-                <li>Created user flows and wireframes for Ads Collaboration feature.</li>
-                <li>Designed interactive UI components (media players, forms, playlists).</li>
-              </ul>
-            </div>
-          </article>
+        <div class="exp-row">
+          <span class="exp-row__date">2025</span>
+          <span class="exp-row__role">Product Designer <em>· AI Document Analysis Platform</em></span>
+          <span class="exp-row__impact">Designed the end-to-end AI chat experience — answer validation, references, error states.</span>
         </div>
-      </section>
-
-      <!-- WORK / PROJECTS -->
-      <section class="tile tile--projects" id="work">
-        <div class="block__head">
-          <span class="block__label">My Projects</span>
-          <span class="block__count">04</span>
+        <div class="exp-row">
+          <span class="exp-row__date">2024 → 25</span>
+          <span class="exp-row__role">UX/UI Designer <em>· HealthConnect</em></span>
+          <span class="exp-row__impact">Built a multi-role patient journey (Doctor, Patient, Attorney) across web and mobile.</span>
         </div>
-
-        <div class="row-list row-list--grid">
-          <a href="#" class="row row--project">
-            <div class="row__num">01</div>
-            <div class="row__body">
-              <div class="row__title">AI Document Analysis</div>
-              <div class="row__desc">Enterprise chat for document analysis · answer validation · scalable design system</div>
-            </div>
-            <div class="row__badge">Soon</div>
-          </a>
-
-          <a href="#" class="row row--project">
-            <div class="row__num">02</div>
-            <div class="row__body">
-              <div class="row__title">Internal AI Platform</div>
-              <div class="row__desc">Apps &amp; Skills integration · UI kit restructure · design tokens at scale</div>
-            </div>
-            <div class="row__badge">Soon</div>
-          </a>
-
-          <a href="#" class="row row--project">
-            <div class="row__num">03</div>
-            <div class="row__body">
-              <div class="row__title">HealthConnect</div>
-              <div class="row__desc">Multi-role healthcare platform · web + mobile · end-to-end patient journey</div>
-            </div>
-            <div class="row__badge">Soon</div>
-          </a>
+        <div class="exp-row">
+          <span class="exp-row__date">2023 → 24</span>
+          <span class="exp-row__role">UX/UI Designer <em>· BrandingOptics</em></span>
+          <span class="exp-row__impact">Designed a CRM platform for booking, subscriptions, and client communication.</span>
         </div>
-      </section>
-
-      <!-- DETAILS -->
-      <section class="tile tile--details" id="details">
-        <div class="block__head">
-          <span class="block__label">Details</span>
-          <span class="block__count">05</span>
+        <div class="exp-row">
+          <span class="exp-row__date">2022 → 23</span>
+          <span class="exp-row__role">UX/UI Designer, Junior <em>· Pigeebak</em></span>
+          <span class="exp-row__impact">Designed core media-sharing and Ads Collaboration features from research through UI.</span>
         </div>
+      </div>
 
-        <div class="details-grid">
-          <div class="detail">
-            <div class="detail__label">Languages</div>
-            <div class="detail__lines">
-              <div><span>English</span><span class="muted">Fluent</span></div>
-              <div><span>Polish</span><span class="muted">Intermediate</span></div>
-              <div><span>Ukrainian</span><span class="muted">Native</span></div>
-            </div>
-          </div>
-          <div class="detail">
-            <div class="detail__label">Education</div>
-            <div class="detail__lines">
-              <div><span>MA, Philology</span></div>
-              <div class="muted small">National Academy of the National Guard of Ukraine</div>
-            </div>
-          </div>
-          <div class="detail">
-            <div class="detail__label">Availability</div>
-            <div class="detail__lines">
-              <div><span>Open to full-time &amp; contract</span></div>
-              <div class="muted small">Remote · Kraków · EU timezones</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <a href="mailto:anasssta9@gmail.com?subject=Resume%20request" class="experience__more">Ask for my full résumé →</a>
+    </section>
 
-      <!-- UPGRADE CARD (CTA) -->
-      <section class="tile tile--cta">
-        <div class="upgrade-card">
-          <button class="upgrade-card__close" aria-label="Close">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
-          </button>
-          <div class="upgrade-card__icon">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          </div>
-          <div class="upgrade-card__title">
-            <strong>Let's collaborate</strong>
-            <span class="badge">Available</span>
-          </div>
-          <p class="upgrade-card__desc">
+    <!-- CONTACT -->
+    <section class="contact reveal" id="contact">
+      <div class="contact__inner">
+        <div class="contact__main">
+          <span class="badge">Available</span>
+          <h2 class="contact__title">Let's collaborate</h2>
+          <p class="contact__desc">
             Looking for a designer who can ship AI-powered products end-to-end?
-            I'm currently taking on new projects.
+            I'm currently taking on new projects — remote, contract or full-time, EU timezones.
           </p>
-          <div class="upgrade-card__divider"></div>
-          <div class="upgrade-card__price">
-            <span class="price-big">EU</span>
-            <span class="price-sub">remote · contract or full-time</span>
-          </div>
-          <a href="mailto:anasssta9@gmail.com" class="upgrade-card__btn">Get in touch →</a>
+          <a href="mailto:anasssta9@gmail.com" class="contact__btn">Get in touch →</a>
         </div>
-      </section>
 
-    </div>
-
-    <!-- PROFILE FOOTER -->
-    <section class="tile tile--footer profile-footer">
-      <div class="profile-footer__avatar">AL</div>
-      <div class="profile-footer__info">
-        <div class="profile-footer__name">Anastasiia Liuta</div>
-        <a href="mailto:anasssta9@gmail.com" class="profile-footer__email">anasssta9@gmail.com</a>
+        <div class="contact__meta">
+          <div class="contact__person">
+            <div class="contact__avatar">AL</div>
+            <div>
+              <div class="contact__name">Anastasiia Liuta</div>
+              <a href="mailto:anasssta9@gmail.com" class="contact__email">anasssta9@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact__facts">
+            <div><span class="muted">Languages</span> English (Fluent) · Polish (Intermediate) · Ukrainian (Native)</div>
+            <div><span class="muted">Education</span> MA, Philology — National Academy of the National Guard of Ukraine</div>
+            <div><span class="muted">Based in</span> Kraków, Poland · EU timezones</div>
+          </div>
+        </div>
       </div>
-      <button class="profile-footer__menu" aria-label="More">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg>
-      </button>
     </section>
 
   </main>
@@ -424,7 +315,7 @@
           }
         });
       }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-      document.querySelectorAll('.tile').forEach(function (el) { io.observe(el); });
+      document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
     }
   </script>
 
