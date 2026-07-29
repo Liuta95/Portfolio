@@ -544,7 +544,7 @@ ul { list-style: none; }
 /* ============================================
    SELECTED WORK — 2+1 featured grid
    ============================================ */
-.work { padding: 40px 0 96px; }
+.work { padding: 40px 0 96px; border-top: 1px solid var(--panel-divider); }
 
 .work-grid {
   display: grid;
@@ -665,7 +665,7 @@ ul { list-style: none; }
 /* ============================================
    ABOUT + STRENGTHS — light, no card
    ============================================ */
-.about-strengths { padding: 40px 0 96px; border-top: 1px solid var(--panel-divider); }
+.about-strengths { padding: 40px 0 96px; }
 
 .about-strengths__grid {
   display: grid;
