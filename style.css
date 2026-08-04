@@ -722,7 +722,7 @@ ul { list-style: none; }
 
 .exp-row {
   display: grid;
-  grid-template-columns: 110px 240px 1fr;
+  grid-template-columns: 150px 230px 1fr;
   gap: 20px;
   align-items: baseline;
   padding: 16px 0;
@@ -1205,7 +1205,7 @@ ul { list-style: none; }
 
   .about-strengths__grid { grid-template-columns: 1fr; gap: 32px; }
 
-  .exp-row { grid-template-columns: 90px 1fr; }
+  .exp-row { grid-template-columns: 130px 1fr; }
   .exp-row__impact { grid-column: 1 / -1; }
 
   .contact__inner { grid-template-columns: 1fr; padding: 36px; }
