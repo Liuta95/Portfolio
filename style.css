@@ -206,26 +206,25 @@ ul { list-style: none; }
 
 .theme-toggle__icon {
   position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   transition: opacity 0.35s ease, transform 0.45s var(--ease-out);
 }
 
 :root[data-theme="dark"] .theme-toggle__icon--moon,
 :root:not([data-theme]) .theme-toggle__icon--moon {
   opacity: 0;
-  transform: rotate(-90deg) scale(0.4);
+  transform: translate(-50%, -50%) rotate(-90deg) scale(0.4);
 }
 
 :root[data-theme="light"] .theme-toggle__icon--sun {
   opacity: 0;
-  transform: rotate(90deg) scale(0.4);
+  transform: translate(-50%, -50%) rotate(90deg) scale(0.4);
 }
 
-:root[data-theme="light"] .theme-toggle__icon--moon { opacity: 1; transform: none; }
-:root[data-theme="dark"] .theme-toggle__icon--sun { opacity: 1; transform: none; }
+:root[data-theme="light"] .theme-toggle__icon--moon { opacity: 1; transform: translate(-50%, -50%); }
+:root[data-theme="dark"] .theme-toggle__icon--sun { opacity: 1; transform: translate(-50%, -50%); }
 
 .topnav__cta {
   padding: 8px 16px;
