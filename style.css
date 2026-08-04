@@ -701,7 +701,10 @@ ul { list-style: none; }
   font-size: 17px;
   line-height: 1.65;
   color: var(--ink-soft);
+  margin-bottom: 18px;
 }
+
+.about-strengths__bio p:last-child { margin-bottom: 0; }
 
 .about-strengths__bio strong { color: var(--ink); font-weight: 600; }
 
