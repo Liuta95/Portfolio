@@ -22,7 +22,7 @@
   --ink: #ffffff;
   --ink-soft: #b6b6c0;
   --ink-muted: #8a8a95;
-  --ink-faint: #5e5e68;
+  --ink-faint: #828286;
 
   /* Accent */
   --accent: #a78bfa;
@@ -59,8 +59,8 @@
 
   --ink: #17171c;
   --ink-soft: #4c4c56;
-  --ink-muted: #7b7b85;
-  --ink-faint: #a6a6af;
+  --ink-muted: #606064;
+  --ink-faint: #6c6c70;
 
   --accent: #7c3aed;
   --accent-2: #db2777;
