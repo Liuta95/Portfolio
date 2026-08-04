@@ -88,6 +88,13 @@ body {
 
 a { color: inherit; text-decoration: none; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+a:focus, button:focus { outline: none; }
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
 ul { list-style: none; }
 
 ::selection { background: rgba(167, 139, 250, 0.35); color: #fff; }
@@ -191,6 +198,11 @@ ul { list-style: none; }
 }
 
 .theme-toggle:hover { background: var(--panel-bg-hover); color: var(--ink); }
+
+.theme-toggle:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--accent-soft), 0 0 0 1px var(--accent);
+}
 
 .theme-toggle__icon {
   position: absolute;
