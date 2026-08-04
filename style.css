@@ -430,6 +430,10 @@ ul { list-style: none; }
 }
 
 .hero__marquee {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
   margin-top: 60px;
   overflow: hidden;
   border-top: 1px solid var(--panel-divider);
