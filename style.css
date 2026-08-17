@@ -1,34 +1,34 @@
 /* ============================================
    ANASTASIIA LIUTA · PORTFOLIO
    Editorial, case-study-first layout
-   Light + dark theme
+   Fixed design: dark hero, white content
    ============================================ */
 
 :root {
-  /* Page (dark theme = default) */
-  --bg: #0a0a0c;
+  /* Page — white content */
+  --bg: #f2f2f5;
 
   /* Cards / surfaces */
-  --panel-bg: rgba(255, 255, 255, 0.045);
-  --panel-bg-soft: rgba(255, 255, 255, 0.03);
-  --panel-bg-hover: rgba(255, 255, 255, 0.075);
-  --panel-border: rgba(255, 255, 255, 0.09);
-  --panel-border-strong: rgba(255, 255, 255, 0.20);
-  --panel-divider: rgba(255, 255, 255, 0.08);
-  --panel-highlight: rgba(255, 255, 255, 0.12);
-  --tile-shadow: 0 30px 60px -35px rgba(0, 0, 0, 0.7);
+  --panel-bg: #ffffff;
+  --panel-bg-soft: rgba(0, 0, 0, 0.03);
+  --panel-bg-hover: rgba(0, 0, 0, 0.045);
+  --panel-border: rgba(0, 0, 0, 0.08);
+  --panel-border-strong: rgba(0, 0, 0, 0.16);
+  --panel-divider: rgba(0, 0, 0, 0.07);
+  --panel-highlight: rgba(255, 255, 255, 0.9);
+  --tile-shadow: 0 30px 50px -32px rgba(20, 20, 30, 0.22), 0 2px 8px -2px rgba(20, 20, 30, 0.06);
 
   /* Text */
-  --ink: #ffffff;
-  --ink-soft: #b6b6c0;
-  --ink-muted: #8a8a95;
-  --ink-faint: #828286;
+  --ink: #17171c;
+  --ink-soft: #4c4c56;
+  --ink-muted: #606064;
+  --ink-faint: #6c6c70;
 
   /* Accent */
-  --accent: #a78bfa;
-  --accent-2: #e879a0;
-  --accent-3: #f59e6b;
-  --accent-soft: rgba(167, 139, 250, 0.16);
+  --accent: #7c3aed;
+  --accent-2: #db2777;
+  --accent-3: #ea580c;
+  --accent-soft: rgba(124, 58, 237, 0.10);
 
   /* Fonts */
   --font-display: 'Instrument Serif', 'Times New Roman', serif;
@@ -45,27 +45,28 @@
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-:root[data-theme="light"] {
-  --bg: #f2f2f5;
+/* Dark, colorful chrome — pinned to the hero and the floating nav, regardless of page background */
+.topnav, .hero, .case-hero {
+  --bg: #0a0a0c;
 
-  --panel-bg: #ffffff;
-  --panel-bg-soft: rgba(0, 0, 0, 0.03);
-  --panel-bg-hover: rgba(0, 0, 0, 0.045);
-  --panel-border: rgba(0, 0, 0, 0.08);
-  --panel-border-strong: rgba(0, 0, 0, 0.16);
-  --panel-divider: rgba(0, 0, 0, 0.07);
-  --panel-highlight: rgba(255, 255, 255, 0.9);
-  --tile-shadow: 0 30px 50px -32px rgba(20, 20, 30, 0.22), 0 2px 8px -2px rgba(20, 20, 30, 0.06);
+  --panel-bg: rgba(255, 255, 255, 0.045);
+  --panel-bg-soft: rgba(255, 255, 255, 0.03);
+  --panel-bg-hover: rgba(255, 255, 255, 0.075);
+  --panel-border: rgba(255, 255, 255, 0.09);
+  --panel-border-strong: rgba(255, 255, 255, 0.20);
+  --panel-divider: rgba(255, 255, 255, 0.08);
+  --panel-highlight: rgba(255, 255, 255, 0.12);
+  --tile-shadow: 0 30px 60px -35px rgba(0, 0, 0, 0.7);
 
-  --ink: #17171c;
-  --ink-soft: #4c4c56;
-  --ink-muted: #606064;
-  --ink-faint: #6c6c70;
+  --ink: #ffffff;
+  --ink-soft: #b6b6c0;
+  --ink-muted: #8a8a95;
+  --ink-faint: #828286;
 
-  --accent: #7c3aed;
-  --accent-2: #db2777;
-  --accent-3: #ea580c;
-  --accent-soft: rgba(124, 58, 237, 0.10);
+  --accent: #a78bfa;
+  --accent-2: #e879a0;
+  --accent-3: #f59e6b;
+  --accent-soft: rgba(167, 139, 250, 0.16);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -182,50 +183,6 @@ ul { list-style: none; }
   50%      { opacity: 0.5; }
 }
 
-.theme-toggle {
-  position: relative;
-  width: 32px;
-  height: 32px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: var(--panel-bg-soft);
-  border: 1px solid var(--panel-border);
-  color: var(--ink-muted);
-  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
-}
-
-.theme-toggle:hover { background: var(--panel-bg-hover); color: var(--ink); }
-
-.theme-toggle:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 3px var(--accent-soft), 0 0 0 1px var(--accent);
-}
-
-.theme-toggle__icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.35s ease, transform 0.45s var(--ease-out);
-}
-
-:root[data-theme="dark"] .theme-toggle__icon--moon,
-:root:not([data-theme]) .theme-toggle__icon--moon {
-  opacity: 0;
-  transform: translate(-50%, -50%) rotate(-90deg) scale(0.4);
-}
-
-:root[data-theme="light"] .theme-toggle__icon--sun {
-  opacity: 0;
-  transform: translate(-50%, -50%) rotate(90deg) scale(0.4);
-}
-
-:root[data-theme="light"] .theme-toggle__icon--moon { opacity: 1; transform: translate(-50%, -50%); }
-:root[data-theme="dark"] .theme-toggle__icon--sun { opacity: 1; transform: translate(-50%, -50%); }
-
 .topnav__cta {
   padding: 8px 16px;
   background: var(--ink);
@@ -274,23 +231,13 @@ ul { list-style: none; }
   position: relative;
 }
 
-:root[data-theme="dark"] .hero__bg {
+.hero__bg {
   background:
     linear-gradient(180deg, transparent 0%, transparent 58%, var(--bg) 94%),
     radial-gradient(ellipse 95% 78% at 16% -10%, rgba(124, 58, 237, 0.34) 0%, transparent 72%),
     radial-gradient(ellipse 90% 72% at 98% 6%, rgba(219, 39, 119, 0.25) 0%, transparent 72%),
     radial-gradient(ellipse 120% 95% at 50% 38%, rgba(109, 40, 217, 0.14) 0%, transparent 78%),
     radial-gradient(ellipse 100% 85% at 42% 118%, rgba(234, 88, 12, 0.16) 0%, transparent 74%),
-    var(--bg);
-}
-
-:root[data-theme="light"] .hero__bg {
-  background:
-    linear-gradient(180deg, transparent 0%, transparent 58%, var(--bg) 94%),
-    radial-gradient(ellipse 95% 78% at 16% -10%, #e4d3f2 0%, transparent 68%),
-    radial-gradient(ellipse 90% 72% at 98% 6%, #f0d9ec 0%, transparent 68%),
-    radial-gradient(ellipse 120% 95% at 50% 38%, #ece1f7 0%, transparent 75%),
-    radial-gradient(ellipse 100% 85% at 42% 118%, #fbe3d3 0%, transparent 70%),
     var(--bg);
 }
 
@@ -971,21 +918,12 @@ ul { list-style: none; }
   z-index: -1;
 }
 
-:root[data-theme="dark"] .case-hero__bg {
+.case-hero__bg {
   background:
     linear-gradient(180deg, transparent 0%, transparent 55%, var(--bg) 92%),
     radial-gradient(ellipse 95% 75% at 90% -10%, rgba(219, 39, 119, 0.30) 0%, transparent 70%),
     radial-gradient(ellipse 90% 70% at 4% 10%, rgba(124, 58, 237, 0.30) 0%, transparent 70%),
     radial-gradient(ellipse 110% 90% at 50% 40%, rgba(109, 40, 217, 0.14) 0%, transparent 78%),
-    var(--bg);
-}
-
-:root[data-theme="light"] .case-hero__bg {
-  background:
-    linear-gradient(180deg, transparent 0%, transparent 55%, var(--bg) 92%),
-    radial-gradient(ellipse 95% 75% at 90% -10%, #f0d9ec 0%, transparent 68%),
-    radial-gradient(ellipse 90% 70% at 4% 10%, #e4d3f2 0%, transparent 68%),
-    radial-gradient(ellipse 110% 90% at 50% 40%, #ece1f7 0%, transparent 75%),
     var(--bg);
 }
 
