@@ -31,6 +31,17 @@
   <header class="hero">
     <div class="hero__bg" aria-hidden="true"></div>
 
+    <!-- Portrait — pinned to the true right edge of the viewport -->
+    <div class="hero__photo">
+      <img src="assets/profile.jpg" alt="Anastasiia Liuta" />
+    </div>
+
+    <!-- Scroll hint — pinned to the true bottom-right of the viewport -->
+    <div class="hero__scroll">
+      <span>scroll</span>
+      <span class="hero__scroll-line"></span>
+    </div>
+
     <div class="hero__inner">
 
       <div class="hero__top">
@@ -52,26 +63,10 @@
         <span class="hero__line hero__line--accent">Liuta.</span>
       </h1>
 
-      <!-- Portrait -->
-      <div class="hero__photo">
-        <img src="assets/profile.jpg" alt="Anastasiia Liuta" />
-      </div>
-
       <!-- Role -->
       <div class="hero__role">
         <p class="hero__role-main">Product Designer</p>
-        <p class="hero__role-sub">AI-driven · 5+ years · SaaS · Healthcare · CRM</p>
-      </div>
-
-      <!-- Static role label -->
-      <div class="hero__static-label">
-        <span><strong>Product Designer</strong> — AI SaaS / Healthcare / CRM</span>
-      </div>
-
-      <!-- Scroll hint -->
-      <div class="hero__scroll">
-        <span>scroll</span>
-        <span class="hero__scroll-line"></span>
+        <p class="hero__role-sub">AI-driven · 5+ years</p>
       </div>
 
       <!-- Decorative ticker -->
@@ -103,8 +98,7 @@
   <section class="positioning reveal">
     <div class="positioning__transition" aria-hidden="true"></div>
     <p class="positioning__statement">
-      Product Designer specializing in <strong>AI-driven</strong> SaaS, healthcare, and CRM
-      products — turning complex workflows into interfaces that feel inevitable.
+      Product Designer turning complex workflows into interfaces that feel <strong>inevitable</strong>.
     </p>
     <div class="positioning__tags">
       <span class="tag">5+ years experience</span>
@@ -186,44 +180,20 @@
         <span class="section__count">02</span>
       </div>
 
-      <div class="work-grid">
-        <a href="#" class="case-card case-card--featured">
-          <div class="case-card__art case-card__art--1">
-            <span class="case-card__mark">AI</span>
+      <div class="work-grid work-grid--single">
+        <a href="petpal.html" class="case-card case-card--featured">
+          <div class="case-card__art case-card__art--3">
+            <img src="assets/petpal-cover.jpg" alt="PetPal — pet sitter marketplace cover photo" class="case-card__cover" />
           </div>
           <div class="case-card__body">
             <div class="case-card__tags">
-              <span>Enterprise SaaS</span><span>AI Chat</span>
+              <span>Marketplace</span><span>AI Matching</span>
             </div>
-            <h3 class="case-card__title">AI Document Analysis</h3>
-            <p class="case-card__desc">Enterprise chat for document analysis — answer validation, references, and a scalable design system.</p>
-            <span class="case-card__badge">Case study — in progress</span>
+            <h3 class="case-card__title">PetPal</h3>
+            <p class="case-card__desc">Pet sitter marketplace — AI-matched sitters, real-time updates, GPS-tracked walks.</p>
+            <span class="case-card__badge">View case study →</span>
           </div>
         </a>
-
-        <div class="work-grid__side">
-          <a href="#" class="case-card case-card--small">
-            <div class="case-card__art case-card__art--2">
-              <span class="case-card__mark">IP</span>
-            </div>
-            <div class="case-card__body">
-              <h3 class="case-card__title">Internal AI Platform</h3>
-              <p class="case-card__desc">Apps &amp; Skills integration · design tokens at scale</p>
-              <span class="case-card__badge">Case study — in progress</span>
-            </div>
-          </a>
-
-          <a href="petpal.html" class="case-card case-card--small">
-            <div class="case-card__art case-card__art--3">
-              <img src="assets/petpal-cover.jpg" alt="PetPal — pet sitter marketplace cover photo" class="case-card__cover" />
-            </div>
-            <div class="case-card__body">
-              <h3 class="case-card__title">PetPal</h3>
-              <p class="case-card__desc">Pet sitter marketplace — AI-matched sitters, real-time updates, GPS-tracked walks.</p>
-              <span class="case-card__badge">View case study →</span>
-            </div>
-          </a>
-        </div>
       </div>
     </section>
 
@@ -257,7 +227,7 @@
         </div>
       </div>
 
-      <a href="mailto:anasssta9@gmail.com?subject=Resume%20request" class="experience__more">Ask for my full résumé →</a>
+      <a href="/resume.pdf" download class="experience__more">Download résumé ↓</a>
     </section>
 
     <!-- CONTACT -->

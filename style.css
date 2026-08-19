@@ -222,8 +222,7 @@ ul { list-style: none; }
    the same max-width the rest of the page uses. */
 .hero__inner {
   min-height: 100vh;
-  max-width: 1400px;
-  margin: 0 auto;
+  max-width: 860px;
   padding: 120px 48px 60px;
   display: flex;
   flex-direction: column;
@@ -384,16 +383,6 @@ ul { list-style: none; }
   color: var(--ink-muted);
 }
 
-.hero__static-label {
-  margin-top: 44px;
-  font-family: var(--font-sans);
-  font-size: 15px;
-  color: var(--ink-muted);
-  animation: fade-up 1s var(--ease-out) 0.7s backwards;
-}
-
-.hero__static-label strong { color: var(--ink); font-weight: 600; }
-
 .hero__marquee {
   width: 100vw;
   position: absolute;
@@ -416,6 +405,7 @@ ul { list-style: none; }
   letter-spacing: 0.08em;
   font-weight: 400;
   color: var(--ink-faint);
+  opacity: 0.7;
   animation: marquee 40s linear infinite;
 }
 
@@ -469,7 +459,7 @@ ul { list-style: none; }
   position: relative;
   max-width: 780px;
   margin: 0 auto;
-  padding: 40px 24px 80px;
+  padding: 130px 24px 80px;
   text-align: left;
 }
 
@@ -479,28 +469,34 @@ ul { list-style: none; }
   left: 50%;
   width: 100vw;
   margin-left: -50vw;
-  height: 2px;
-  background: linear-gradient(90deg,
-    transparent 0%,
-    var(--accent) 22%,
-    var(--accent-2) 50%,
-    var(--accent-3) 78%,
+  height: 110px;
+  pointer-events: none;
+}
+
+.positioning__transition::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    #0a0a0c 0%,
+    rgba(10, 10, 12, 0.35) 40%,
     transparent 100%);
-  opacity: 0.55;
+  opacity: 0.85;
 }
 
 .positioning__transition::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 64px;
-  background: linear-gradient(180deg,
-    rgba(124, 58, 237, 0.10) 0%,
-    rgba(219, 39, 119, 0.05) 45%,
-    transparent 100%);
-  pointer-events: none;
+  inset: 0;
+  background:
+    linear-gradient(90deg,
+      transparent 0%, var(--accent) 22%, var(--accent-2) 50%, var(--accent-3) 78%, transparent 100%)
+      top / 100% 2px no-repeat,
+    linear-gradient(180deg,
+      rgba(124, 58, 237, 0.10) 0%,
+      rgba(219, 39, 119, 0.05) 45%,
+      transparent 100%)
+      top / 100% 100% no-repeat;
 }
 
 .positioning__statement {
@@ -578,10 +574,12 @@ ul { list-style: none; }
   gap: 16px;
 }
 
-.work-grid__side {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.work-grid--single {
+  grid-template-columns: 1fr;
+}
+
+.work-grid--single .case-card--featured {
+  max-width: 640px;
 }
 
 .case-card {
@@ -776,6 +774,14 @@ ul { list-style: none; }
   color: var(--ink-muted);
   line-height: 1.5;
 }
+
+/* Career progression: heaviest/darkest at the most recent, senior role, tapering
+   to lighter weight and softer gray toward the oldest, junior role — the visual
+   weight signals seniority so growth reads at a glance, without checking dates. */
+.experience-list .exp-row:nth-child(1) .exp-row__role { font-size: 15px; font-weight: 700; color: var(--ink); }
+.experience-list .exp-row:nth-child(2) .exp-row__role { font-weight: 600; color: var(--ink); }
+.experience-list .exp-row:nth-child(3) .exp-row__role { font-weight: 500; color: var(--ink-soft); }
+.experience-list .exp-row:nth-child(4) .exp-row__role { font-weight: 400; color: var(--ink-muted); }
 
 .experience__more {
   display: inline-block;
@@ -1224,8 +1230,6 @@ ul { list-style: none; }
    ============================================ */
 @media (max-width: 900px) {
   .work-grid { grid-template-columns: 1fr; }
-  .work-grid__side { flex-direction: row; }
-  .work-grid__side .case-card { flex: 1; }
 
   .about-strengths__grid { grid-template-columns: 1fr; gap: 32px; }
 
@@ -1249,11 +1253,9 @@ ul { list-style: none; }
   .hero__role { gap: 12px; }
   .hero__scroll { display: none; }
 
-  .positioning { padding: 32px 20px 56px; }
+  .positioning { padding: 110px 20px 56px; }
 
   .content { padding: 0 16px; }
-
-  .work-grid__side { flex-direction: column; }
 
   .exp-row { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; }
   .exp-row__date { order: -1; }
