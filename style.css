@@ -492,14 +492,6 @@ ul { list-style: none; }
   color: var(--accent);
 }
 
-.positioning__tags {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 24px;
-}
-
 .tag {
   font-family: var(--font-mono);
   font-size: 11px;
