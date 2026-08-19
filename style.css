@@ -226,7 +226,7 @@ ul { list-style: none; }
   padding: 120px 48px 60px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
 }
 
@@ -250,6 +250,10 @@ ul { list-style: none; }
 }
 
 .hero__top {
+  position: absolute;
+  top: 120px;
+  left: 48px;
+  right: 48px;
   display: flex;
   justify-content: space-between;
   font-family: var(--font-mono);
@@ -1230,6 +1234,7 @@ ul { list-style: none; }
   .topnav__center { display: none; }
 
   .hero__inner { padding: 100px 20px 40px; }
+  .hero__top { top: 100px; left: 20px; right: 20px; }
   .hero__line:nth-child(2) { padding-left: 30px; }
   .hero__role { gap: 12px; }
   .hero__scroll { display: none; }
