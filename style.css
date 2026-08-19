@@ -466,10 +466,41 @@ ul { list-style: none; }
    POSITIONING STRIP — no card, editorial beat
    ============================================ */
 .positioning {
+  position: relative;
   max-width: 780px;
   margin: 0 auto;
-  padding: 12px 24px 80px;
-  text-align: center;
+  padding: 40px 24px 80px;
+  text-align: left;
+}
+
+.positioning__transition {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--accent) 22%,
+    var(--accent-2) 50%,
+    var(--accent-3) 78%,
+    transparent 100%);
+  opacity: 0.55;
+}
+
+.positioning__transition::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: linear-gradient(180deg,
+    rgba(124, 58, 237, 0.10) 0%,
+    rgba(219, 39, 119, 0.05) 45%,
+    transparent 100%);
+  pointer-events: none;
 }
 
 .positioning__statement {
@@ -477,7 +508,7 @@ ul { list-style: none; }
   font-size: clamp(22px, 3vw, 30px);
   font-weight: 400;
   line-height: 1.35;
-  color: var(--ink);
+  color: var(--ink-soft);
 }
 
 .positioning__statement strong {
@@ -488,7 +519,7 @@ ul { list-style: none; }
 
 .positioning__tags {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 24px;
@@ -1218,7 +1249,7 @@ ul { list-style: none; }
   .hero__role { gap: 12px; }
   .hero__scroll { display: none; }
 
-  .positioning { padding: 0 20px 56px; }
+  .positioning { padding: 32px 20px 56px; }
 
   .content { padding: 0 16px; }
 
