@@ -384,28 +384,38 @@ ul { list-style: none; }
   color: var(--ink-muted);
 }
 
+.hero__static-label {
+  margin-top: 44px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--ink-muted);
+  animation: fade-up 1s var(--ease-out) 0.7s backwards;
+}
+
+.hero__static-label strong { color: var(--ink); font-weight: 600; }
+
 .hero__marquee {
   width: 100vw;
-  position: relative;
+  position: absolute;
   left: 50%;
+  bottom: 0;
   margin-left: -50vw;
-  margin-top: 60px;
   overflow: hidden;
   border-top: 1px solid var(--panel-divider);
-  border-bottom: 1px solid var(--panel-divider);
-  padding: 22px 0;
-  animation: fade-up 1s var(--ease-out) 0.7s backwards;
+  padding: 10px 0;
+  animation: fade-up 1s var(--ease-out) 0.9s backwards;
 }
 
 .marquee__track {
   display: flex;
-  gap: 28px;
+  gap: 18px;
   white-space: nowrap;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 26px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   font-weight: 400;
-  color: var(--ink-soft);
+  color: var(--ink-faint);
   animation: marquee 40s linear infinite;
 }
 
@@ -418,7 +428,7 @@ ul { list-style: none; }
 
 .hero__scroll {
   position: absolute;
-  bottom: 40px;
+  bottom: 64px;
   right: 48px;
   display: flex;
   align-items: center;
@@ -1207,7 +1217,6 @@ ul { list-style: none; }
   .hero__line:nth-child(2) { padding-left: 30px; }
   .hero__role { gap: 12px; }
   .hero__scroll { display: none; }
-  .marquee__track { font-size: 20px; }
 
   .positioning { padding: 0 20px 56px; }
 
