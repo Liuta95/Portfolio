@@ -546,6 +546,22 @@ ul { list-style: none; }
    ============================================ */
 .work { padding: 64px 0 96px; border-top: 1px solid var(--panel-divider); }
 
+.work-more {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.work-more__text {
+  font-size: 14px;
+  color: var(--ink-muted);
+  max-width: 44ch;
+}
+
+.work-more__link { flex-shrink: 0; }
+
 .work-grid {
   display: grid;
   grid-template-columns: 1.6fr 1fr;
@@ -702,6 +718,22 @@ ul { list-style: none; }
   gap: 20px;
 }
 
+.info-card {
+  padding: 18px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--r-md);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-card__row {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
 .skill-group__label {
   display: block;
   font-size: 11px;
@@ -751,6 +783,13 @@ ul { list-style: none; }
   font-size: 13.5px;
   color: var(--ink-muted);
   line-height: 1.5;
+}
+
+.exp-row__metric {
+  display: inline-block;
+  margin-left: 4px;
+  font-weight: 700;
+  color: var(--ink);
 }
 
 /* Career progression: heaviest/darkest at the most recent, senior role, tapering
