@@ -319,22 +319,6 @@ ul { list-style: none; }
   animation: fade-up 0.8s var(--ease-out) backwards;
 }
 
-.hero__eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
-  border-radius: 100px;
-  background: var(--panel-bg-soft);
-  border: 1px solid var(--panel-divider);
-  font-family: var(--font-mono);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--ink-soft);
-  animation: fade-up 0.9s var(--ease-out) 0.05s backwards;
-}
-
 .hero__name {
   font-family: var(--font-sans);
   font-weight: 800;
