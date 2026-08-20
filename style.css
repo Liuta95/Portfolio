@@ -1,34 +1,34 @@
 /* ============================================
    ANASTASIIA LIUTA · PORTFOLIO
    Editorial, case-study-first layout
-   Fixed design: dark hero, white content
+   Fixed design: full black theme
    ============================================ */
 
 :root {
-  /* Page — white content */
-  --bg: #f2f2f5;
+  /* Page */
+  --bg: #0a0a0c;
 
   /* Cards / surfaces */
-  --panel-bg: #ffffff;
-  --panel-bg-soft: rgba(0, 0, 0, 0.03);
-  --panel-bg-hover: rgba(0, 0, 0, 0.045);
-  --panel-border: rgba(0, 0, 0, 0.08);
-  --panel-border-strong: rgba(0, 0, 0, 0.16);
-  --panel-divider: rgba(0, 0, 0, 0.07);
-  --panel-highlight: rgba(255, 255, 255, 0.9);
-  --tile-shadow: 0 30px 50px -32px rgba(20, 20, 30, 0.22), 0 2px 8px -2px rgba(20, 20, 30, 0.06);
+  --panel-bg: rgba(255, 255, 255, 0.045);
+  --panel-bg-soft: rgba(255, 255, 255, 0.03);
+  --panel-bg-hover: rgba(255, 255, 255, 0.075);
+  --panel-border: rgba(255, 255, 255, 0.09);
+  --panel-border-strong: rgba(255, 255, 255, 0.20);
+  --panel-divider: rgba(255, 255, 255, 0.08);
+  --panel-highlight: rgba(255, 255, 255, 0.12);
+  --tile-shadow: 0 30px 60px -35px rgba(0, 0, 0, 0.7);
 
   /* Text */
-  --ink: #17171c;
-  --ink-soft: #4c4c56;
-  --ink-muted: #606064;
-  --ink-faint: #6c6c70;
+  --ink: #ffffff;
+  --ink-soft: #b6b6c0;
+  --ink-muted: #8a8a95;
+  --ink-faint: #828286;
 
   /* Accent — cyan/blue */
-  --accent: #0e7490;
-  --accent-2: #0369a1;
-  --accent-3: #1d4ed8;
-  --accent-soft: rgba(14, 116, 144, 0.10);
+  --accent: #22d3ee;
+  --accent-2: #38bdf8;
+  --accent-3: #60a5fa;
+  --accent-soft: rgba(34, 211, 238, 0.16);
 
   /* Fonts */
   --font-display: 'Instrument Serif', 'Times New Roman', serif;
@@ -43,30 +43,6 @@
 
   /* Motion */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* Dark, colorful chrome — pinned to the hero and the floating nav, regardless of page background */
-.topnav, .hero, .case-hero {
-  --bg: #0a0a0c;
-
-  --panel-bg: rgba(255, 255, 255, 0.045);
-  --panel-bg-soft: rgba(255, 255, 255, 0.03);
-  --panel-bg-hover: rgba(255, 255, 255, 0.075);
-  --panel-border: rgba(255, 255, 255, 0.09);
-  --panel-border-strong: rgba(255, 255, 255, 0.20);
-  --panel-divider: rgba(255, 255, 255, 0.08);
-  --panel-highlight: rgba(255, 255, 255, 0.12);
-  --tile-shadow: 0 30px 60px -35px rgba(0, 0, 0, 0.7);
-
-  --ink: #ffffff;
-  --ink-soft: #b6b6c0;
-  --ink-muted: #8a8a95;
-  --ink-faint: #828286;
-
-  --accent: #22d3ee;
-  --accent-2: #38bdf8;
-  --accent-3: #60a5fa;
-  --accent-soft: rgba(34, 211, 238, 0.16);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -98,7 +74,7 @@ body::before {
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background-image: radial-gradient(circle, rgba(23, 23, 28, 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
@@ -295,8 +271,8 @@ ul { list-style: none; }
   right: 32px;
   z-index: -1;
   pointer-events: none;
-  border-left: 1px solid rgba(255, 255, 255, 0.10);
-  border-right: 1px solid rgba(255, 255, 255, 0.10);
+  border-left: 1px solid rgba(182, 182, 195, 0.18);
+  border-right: 1px solid rgba(182, 182, 195, 0.18);
 }
 
 /* Centered content column — everything readable stays inside
