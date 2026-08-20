@@ -126,6 +126,40 @@ ul { list-style: none; }
 ::-webkit-scrollbar-thumb:hover { background-color: var(--accent); background-clip: content-box; }
 
 /* ============================================
+   CORNER-FRAME — small "+" marks at the four
+   corners of a container, blueprint/workbench
+   accent. Two color variants for dark/light bg.
+   ============================================ */
+.corner-frame { position: relative; }
+
+.corner-frame--dark {
+  --corner-mark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath d='M8 2v12M2 8h12' stroke='%23ffffff' stroke-opacity='0.35' stroke-width='1'/%3E%3C/svg%3E");
+}
+
+.corner-frame--light {
+  --corner-mark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath d='M8 2v12M2 8h12' stroke='%2317171c' stroke-opacity='0.18' stroke-width='1'/%3E%3C/svg%3E");
+}
+
+.corner-frame::before,
+.corner-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: var(--corner-mark), var(--corner-mark);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 16px 16px, 16px 16px;
+}
+
+.corner-frame::before {
+  background-position: -8px -8px, calc(100% + 8px) -8px;
+}
+
+.corner-frame::after {
+  background-position: -8px calc(100% + 8px), calc(100% + 8px) calc(100% + 8px);
+}
+
+/* ============================================
    TOP NAV
    ============================================ */
 .topnav {
@@ -294,12 +328,28 @@ ul { list-style: none; }
   animation: fade-up 0.8s var(--ease-out) backwards;
 }
 
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 100px;
+  background: var(--panel-bg-soft);
+  border: 1px solid var(--panel-divider);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  animation: fade-up 0.9s var(--ease-out) 0.05s backwards;
+}
+
 .hero__name {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(72px, 15vw, 240px);
-  line-height: 0.88;
-  letter-spacing: -0.04em;
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: clamp(56px, 11vw, 160px);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
   margin: 48px 0 40px;
   color: var(--ink);
 }
@@ -317,7 +367,7 @@ ul { list-style: none; }
 }
 
 .hero__line--accent {
-  font-style: italic;
+  font-style: normal;
   background: linear-gradient(110deg, #6d28d9 0%, #a855f7 35%, #e879a0 70%, #f59e6b 100%);
   background-size: 250% 100%;
   -webkit-background-clip: text;
