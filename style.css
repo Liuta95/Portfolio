@@ -259,22 +259,6 @@ ul { list-style: none; }
   -webkit-mask-image: radial-gradient(ellipse 65% 55% at 50% 40%, black 0%, transparent 78%);
 }
 
-/* Ruler-box: vertical lines inset from the true hero edges, spanning
-   the full height, with corner-frame ticks landing exactly where the
-   lines start/end — the "blueprint canvas" look, decoupled from the
-   narrower text column so it doesn't hug the copy. */
-.hero__frame {
-  position: absolute;
-  top: 0;
-  bottom: 38px;
-  left: 32px;
-  right: 32px;
-  z-index: -1;
-  pointer-events: none;
-  border-left: 1px solid rgba(182, 182, 195, 0.18);
-  border-right: 1px solid rgba(182, 182, 195, 0.18);
-}
-
 /* Centered content column — everything readable stays inside
    the same max-width the rest of the page uses. */
 .hero__inner {
