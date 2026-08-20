@@ -266,7 +266,7 @@ ul { list-style: none; }
 .hero__frame {
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 38px;
   left: 32px;
   right: 32px;
   z-index: -1;
