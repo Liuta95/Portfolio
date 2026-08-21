@@ -1020,6 +1020,23 @@ ul { list-style: none; }
     var(--bg);
 }
 
+.case-hero__video {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.case-hero__video-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(10, 10, 12, 0.55) 0%, rgba(10, 10, 12, 0.7) 55%, var(--bg) 96%);
+}
+
 .case-hero__inner {
   max-width: 1000px;
   margin: 0 auto;
