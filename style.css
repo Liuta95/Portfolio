@@ -264,7 +264,7 @@ ul { list-style: none; }
 .hero__inner {
   min-height: 100vh;
   max-width: 860px;
-  padding: 120px 80px 60px;
+  padding: 120px 120px 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -291,8 +291,8 @@ ul { list-style: none; }
 .hero__top {
   position: absolute;
   top: 120px;
-  left: 80px;
-  right: 80px;
+  left: 120px;
+  right: 120px;
   display: flex;
   justify-content: space-between;
   font-family: var(--font-mono);
@@ -549,7 +549,7 @@ ul { list-style: none; }
 .content {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 120px;
   border-left: 1px solid var(--panel-divider);
   border-right: 1px solid var(--panel-divider);
 }
