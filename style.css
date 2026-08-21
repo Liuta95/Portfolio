@@ -628,6 +628,7 @@ ul { list-style: none; }
   border: 1px solid var(--panel-border);
   border-radius: var(--r-lg);
   overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
   box-shadow: var(--tile-shadow), 0 1px 0 0 var(--panel-highlight) inset;
   transition: transform 0.35s var(--ease-out), border-color 0.35s ease, box-shadow 0.35s ease;
 }
