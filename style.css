@@ -252,7 +252,7 @@ ul { list-style: none; }
   z-index: -1;
   pointer-events: none;
   background-image: url("assets/hex-pattern.svg");
-  background-size: 19.053px 33px;
+  background-size: 86.603px 150px;
   mask-image: radial-gradient(ellipse 65% 55% at 50% 40%, black 0%, transparent 78%);
   -webkit-mask-image: radial-gradient(ellipse 65% 55% at 50% 40%, black 0%, transparent 78%);
 }
