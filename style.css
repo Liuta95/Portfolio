@@ -251,10 +251,8 @@ ul { list-style: none; }
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background-image:
-    linear-gradient(to right, rgba(182, 182, 200, 0.14) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(182, 182, 200, 0.14) 1px, transparent 1px);
-  background-size: 48px 48px;
+  background-image: url("assets/hex-pattern.svg");
+  background-size: 34.641px 60px;
   mask-image: radial-gradient(ellipse 65% 55% at 50% 40%, black 0%, transparent 78%);
   -webkit-mask-image: radial-gradient(ellipse 65% 55% at 50% 40%, black 0%, transparent 78%);
 }
