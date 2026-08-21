@@ -728,12 +728,13 @@ ul { list-style: none; }
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  padding: 5px 10px;
-  background: var(--panel-bg-soft);
-  border: 1px solid var(--panel-divider);
+  padding: 6px 12px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%), #1c1c20;
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 100px;
-  color: var(--ink-muted);
-  transition: color 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 6px 16px -6px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
+  color: var(--ink-soft);
+  transition: color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .case-card:hover .case-card__badge { color: var(--accent); border-color: rgba(234, 179, 8, 0.35); }
@@ -1028,16 +1029,25 @@ ul { list-style: none; }
 }
 
 .case-back {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   font-family: var(--font-mono);
   font-size: 12px;
-  color: var(--ink-muted);
+  color: var(--ink-soft);
   margin-bottom: 40px;
-  border-bottom: 1px solid transparent;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  padding: 8px 16px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%), #1c1c20;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 100px;
+  box-shadow: 0 6px 16px -6px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
+  transition: color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.case-back:hover { color: var(--ink); border-color: var(--panel-border-strong); }
+.case-back:hover {
+  color: var(--ink);
+  border-color: rgba(255, 255, 255, 0.24);
+  box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+}
 
 .case-hero__eyebrow {
   display: block;
@@ -1085,12 +1095,17 @@ ul { list-style: none; }
 }
 
 .case-hero__link--ghost {
-  background: transparent;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%), #1c1c20;
   color: var(--ink-soft);
-  border: 1px solid var(--panel-border-strong);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 6px 16px -6px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
 }
 
-.case-hero__link--ghost:hover { box-shadow: none; color: var(--ink); }
+.case-hero__link--ghost:hover {
+  box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+  color: var(--ink);
+  border-color: rgba(255, 255, 255, 0.24);
+}
 
 /* Role / Timeline / Team / Scope */
 .case-meta {
