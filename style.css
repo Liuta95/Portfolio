@@ -684,10 +684,11 @@ ul { list-style: none; }
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.5s var(--ease-out);
+  filter: blur(0px);
+  transition: transform 0.5s var(--ease-out), filter 0.5s var(--ease-out);
 }
 
-.case-card:hover .case-card__cover { transform: scale(1.04); }
+.case-card:hover .case-card__cover { transform: scale(1.08); filter: blur(6px); }
 
 .case-card__overlay {
   position: absolute;
