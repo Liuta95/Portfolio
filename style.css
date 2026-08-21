@@ -640,12 +640,12 @@ ul { list-style: none; }
 
 .case-card__art {
   position: relative;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border-radius: var(--r-lg) var(--r-lg) 0 0;
+  border-radius: var(--r-lg);
   -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
@@ -722,21 +722,10 @@ ul { list-style: none; }
   margin-bottom: 14px;
 }
 
-.case-card__overlay-cta {
-  display: inline-block;
-  align-self: flex-start;
-  font-family: var(--font-mono);
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--accent);
-}
-
-.case-card__body { padding: 22px 20px 24px; flex: 1; display: flex; flex-direction: column; }
-
 .case-card__tags {
   display: flex;
   gap: 8px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .case-card__tags span {
@@ -745,23 +734,6 @@ ul { list-style: none; }
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--accent);
-}
-
-.case-card__title {
-  font-family: var(--font-sans);
-  font-size: 19px;
-  font-weight: 600;
-  color: var(--ink);
-  margin-bottom: 8px;
-}
-
-.case-card--small .case-card__title { font-size: 16px; }
-
-.case-card__desc {
-  font-size: 13.5px;
-  color: var(--ink-muted);
-  line-height: 1.55;
-  flex: 1;
 }
 
 .case-card__badge {
