@@ -645,6 +645,8 @@ ul { list-style: none; }
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  border-radius: var(--r-lg) var(--r-lg) 0 0;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
 .case-card--small .case-card__art { aspect-ratio: 16 / 8; }
