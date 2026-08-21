@@ -1019,6 +1019,12 @@ ul { list-style: none; }
     var(--bg);
 }
 
+.case-hero__bg--ai-agent {
+  background:
+    linear-gradient(180deg, rgba(10, 10, 12, 0.55) 0%, rgba(10, 10, 12, 0.75) 55%, var(--bg) 96%),
+    url("assets/ai-agent-hero-mockup.jpg") center 30% / cover no-repeat;
+}
+
 .case-hero__inner {
   max-width: 1000px;
   margin: 0 auto;
