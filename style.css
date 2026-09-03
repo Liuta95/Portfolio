@@ -671,8 +671,6 @@ ul { list-style: none; }
   -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
-.case-card--small .case-card__art { aspect-ratio: 16 / 8; }
-
 .case-card__art::after {
   content: '';
   position: absolute;
@@ -682,22 +680,11 @@ ul { list-style: none; }
   mix-blend-mode: overlay;
 }
 
-.case-card__art--1 { background: radial-gradient(ellipse at 30% 20%, #a855f7, transparent 60%), radial-gradient(ellipse at 80% 80%, #e879a0, transparent 60%), linear-gradient(135deg, #4c1d95, #1e1033); }
-.case-card__art--2 { background: radial-gradient(ellipse at 70% 30%, #f59e6b, transparent 60%), radial-gradient(ellipse at 20% 80%, #a855f7, transparent 60%), linear-gradient(135deg, #7c2d12, #1e1033); }
-.case-card__art--3 { background: radial-gradient(ellipse at 50% 20%, #e879a0, transparent 60%), radial-gradient(ellipse at 20% 90%, #6d28d9, transparent 60%), linear-gradient(135deg, #831843, #1e1033); }
-
-.case-card__mark {
-  position: relative;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 15vw;
-  color: rgba(255, 255, 255, 0.14);
-  line-height: 1;
-  user-select: none;
-}
-
-.case-card--featured .case-card__mark { font-size: 8vw; max-font-size: 100px; }
-.case-card--small .case-card__mark { font-size: 44px; }
+/* Fallback color shown only if a card's cover image fails to load —
+   kept on-brand (amber family) per DESIGN.md's One Signal Rule. */
+.case-card__art--1 { background: radial-gradient(ellipse at 30% 20%, #eab308, transparent 60%), radial-gradient(ellipse at 80% 80%, #f59e0b, transparent 60%), linear-gradient(135deg, #92400e, #1c1c20); }
+.case-card__art--2 { background: radial-gradient(ellipse at 70% 30%, #fde047, transparent 60%), radial-gradient(ellipse at 20% 80%, #eab308, transparent 60%), linear-gradient(135deg, #78350f, #1c1c20); }
+.case-card__art--3 { background: radial-gradient(ellipse at 50% 20%, #f59e0b, transparent 60%), radial-gradient(ellipse at 20% 90%, #d97706, transparent 60%), linear-gradient(135deg, #92400e, #1c1c20); }
 
 .case-card__cover {
   width: 100%;
