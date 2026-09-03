@@ -1283,50 +1283,6 @@ ul { list-style: none; }
   letter-spacing: 0.1em;
 }
 
-.case-screen__cover {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top left;
-  display: block;
-}
-
-/* Full-size variant: shows the entire recreated screenshot uncropped,
-   sizing the tile to the image's own aspect ratio instead of forcing
-   it into the 16:11 box used by the abstract gradient tiles. */
-.case-screen__art--full {
-  aspect-ratio: auto;
-  display: block;
-}
-
-.case-screen__art--full .case-screen__cover {
-  height: auto;
-  object-fit: contain;
-}
-
-/* Stacked variant: one large, full-width screen per row instead of a
-   3-up grid of small tiles — for a case study whose screenshots need
-   to be read, not just recognized at a glance. The screenshot fills
-   the full card width; the caption sits below it. */
-.case-screens.case-screens--stacked {
-  grid-template-columns: 1fr;
-  gap: 28px;
-}
-
-.case-screens--stacked .case-screen__body {
-  padding: 24px 32px 28px;
-}
-
-.case-screens--stacked .case-screen__title {
-  font-size: 19px;
-  margin-bottom: 10px;
-}
-
-.case-screens--stacked .case-screen__desc {
-  font-size: 14px;
-  max-width: 62ch;
-}
-
 .case-screen__body { padding: 18px 18px 20px; flex: 1; display: flex; flex-direction: column; }
 
 .case-screen__tag {
@@ -1343,6 +1299,115 @@ ul { list-style: none; }
 .case-screen__title { font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
 
 .case-screen__desc { font-size: 13px; line-height: 1.55; color: var(--ink-muted); }
+
+/* Key Screens — text legend + horizontal slider.
+   Captions are listed together up front; the screens themselves each
+   get an uninterrupted full-width slide, one at a time. */
+.case-screens-legend {
+  list-style: none;
+  margin: 0 0 40px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 40px;
+}
+
+.case-screens-legend li { border-top: 1px solid var(--panel-divider); padding-top: 16px; }
+
+.case-screens-legend__tag {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.case-screens-legend__title { font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+
+.case-screens-legend__desc { font-size: 13.5px; line-height: 1.6; color: var(--ink-muted); }
+
+.case-slider { position: relative; }
+
+.case-slider__track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  border-radius: var(--r-lg);
+}
+
+.case-slider__track::-webkit-scrollbar { display: none; }
+
+.case-slider__slide {
+  flex: 0 0 100%;
+  margin: 0;
+  scroll-snap-align: center;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 1px solid var(--panel-border);
+  background: var(--panel-bg);
+  box-shadow: var(--tile-shadow), 0 1px 0 0 var(--panel-highlight) inset;
+}
+
+.case-slider__slide img { width: 100%; height: auto; display: block; }
+
+.case-slider__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%), #1c1c20;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--ink-soft);
+  font-size: 20px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 6px 16px -6px rgba(0, 0, 0, 0.5);
+  transition: color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.case-slider__nav:hover { color: var(--ink); border-color: rgba(255, 255, 255, 0.24); }
+
+.case-slider__nav:disabled { opacity: 0.3; cursor: default; pointer-events: none; }
+
+.case-slider__nav--prev { left: 12px; }
+.case-slider__nav--next { right: 12px; }
+
+.case-slider__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.case-slider__dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--panel-border-strong);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.case-slider__dot.is-active { background: var(--accent); transform: scale(1.35); }
+
+@media (max-width: 640px) {
+  .case-screens-legend { grid-template-columns: 1fr; gap: 20px; }
+  .case-slider__nav { width: 36px; height: 36px; font-size: 18px; }
+}
 
 /* Reflection */
 .case-reflection { padding: 0 0 72px; }
