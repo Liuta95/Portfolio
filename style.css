@@ -1314,20 +1314,6 @@ ul { list-style: none; }
 
 .case-screens-legend li { border-top: 1px solid var(--panel-divider); padding-top: 16px; }
 
-.case-screens-legend--single { grid-template-columns: 1fr; max-width: 62ch; }
-
-/* Single full-width screen — same frame treatment as a slider slide,
-   used while only one real screen has been exported so far. */
-.case-screen-full {
-  margin: 0;
-  border-radius: var(--r-lg);
-  overflow: hidden;
-  border: 1px solid var(--panel-border);
-  background: var(--panel-bg);
-  box-shadow: var(--tile-shadow), 0 1px 0 0 var(--panel-highlight) inset;
-}
-
-.case-screen-full img { width: 100%; height: auto; display: block; }
 
 .case-screens-legend__tag {
   display: block;

@@ -146,17 +146,32 @@
         placeholder mark from the design file, not the client's real branding.
       </p>
 
-      <ul class="case-screens-legend case-screens-legend--single">
+      <ul class="case-screens-legend">
         <li>
           <span class="case-screens-legend__tag">Entry</span>
           <h3 class="case-screens-legend__title">Doctor Home &amp; Documentation Tasks</h3>
           <p class="case-screens-legend__desc">A triaged task queue — signature-ready records, incomplete documentation, and multi-visit reviews — surfaces what needs the doctor's attention first, ahead of a flat patient list.</p>
         </li>
+        <li>
+          <span class="case-screens-legend__tag">Core workflow</span>
+          <h3 class="case-screens-legend__title">Consultation Report &amp; Diagnosis</h3>
+          <p class="case-screens-legend__desc">A structured, step-by-step report — chief complaint and clinical assessment feed a suggested ICD-10 diagnosis list, and the record can't move to a treatment plan until one is selected.</p>
+        </li>
       </ul>
 
-      <figure class="case-screen-full">
-        <img src="assets/healthconnect/doctor-home.png" alt="Doctor home screen: a Documentation Tasks queue listing patients needing a signature, incomplete records, or multi-visit review, with counts for documentation tasks and records ready for signature" />
-      </figure>
+      <div class="case-slider" id="screensSlider">
+        <button type="button" class="case-slider__nav case-slider__nav--prev" aria-label="Previous screen">‹</button>
+        <div class="case-slider__track">
+          <figure class="case-slider__slide">
+            <img src="assets/healthconnect/doctor-home.png" alt="Doctor home screen: a Documentation Tasks queue listing patients needing a signature, incomplete records, or multi-visit review, with counts for documentation tasks and records ready for signature" />
+          </figure>
+          <figure class="case-slider__slide">
+            <img src="assets/healthconnect/screen-2.png" alt="Consultation report for a patient visit, on the Diagnosis step: patient and visit details, chief complaint, clinical assessment, and a right-hand panel of suggested ICD-10 diagnoses with one selected" />
+          </figure>
+        </div>
+        <button type="button" class="case-slider__nav case-slider__nav--next" aria-label="Next screen">›</button>
+        <div class="case-slider__dots" role="tablist" aria-label="Screen"></div>
+      </div>
     </section>
 
     <!-- OUTCOMES -->
