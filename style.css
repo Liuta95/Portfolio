@@ -708,7 +708,8 @@ ul { list-style: none; }
   transition: transform 0.5s var(--ease-out), filter 0.5s var(--ease-out);
 }
 
-.case-card:hover .case-card__cover { transform: scale(1.08); filter: blur(6px); }
+.case-card:hover .case-card__cover,
+.case-card:focus-within .case-card__cover { transform: scale(1.08); filter: blur(6px); }
 
 .case-card__overlay {
   position: absolute;
@@ -725,9 +726,20 @@ ul { list-style: none; }
   pointer-events: none;
 }
 
-.case-card:hover .case-card__overlay {
+.case-card:hover .case-card__overlay,
+.case-card:focus-within .case-card__overlay {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Touch devices have no real :hover — the overlay is the only place the
+   project title/description/CTA live, so it must be visible at rest here
+   instead of requiring a hover that will never fire. */
+@media (hover: none) {
+  .case-card__overlay {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .case-card__overlay-title {
