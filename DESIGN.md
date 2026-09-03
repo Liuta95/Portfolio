@@ -63,23 +63,23 @@ components:
 
 **Creative North Star: "The Amber Terminal"**
 
-The site reads as a dark technical console that occasionally lights up — a near-black canvas (`#0a0a0c`) with a single warm amber signal color, monospace labels standing in for system readouts, and irregular gold-leaf islands scattered across the hero backgrounds like an aerial view of mineral deposits in rock. It is restrained by default: surfaces are flat, borders are hairline, and color is scarce. The amber only appears where something matters — the name, the primary action, an active state — so its rarity is what makes it read as a signal rather than decoration.
+The site reads as a dark technical console that occasionally lights up — a near-black canvas (`#0a0a0c`) with a single warm amber signal color in every interactive surface, monospace labels standing in for system readouts, and a real gold-and-violet marble photograph across the hero backgrounds like an aerial view of mineral deposits in rock. It is restrained by default: surfaces are flat, borders are hairline, and UI color is scarce. The amber only appears where something matters — the name, the primary action, an active state — so its rarity is what makes it read as a signal rather than decoration.
 
-The one confirmed rejection: a cyan/blue accent was used earlier in this project and was deliberately replaced site-wide with the amber palette. Blue must not return as an accent color anywhere in this system.
+The one confirmed UI rejection: a cyan/blue accent was used earlier in this project and was deliberately replaced site-wide with amber. Blue must not return as a UI accent color (button, link, focus-state) anywhere in this system. That discipline is scoped to interface color, not to imagery — the hero photograph itself is allowed a second hue (violet) because it's a photograph, not a token; see the Named Rule below.
 
 **Key Characteristics:**
 - Near-black, low-noise canvas with translucent white panels instead of distinct card colors
-- One accent color family (amber), used sparingly and never paired with blue
+- One UI accent color family (amber) — every button, link, and active state stays amber-only, never blue
 - Serif display type for the name/headlines, monospace for every label/eyebrow/meta value
 - Flat at rest; shadow and glow appear only as a hover response
-- Hand-built SVG "gold island" blobs (procedural marble/gold-leaf texture) are the site's one recurring signature motif, run across every hero
+- A real photographic gold-and-violet marble image is the site's one recurring signature motif, run across every hero
 
 ## Colors
 
 The palette is almost monochrome — near-black, white, and grayscale panel translucencies — with exactly one warm accent family carrying all emphasis.
 
 ### Primary
-- **Amber Signal** (`#eab308`): the sole accent. Used for the name gradient, primary CTA buttons, active/hover states, and the gold-marble background image. Never exceeds a small fraction of any screen.
+- **Amber Signal** (`#eab308`): the sole accent. Used for the name gradient, primary CTA buttons, active/hover states, and the gold half of the hero marble photo. Never exceeds a small fraction of any UI screen (imagery is exempt; see Overview).
 - **Amber Signal Warm** (`#f59e0b`) / **Amber Signal Pale** (`#fde047`): gradient partners to Amber Signal. Always used together in a gradient (button fills, the "Liuta." name text, the hero glow) — never as flat standalone fills.
 
 ### Neutral
@@ -89,7 +89,7 @@ The palette is almost monochrome — near-black, white, and grayscale panel tran
 - **Panel White** (`rgba(255,255,255,0.045–0.12)`): every "surface" in the system (cards, the nav pill, secondary buttons) is this same white laid over the void at low opacity, not a distinct hex color — depth comes from opacity steps, not new colors.
 
 ### Named Rules
-**The One Signal Rule.** Amber is the only accent color in the system. It never mixes with a second hue (no blue, no purple) — that combination was tried and explicitly reverted.
+**The One Signal Rule.** Amber is the only accent color for UI — buttons, links, focus states, badges. It never mixes with a second hue there (no blue, no purple); a blue UI accent was tried and explicitly reverted. The hero marble photograph is the sole exception: its natural violet tones are imagery, not a UI token, and don't count against this rule.
 
 ## Typography
 
@@ -120,7 +120,7 @@ Flat by default. Cards, buttons, and the nav pill sit with no shadow at rest —
 
 ## Shapes
 
-Three form languages coexist deliberately: soft rounded rectangles (`8–28px` radius, scaling with the element's size) for cards, art tiles, and panels; full pill shapes (`100px` radius) for secondary/ghost buttons, badges, tags, and the nav bar itself; and a tighter rounded rectangle (`10–12px`) reserved only for the primary gold CTA, whose textured metal fill reads better with a squarer edge than a full pill. Corners are never sharp on an interactive element. The gold-marble background photo is the one organic, non-rectangular motif, appearing only as a background image (never as a component shape).
+Three form languages coexist deliberately: soft rounded rectangles (`8–28px` radius, scaling with the element's size) for cards, art tiles, and panels; full pill shapes (`100px` radius) for secondary/ghost buttons, badges, tags, and the nav bar itself; and a tighter rounded rectangle (`10–12px`) reserved only for the primary gold CTA, whose textured metal fill reads better with a squarer edge than a full pill. Corners are never sharp on an interactive element. The hero marble photo is the one organic, non-rectangular motif, appearing only as a background image (never as a component shape).
 
 ## Components
 
@@ -143,8 +143,8 @@ Three form languages coexist deliberately: soft rounded rectangles (`8–28px` r
 ### Navigation
 - Floating centered pill, fixed to the top of the viewport, translucent panel background with backdrop blur. Contains the logo/name, an "Available for projects" status with a pulsing green dot, and the primary amber CTA button. No hover state changes its shape — only the CTA button reacts.
 
-### Signature: Gold Marble Field
-A real photographic gold-leaf marble image (`assets/hero-gold-marble.jpg`, AI-generated by the user, not a code-drawn texture) used on every hero: black stone on the left bleeding into a diagonal band of pale gold-veined marble toward the right. The composition's own black-to-gold gradient does the fade work — solid black sits under the headline column, marble detail lives on the right where there's no body text, so no CSS mask is needed over it. Went through several code-drawn directions first in this project (a hexagon grid, then thin cracked "veins," then thresholded gold "island" blobs) before the user supplied this real image to replace the generated texture outright.
+### Signature: Marble Field
+A real photographic gold-and-violet marble image (`assets/hero-marble.jpg`, AI-generated by the user, not a code-drawn texture) used on every hero: black stone on the left bleeding into a diagonal vein of pale gold and deep violet marble toward the right. The composition's own black-to-color gradient does the fade work — solid black sits under the headline column, the colored marble detail lives on the right where there's no body text, so no CSS mask is needed over it. Went through several code-drawn directions first in this project (a hexagon grid, then thin cracked "veins," then thresholded gold "island" blobs), then an amber-only version of this same real photo, before the user supplied this violet-toned version as the final direction — a deliberate, confirmed exception to the One Signal Rule for imagery only (see Colors § Named Rules).
 
 ## Do's and Don'ts
 
