@@ -25,7 +25,7 @@ A visitor scans the hero, skims "Selected Work" case-study cards (PetPal, AI Age
 ## Capabilities and Constraints
 
 - Static site: plain HTML/CSS/JS. No framework, no build tooling, no npm-installed component libraries (e.g. shadcn/Magic UI cannot be installed via their CLI here — equivalent effects are hand-built in CSS/SVG).
-- Two live case studies today: PetPal (`petpal.html`, pet-sitter marketplace) and AI Agent (`ai-agent.html`, personal AI workspace) — both are Anastasiia's own real, live shipped projects.
+- Three case studies today: PetPal (`petpal.html`, pet-sitter marketplace), AI Agent (`ai-agent.html`, personal AI workspace), and HealthConnect (`healthconnect.html`, multi-role healthcare SaaS platform).
 - No CMS/backend — all content is hand-authored in the HTML files.
 
 ## Brand Commitments
@@ -38,6 +38,7 @@ A visitor scans the hero, skims "Selected Work" case-study cards (PetPal, AI Age
 
 - PetPal case study (`petpal.html`): real live product at `petpal-ivory.vercel.app`, source at `github.com/Liuta95/Petpal`.
 - AI Agent case study (`ai-agent.html`): real live product at `ai-agent-pi-jet.vercel.app`, source at `github.com/Liuta95/AI-Agent`. Case-study copy was deliberately rewritten from scratch after the user's first draft was found to be copied verbatim from another designer's portfolio — nothing in that page may be reused.
+- HealthConnect case study (`healthconnect.html`): real client/employer project, UX/UI Designer, Mar 2024 – Jan 2025. No public live link or repo (confidential). The user supplied real product screenshots for reference; those exact files aren't in this repo — the Key Screens images in `assets/healthconnect/` are hand-built HTML/CSS recreations matching the original screens' layout and content, with the original product's logo/branding removed and its blue color system replaced with a green healthcare palette. This is disclosed directly on the case-study page under the Key Screens heading — keep that disclosure line if the section is edited.
 - Experience section: real employers only — Trinetix, wht. agency, Upwork. No fictional/NDA-style project names.
 - **Hard constraint carried across this whole project: never fabricate metrics, employer names, testimonials, or screenshots.** Where a real screenshot can't be exported into this environment, cover art is disclosed as a hand-built recreation, not presented as a real capture.
 
