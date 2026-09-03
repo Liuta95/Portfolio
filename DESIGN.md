@@ -63,7 +63,7 @@ components:
 
 **Creative North Star: "The Amber Terminal"**
 
-The site reads as a dark technical console that occasionally lights up — a near-black canvas (`#0a0a0c`) with a single warm amber signal color, monospace labels standing in for system readouts, and a hexagon-grid texture behind the hero like a faint circuit board. It is restrained by default: surfaces are flat, borders are hairline, and color is scarce. The amber only appears where something matters — the name, the primary action, an active state — so its rarity is what makes it read as a signal rather than decoration.
+The site reads as a dark technical console that occasionally lights up — a near-black canvas (`#0a0a0c`) with a single warm amber signal color, monospace labels standing in for system readouts, and cracked gold-leaf veins running through the hero backgrounds like fault lines in marble. It is restrained by default: surfaces are flat, borders are hairline, and color is scarce. The amber only appears where something matters — the name, the primary action, an active state — so its rarity is what makes it read as a signal rather than decoration.
 
 The one confirmed rejection: a cyan/blue accent was used earlier in this project and was deliberately replaced site-wide with the amber palette. Blue must not return as an accent color anywhere in this system.
 
@@ -72,14 +72,14 @@ The one confirmed rejection: a cyan/blue accent was used earlier in this project
 - One accent color family (amber), used sparingly and never paired with blue
 - Serif display type for the name/headlines, monospace for every label/eyebrow/meta value
 - Flat at rest; shadow and glow appear only as a hover response
-- A hand-built hexagon-grid texture is the site's one recurring signature motif
+- Hand-built SVG "gold vein" cracks (procedural marble/gold-leaf texture) are the site's one recurring signature motif, run across every hero
 
 ## Colors
 
 The palette is almost monochrome — near-black, white, and grayscale panel translucencies — with exactly one warm accent family carrying all emphasis.
 
 ### Primary
-- **Amber Signal** (`#eab308`): the sole accent. Used for the name gradient, primary CTA buttons, active/hover states, and the hexagon pattern's occasional filled cells. Never exceeds a small fraction of any screen.
+- **Amber Signal** (`#eab308`): the sole accent. Used for the name gradient, primary CTA buttons, active/hover states, and the gold-vein background texture. Never exceeds a small fraction of any screen.
 - **Amber Signal Warm** (`#f59e0b`) / **Amber Signal Pale** (`#fde047`): gradient partners to Amber Signal. Always used together in a gradient (button fills, the "Liuta." name text, the hero glow) — never as flat standalone fills.
 
 ### Neutral
@@ -120,7 +120,7 @@ Flat by default. Cards, buttons, and the nav pill sit with no shadow at rest —
 
 ## Shapes
 
-Three form languages coexist deliberately: soft rounded rectangles (`8–28px` radius, scaling with the element's size) for cards, art tiles, and panels; full pill shapes (`100px` radius) for secondary/ghost buttons, badges, tags, and the nav bar itself; and a tighter rounded rectangle (`10–12px`) reserved only for the primary gold CTA, whose textured metal fill reads better with a squarer edge than a full pill. Corners are never sharp on an interactive element. The hexagon is the one non-rectangular motif, appearing only as a background texture (never as a component shape).
+Three form languages coexist deliberately: soft rounded rectangles (`8–28px` radius, scaling with the element's size) for cards, art tiles, and panels; full pill shapes (`100px` radius) for secondary/ghost buttons, badges, tags, and the nav bar itself; and a tighter rounded rectangle (`10–12px`) reserved only for the primary gold CTA, whose textured metal fill reads better with a squarer edge than a full pill. Corners are never sharp on an interactive element. The gold-vein cracks are the one organic, non-rectangular motif, appearing only as a background texture (never as a component shape).
 
 ## Components
 
@@ -143,8 +143,8 @@ Three form languages coexist deliberately: soft rounded rectangles (`8–28px` r
 ### Navigation
 - Floating centered pill, fixed to the top of the viewport, translucent panel background with backdrop blur. Contains the logo/name, an "Available for projects" status with a pulsing green dot, and the primary amber CTA button. No hover state changes its shape — only the CTA button reacts.
 
-### Signature: Hexagon Field
-A hand-built (no library) SVG hexagon grid used as the hero's background texture: mostly hairline outlines at low opacity, with a sparse (~7%) random subset of cells filled in a soft amber gradient, radially masked so it fades out toward the hero's edges. This is the system's one piece of generative/textural decoration; it does not repeat as a small tile (which previously produced a visible diagonal stripe artifact) — it's generated once as a single large non-repeating field.
+### Signature: Gold Vein Field
+A hand-built (no library) SVG background used on every hero (`assets/gold-vein-pattern.svg`): a procedural "cracked gold leaf" texture built from a handful of hand-drawn paths warped through layered `feTurbulence`/`feDisplacementMap` filters (first a broad low-frequency warp for the organic wander, then a second high-frequency pass for chunky, irregular edges, plus a soft glow merge). Rendered once as a single large non-repeating field, concentrated toward the right/corners and faded out before it reaches the text column via a linear + radial mask — it never crosses under body copy. Replaced an earlier hexagon-grid version of this same role.
 
 ## Do's and Don'ts
 
@@ -158,5 +158,5 @@ A hand-built (no library) SVG hexagon grid used as the hero's background texture
 ### Don't:
 - **Don't** reintroduce a blue or cyan accent — it was tried in this project and explicitly reverted to amber.
 - **Don't** put white text directly on an amber fill.
-- **Don't** tile a small repeating pattern fragment for texture (the hexagon field learned this the hard way — repetition of a fragment with filled cells reads as a stripe, not sparse texture); generate decorative textures once, at full size.
+- **Don't** tile a small repeating pattern fragment for texture (an earlier hexagon-grid version of the signature texture learned this the hard way — repetition of a fragment with filled cells reads as a stripe, not sparse texture); generate decorative textures once, at full size.
 - **Don't** give a card or button a resting shadow; reserve shadow/glow for hover.
