@@ -1304,28 +1304,17 @@ ul { list-style: none; }
   object-fit: contain;
 }
 
-/* Stacked variant: one large screen per row instead of a 3-up grid of
-   small tiles — for a case study whose screenshots need to be read,
-   not just recognized at a glance. Image and caption sit side by side
-   on wide viewports and stack on narrow ones. */
+/* Stacked variant: one large, full-width screen per row instead of a
+   3-up grid of small tiles — for a case study whose screenshots need
+   to be read, not just recognized at a glance. The screenshot fills
+   the full card width; the caption sits below it. */
 .case-screens.case-screens--stacked {
   grid-template-columns: 1fr;
   gap: 28px;
 }
 
-.case-screens--stacked .case-screen {
-  flex-direction: row;
-  align-items: center;
-}
-
-.case-screens--stacked .case-screen__art {
-  flex: 1 1 58%;
-  min-width: 0;
-}
-
 .case-screens--stacked .case-screen__body {
-  flex: 1 1 42%;
-  padding: 28px 32px;
+  padding: 24px 32px 28px;
 }
 
 .case-screens--stacked .case-screen__title {
@@ -1335,17 +1324,7 @@ ul { list-style: none; }
 
 .case-screens--stacked .case-screen__desc {
   font-size: 14px;
-}
-
-@media (max-width: 780px) {
-  .case-screens--stacked .case-screen {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .case-screens--stacked .case-screen__body {
-    padding: 20px 20px 24px;
-  }
+  max-width: 62ch;
 }
 
 .case-screen__body { padding: 18px 18px 20px; flex: 1; display: flex; flex-direction: column; }
