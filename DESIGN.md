@@ -34,6 +34,7 @@ rounded:
   lg: "20px"
   xl: "28px"
   pill: "100px"
+  cta: "10px"
 spacing:
   xs: "8px"
   sm: "12px"
@@ -44,7 +45,7 @@ components:
   button-primary:
     backgroundColor: "{colors.amber-signal}"
     textColor: "{colors.bg}"
-    rounded: "{rounded.pill}"
+    rounded: "{rounded.cta}"
     padding: "8px 18px"
   button-secondary:
     backgroundColor: "#1c1c20"
@@ -119,15 +120,18 @@ Flat by default. Cards, buttons, and the nav pill sit with no shadow at rest —
 
 ## Shapes
 
-Two form languages coexist deliberately: soft rounded rectangles (`8–28px` radius, scaling with the element's size) for cards, art tiles, and panels; and full pill shapes (`100px` radius) for anything clickable — buttons, badges, tags, the nav bar itself. Corners are never sharp on an interactive element. The hexagon is the one non-rectangular motif, appearing only as a background texture (never as a component shape).
+Three form languages coexist deliberately: soft rounded rectangles (`8–28px` radius, scaling with the element's size) for cards, art tiles, and panels; full pill shapes (`100px` radius) for secondary/ghost buttons, badges, tags, and the nav bar itself; and a tighter rounded rectangle (`10–12px`) reserved only for the primary gold CTA, whose textured metal fill reads better with a squarer edge than a full pill. Corners are never sharp on an interactive element. The hexagon is the one non-rectangular motif, appearing only as a background texture (never as a component shape).
 
 ## Components
 
 ### Buttons
-- **Shape:** pill (`100px` radius) always.
-- **Primary:** amber gradient fill (`#eab308 → #f59e0b/#fde047` depending on context), text set in `--bg` (near-black) for contrast — never white text on the amber fill.
+- **Shape:** primary CTA ("Let's talk," "Get in touch") uses a tight rounded rectangle (`10–12px`); every other button (secondary/ghost, badges) stays full pill (`100px`).
+- **Primary:** textured gold-foil fill — a diagonal amber gradient (`#fde047 → #eab308 → #d97706`) layered under a streaky diagonal highlight gradient and a low-opacity fractal-noise overlay (`mix-blend-mode: overlay`) for a brushed-metal read, `#92400e` hairline border, inset top highlight. Text set in `--bg` (near-black) for contrast — never white text on the amber fill.
 - **Secondary/Ghost:** dark gradient fill (`#1c1c20` base with a faint top-light gradient), a hairline `rgba(255,255,255,0.14)` border, soft ink text. Used for "View code," "Back to Selected Work," and case-card badges.
-- **Hover / Focus:** primary scales up slightly and gains an amber glow shadow; secondary brightens its border and text toward full white and deepens its shadow. No color hue changes on hover, only intensity.
+- **Hover / Focus:** primary scales up slightly (nav) or lifts (contact) and deepens its shadow; secondary brightens its border and text toward full white and deepens its shadow. No color hue changes on hover, only intensity.
+
+### Named Rules
+**The Gold-Foil CTA Rule.** The primary CTA is the only button with a textured (noise-overlaid) fill and the only one that breaks the pill radius. That combination — texture + squared corners — is reserved for it alone; it must not spread to secondary buttons or cards.
 
 ### Cards (Selected Work)
 - **Corner Style:** `--r-lg` (20px).
@@ -147,7 +151,7 @@ A hand-built (no library) SVG hexagon grid used as the hero's background texture
 ### Do:
 - **Do** keep amber (`#eab308` family) as the only accent color anywhere in the system.
 - **Do** put primary-button text in `--bg` (near-black), never white, on any amber fill — white-on-amber fails WCAG contrast (~1.9:1, audited and fixed once already).
-- **Do** keep interactive elements pill-shaped and non-interactive containers softly rounded (8–28px).
+- **Do** keep secondary buttons, badges, and the nav bar pill-shaped, non-interactive containers softly rounded (8–28px), and only the primary gold CTA on its own tighter rounded-rect (10–12px).
 - **Do** keep shadows and glows hover-only; nothing carries a resting shadow.
 - **Do** set any label-like text (eyebrows, tags, meta, counters) in JetBrains Mono, uppercase, letter-spaced.
 
