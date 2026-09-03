@@ -1291,6 +1291,19 @@ ul { list-style: none; }
   display: block;
 }
 
+/* Full-size variant: shows the entire recreated screenshot uncropped,
+   sizing the tile to the image's own aspect ratio instead of forcing
+   it into the 16:11 box used by the abstract gradient tiles. */
+.case-screen__art--full {
+  aspect-ratio: auto;
+  display: block;
+}
+
+.case-screen__art--full .case-screen__cover {
+  height: auto;
+  object-fit: contain;
+}
+
 .case-screen__body { padding: 18px 18px 20px; flex: 1; display: flex; flex-direction: column; }
 
 .case-screen__tag {
