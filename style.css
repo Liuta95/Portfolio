@@ -1479,14 +1479,13 @@ ul { list-style: none; }
 .h-panel--hero .case-hero { width: 100%; height: 100%; display: flex; align-items: center; }
 .h-panel--hero .case-hero__inner { padding: 90px 24px 0; }
 
-/* Screen images are constrained on BOTH axes toward the same ~140px
-   target margin — width and height can't hit that exactly at once
-   (the screenshots' aspect ratio doesn't match a typical browser
-   window's), so whichever axis binds wins, but neither is starved
-   down near 0 the way a single-axis target left the other. */
+/* Fixed box: exactly 40px side margin, exactly 120px top/bottom
+   margin, on every viewport — the image below fills this box exactly
+   via object-fit: cover, cropping whatever doesn't fit instead of
+   shrinking to stay inside it. */
 .h-panel--screen .h-panel__inner {
-  width: calc(100vw - 100px);
-  height: calc(100vh - 100px);
+  width: calc(100vw - 40px);
+  height: calc(100vh - 240px);
   max-width: 1700px;
   padding: 0;
   margin: 0 auto;
@@ -1496,14 +1495,10 @@ ul { list-style: none; }
 }
 
 .h-panel__screen-img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  /* Hard ceiling so the image can never exceed the viewport: a flex
-     item centered in an overflowing container gets clipped at the
-     top with no way to scroll back up to it, so this has to win
-     before that ever happens, not fall back to overflow-y. */
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
   display: block;
   border-radius: var(--r-lg);
   border: 1px solid var(--panel-border);
@@ -1568,7 +1563,8 @@ ul { list-style: none; }
   .h-panel--hero .case-hero { display: block; height: auto; }
   .h-panel--hero .case-hero__inner { padding: 120px 20px 56px; }
 
-  .h-panel--screen .h-panel__inner { width: auto; max-width: none; padding: 0 16px; }
+  .h-panel--screen .h-panel__inner { width: auto; height: auto; max-width: none; padding: 0 16px; }
+  .h-panel__screen-img { width: 100%; height: auto; object-fit: initial; }
 
   .h-hint { display: none; }
 }
