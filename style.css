@@ -1484,7 +1484,10 @@ ul { list-style: none; }
    black background with generous negative space, instead of a
    screen stretched to fill the viewport. The section clips anything
    that overflows it; nothing inside is forced to stretch to cause
-   that overflow in the first place. */
+   that overflow in the first place. Sizing lives on the .showcase-
+   frame wrappers (flex: 0 0 auto + an explicit width cap) — the img
+   itself is just width: 100% of that already-fixed box, height auto,
+   object-fit: contain so it can never distort. */
 .h-panel--showcase { overflow: hidden; }
 
 .showcase-container {
@@ -1496,13 +1499,27 @@ ul { list-style: none; }
 .showcase-row {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: clamp(24px, 3vw, 56px);
+  justify-content: flex-start;
+  gap: 44px;
+  /* Nudges the whole pairing right of dead-center — small and fixed
+     so the primary (left) screen always stays fully on-screen. */
+  margin-left: 26px;
 }
+
+.showcase-frame { flex: 0 0 auto; }
+
+/* Fixed px, not vw-relative: solved against a 1440px desktop so the
+   secondary lands at ~72% of the primary's width and overflows the
+   right edge by ~10% of its own width (830 + 44 + 600 + 26 margin =
+   1500 against a 1440 viewport) — a vw-scaled size blows this ratio
+   up fast on any narrower viewport (verified: it reached 46% at the
+   same 1440px before this fix). */
+.showcase-frame--primary { width: 830px; }
+.showcase-frame--secondary { width: 600px; }
 
 .showcase-img {
   display: block;
-  width: auto;
+  width: 100%;
   height: auto;
   max-height: 680px;
   object-fit: contain;
@@ -1511,9 +1528,6 @@ ul { list-style: none; }
   box-shadow: var(--tile-shadow), 0 1px 0 0 var(--panel-highlight) inset;
   background: var(--panel-bg);
 }
-
-.showcase-primary { max-width: min(58vw, 820px); }
-.showcase-secondary { max-width: min(42vw, 600px); }
 
 .h-hint {
   position: fixed;
@@ -1568,8 +1582,8 @@ ul { list-style: none; }
   .h-panel--hero .case-hero__inner { padding: 120px 20px 56px; }
 
   .showcase-container { padding: 0 16px; }
-  .showcase-row { flex-direction: column; }
-  .showcase-primary, .showcase-secondary { max-width: min(90vw, 560px); }
+  .showcase-row { flex-direction: column; margin-left: 0; align-items: center; }
+  .showcase-frame--primary, .showcase-frame--secondary { width: min(90vw, 560px); }
   .showcase-img { max-height: none; }
 
   .h-hint { display: none; }
