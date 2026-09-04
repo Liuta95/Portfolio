@@ -1479,37 +1479,41 @@ ul { list-style: none; }
 .h-panel--hero .case-hero { width: 100%; height: 100%; display: flex; align-items: center; }
 .h-panel--hero .case-hero__inner { padding: 90px 24px 0; }
 
-/* Fixed box: exactly 40px side margin, exactly 120px top/bottom
-   margin, on every viewport — the image below fills this box exactly
-   via object-fit: cover, cropping whatever doesn't fit instead of
-   shrinking to stay inside it. */
-.h-panel--screen .h-panel__inner {
-  width: calc(100vw - 40px);
-  height: calc(100vh - 240px);
-  max-width: 1700px;
-  padding: 0;
+/* Showcase panel: a fixed-size pairing of screens (no width:100%,
+   flex:1, or 1fr/1fr auto-stretch anywhere in here) centered on a
+   black background with generous negative space, instead of a
+   screen stretched to fill the viewport. The section clips anything
+   that overflows it; nothing inside is forced to stretch to cause
+   that overflow in the first place. */
+.h-panel--showcase { overflow: hidden; }
+
+.showcase-container {
+  max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
+}
+
+.showcase-row {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: clamp(24px, 3vw, 56px);
 }
 
-.h-panel__screen-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
+.showcase-img {
   display: block;
+  width: auto;
+  height: auto;
+  max-height: 680px;
+  object-fit: contain;
   border-radius: var(--r-lg);
   border: 1px solid var(--panel-border);
   box-shadow: var(--tile-shadow), 0 1px 0 0 var(--panel-highlight) inset;
   background: var(--panel-bg);
 }
 
-.h-panel__screen-caption { max-width: 62ch; }
-
-.h-panel__screen-caption .case-screens-legend__tag { display: block; margin-bottom: 10px; }
-.h-panel__screen-caption .case-screens-legend__title { font-size: 20px; margin-bottom: 8px; }
+.showcase-primary { max-width: min(58vw, 820px); }
+.showcase-secondary { max-width: min(42vw, 600px); }
 
 .h-hint {
   position: fixed;
@@ -1563,8 +1567,10 @@ ul { list-style: none; }
   .h-panel--hero .case-hero { display: block; height: auto; }
   .h-panel--hero .case-hero__inner { padding: 120px 20px 56px; }
 
-  .h-panel--screen .h-panel__inner { width: auto; height: auto; max-width: none; padding: 0 16px; }
-  .h-panel__screen-img { width: 100%; height: auto; object-fit: initial; }
+  .showcase-container { padding: 0 16px; }
+  .showcase-row { flex-direction: column; }
+  .showcase-primary, .showcase-secondary { max-width: min(90vw, 560px); }
+  .showcase-img { max-height: none; }
 
   .h-hint { display: none; }
 }
