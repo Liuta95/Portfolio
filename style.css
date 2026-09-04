@@ -1479,14 +1479,17 @@ ul { list-style: none; }
 .h-panel--hero .case-hero { width: 100%; height: 100%; display: flex; align-items: center; }
 .h-panel--hero .case-hero__inner { padding: 90px 24px 0; }
 
+/* Screen panel width is set so the image's own side margins sum to
+   exactly 100px — i.e. a 100px gap between one screen's right edge
+   and the next screen's left edge when scrolling between panels. */
 .h-panel--screen .h-panel__inner {
-  max-width: 1200px;
-  padding: 0 48px;
+  width: calc(100vw - 100px);
+  max-width: 1600px;
+  padding: 0;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 20px;
-  text-align: center;
+  justify-content: center;
 }
 
 .h-panel__screen-img {
@@ -1556,7 +1559,7 @@ ul { list-style: none; }
   .h-panel--hero .case-hero { display: block; height: auto; }
   .h-panel--hero .case-hero__inner { padding: 120px 20px 56px; }
 
-  .h-panel--screen .h-panel__inner { max-width: none; padding: 0 16px; }
+  .h-panel--screen .h-panel__inner { width: auto; max-width: none; padding: 0 16px; }
 
   .h-hint { display: none; }
 }
