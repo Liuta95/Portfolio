@@ -1499,8 +1499,9 @@ ul { list-style: none; }
   /* Hard ceiling so the image can never exceed the viewport: a flex
      item centered in an overflowing container gets clipped at the
      top with no way to scroll back up to it, so this has to win
-     before that ever happens, not fall back to overflow-y. */
-  max-height: 100vh;
+     before that ever happens, not fall back to overflow-y. Leaves
+     ~110px of breathing room above and below. */
+  max-height: calc(100vh - 220px);
   display: block;
   border-radius: var(--r-lg);
   border: 1px solid var(--panel-border);
