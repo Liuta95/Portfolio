@@ -1329,82 +1329,6 @@ ul { list-style: none; }
 
 .case-screens-legend__desc { font-size: 13.5px; line-height: 1.6; color: var(--ink-muted); }
 
-.case-slider { position: relative; }
-
-.case-slider__track {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  border-radius: var(--r-lg);
-}
-
-.case-slider__track::-webkit-scrollbar { display: none; }
-
-.case-slider__slide {
-  flex: 0 0 100%;
-  margin: 0;
-  scroll-snap-align: center;
-  border-radius: var(--r-lg);
-  overflow: hidden;
-  border: 1px solid var(--panel-border);
-  background: var(--panel-bg);
-  box-shadow: var(--tile-shadow), 0 1px 0 0 var(--panel-highlight) inset;
-}
-
-.case-slider__slide img { width: 100%; height: auto; display: block; }
-
-.case-slider__nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%), #1c1c20;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  color: var(--ink-soft);
-  font-size: 20px;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 2;
-  box-shadow: 0 6px 16px -6px rgba(0, 0, 0, 0.5);
-  transition: color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
-}
-
-.case-slider__nav:hover { color: var(--ink); border-color: rgba(255, 255, 255, 0.24); }
-
-.case-slider__nav:disabled { opacity: 0.3; cursor: default; pointer-events: none; }
-
-.case-slider__nav--prev { left: 12px; }
-.case-slider__nav--next { right: 12px; }
-
-.case-slider__dots {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 18px;
-}
-
-.case-slider__dot {
-  width: 7px;
-  height: 7px;
-  padding: 0;
-  border: none;
-  border-radius: 50%;
-  background: var(--panel-border-strong);
-  cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-
-.case-slider__dot.is-active { background: var(--accent); transform: scale(1.35); }
-
 @media (max-width: 640px) {
   .case-screens-legend { grid-template-columns: 1fr; gap: 20px; }
   .case-slider__nav { width: 36px; height: 36px; font-size: 18px; }
@@ -1513,6 +1437,128 @@ ul { list-style: none; }
 @media (max-width: 420px) {
   .hero__name { font-size: 56px; }
   .section__label { font-size: 22px; }
+}
+
+/* ============================================
+   HORIZONTAL CASE SCROLL
+   Desktop only: the whole case body is a row of
+   full-viewport panels. JS redirects vertical wheel/
+   trackpad/keyboard input into horizontal motion —
+   there is no native scrollbar or CSS-only fallback,
+   .h-page relies on that script. Below the breakpoint
+   this block reverts everything to a plain vertical
+   stack — mobile gets its own normal-flow layout,
+   not a shrunk desktop one.
+   ============================================ */
+.h-page {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.h-panel {
+  flex: 0 0 100vw;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.h-panel::-webkit-scrollbar { display: none; }
+
+.h-panel__inner {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.h-panel--hero { padding: 0; }
+.h-panel--hero .case-hero { width: 100%; height: 100%; display: flex; align-items: center; }
+.h-panel--hero .case-hero__inner { padding: 90px 24px 0; }
+
+.h-panel--screen .h-panel__inner {
+  max-width: 1300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  text-align: center;
+}
+
+.h-panel__screen-img {
+  max-width: 100%;
+  max-height: 68vh;
+  width: auto;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--panel-border);
+  box-shadow: var(--tile-shadow), 0 1px 0 0 var(--panel-highlight) inset;
+  background: var(--panel-bg);
+}
+
+.h-panel__screen-caption { max-width: 62ch; }
+
+.h-panel__screen-caption .case-screens-legend__tag { display: block; margin-bottom: 10px; }
+.h-panel__screen-caption .case-screens-legend__title { font-size: 20px; margin-bottom: 8px; }
+
+.h-hint {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  z-index: 90;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
+  opacity: 0;
+  animation: hHintIn 0.6s ease 1.2s forwards;
+}
+
+.h-hint__track {
+  position: relative;
+  width: 120px;
+  height: 2px;
+  background: var(--panel-divider);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.h-hint__fill {
+  position: absolute;
+  inset: 0;
+  width: 22%;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+@keyframes hHintIn { to { opacity: 1; } }
+
+@media (max-width: 768px) {
+  .h-page { display: block; height: auto; overflow: visible; }
+
+  .h-panel {
+    display: block;
+    width: auto;
+    height: auto;
+    overflow: visible;
+  }
+
+  .h-panel__inner { padding: 0 16px; max-width: none; }
+
+  .h-panel--hero .case-hero { display: block; height: auto; }
+  .h-panel--hero .case-hero__inner { padding: 120px 20px 56px; }
+
+  .h-panel--screen .h-panel__inner { max-width: none; }
+  .h-panel__screen-img { max-height: none; }
+
+  .h-hint { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
