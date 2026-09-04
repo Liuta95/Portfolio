@@ -1479,11 +1479,14 @@ ul { list-style: none; }
 .h-panel--hero .case-hero { width: 100%; height: 100%; display: flex; align-items: center; }
 .h-panel--hero .case-hero__inner { padding: 90px 24px 0; }
 
-/* Screen panel width is set so the image's own side margins sum to
-   40px — the gap between one screen's right edge and the next
-   screen's left edge when scrolling between panels. */
+/* Screen images are constrained on BOTH axes toward the same ~140px
+   target margin — width and height can't hit that exactly at once
+   (the screenshots' aspect ratio doesn't match a typical browser
+   window's), so whichever axis binds wins, but neither is starved
+   down near 0 the way a single-axis target left the other. */
 .h-panel--screen .h-panel__inner {
-  width: calc(100vw - 40px);
+  width: calc(100vw - 100px);
+  height: calc(100vh - 100px);
   max-width: 1700px;
   padding: 0;
   margin: 0 auto;
@@ -1499,9 +1502,8 @@ ul { list-style: none; }
   /* Hard ceiling so the image can never exceed the viewport: a flex
      item centered in an overflowing container gets clipped at the
      top with no way to scroll back up to it, so this has to win
-     before that ever happens, not fall back to overflow-y. Leaves
-     ~110px of breathing room above and below. */
-  max-height: calc(100vh - 220px);
+     before that ever happens, not fall back to overflow-y. */
+  max-height: 100%;
   display: block;
   border-radius: var(--r-lg);
   border: 1px solid var(--panel-border);
