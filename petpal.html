@@ -14,17 +14,24 @@
 </head>
 <body>
 
-  <!-- TOP NAV -->
-  <nav class="topnav">
-    <a href="index.html" class="topnav__logo">
-      <span class="logo-icon">✦</span>
-      <span>Anastasiia Liuta</span>
-    </a>
-    <div class="topnav__center">
-      <span class="dot"></span>
-      <span>Available for projects</span>
+  <!-- CASE TOP BAR -->
+  <nav class="case-topbar">
+    <a href="index.html#work" class="case-pill">← Back</a>
+    <div class="case-topbar__group">
+      <a href="https://t.me/LiuAna" target="_blank" rel="noopener" class="case-pill case-pill--cta">Let's talk →</a>
+      <div class="case-menu" id="caseMenu">
+        <button type="button" class="case-pill case-menu__trigger" aria-haspopup="true" aria-expanded="false">
+          Menu <span class="case-menu__dots">··</span>
+        </button>
+        <div class="case-menu__panel" role="menu">
+          <a href="index.html" class="case-menu__link" role="menuitem">Home</a>
+          <a href="petpal.html" class="case-menu__link is-current" role="menuitem">PetPal</a>
+          <a href="ai-agent.html" class="case-menu__link" role="menuitem">AI Agent</a>
+          <a href="healthconnect.html" class="case-menu__link" role="menuitem">HealthConnect</a>
+          <a href="mailto:anasssta9@gmail.com" class="case-menu__link" role="menuitem">Email</a>
+        </div>
+      </div>
     </div>
-    <a href="https://t.me/LiuAna" target="_blank" rel="noopener" class="topnav__cta">Let's talk →</a>
   </nav>
 
   <!-- CASE HERO -->
@@ -32,8 +39,6 @@
     <div class="case-hero__bg" aria-hidden="true"></div>
 
     <div class="case-hero__inner">
-      <a href="index.html#work" class="case-back">← Back to Selected Work</a>
-
       <span class="case-hero__eyebrow">Case Study · Product Design</span>
       <h1 class="case-hero__title">PetPal</h1>
       <p class="case-hero__tagline">
@@ -252,6 +257,32 @@
       }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
       document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
     }
+  </script>
+
+  <!-- CASE TOP BAR MENU -->
+  <script>
+    (function () {
+      var menu = document.getElementById('caseMenu');
+      if (!menu) return;
+      var trigger = menu.querySelector('.case-menu__trigger');
+
+      function close() {
+        menu.classList.remove('is-open');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+      function toggle(e) {
+        e.stopPropagation();
+        var open = menu.classList.toggle('is-open');
+        trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      }
+      trigger.addEventListener('click', toggle);
+      document.addEventListener('click', function (e) {
+        if (!menu.contains(e.target)) close();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') close();
+      });
+    })();
   </script>
 
 </body>
