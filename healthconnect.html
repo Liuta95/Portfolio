@@ -300,11 +300,18 @@
       window.addEventListener('resize', updateNavState);
       updateNavState();
 
+      function slideStep() {
+        // Distance between two slides' scroll-snap points: one slide's
+        // width plus the track's gap — scrolling by clientWidth alone
+        // undershoots by the gap and relies on scroll-snap to correct it.
+        var gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+        return track.clientWidth + gap;
+      }
       prevBtn.addEventListener('click', function () {
-        track.scrollBy({ left: -track.clientWidth, behavior: 'smooth' });
+        track.scrollBy({ left: -slideStep(), behavior: 'smooth' });
       });
       nextBtn.addEventListener('click', function () {
-        track.scrollBy({ left: track.clientWidth, behavior: 'smooth' });
+        track.scrollBy({ left: slideStep(), behavior: 'smooth' });
       });
     })();
   </script>
