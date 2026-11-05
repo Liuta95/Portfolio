@@ -692,22 +692,10 @@ ul { list-style: none; }
   transition: transform 0.5s var(--ease-out), filter 0.5s var(--ease-out);
 }
 
-/* Animated WebGL cover (js/case-cover.js): fills the 16:9 card. The
-   dark base shows until the shader's first frame, and stays as the
-   fallback if WebGL is unavailable. */
-.case-card__scene {
-  position: absolute;
-  inset: 0;
-  background: #04070a;
-}
-
-.case-card__scene canvas { display: block; width: 100%; height: 100%; }
-
 .case-card__art { container-type: inline-size; }
 
-/* Domain + project name, centered a little below the middle so the
-   light source in the top-right corner has room. Sized in container
-   units so the pair scales with the card. */
+/* Domain label over a video cover. Sized in container units so it
+   scales with the card the way the video's baked-in title does. */
 .case-card__label {
   position: absolute;
   left: 50%;
@@ -732,23 +720,16 @@ ul { list-style: none; }
   color: rgba(237, 237, 237, 0.62);
 }
 
-.case-card__name {
-  font-family: var(--font-sans);
-  font-weight: 500;
-  font-size: clamp(30px, 7.6cqw, 72px);
-  line-height: 1;
-  letter-spacing: -0.035em;
-  white-space: nowrap;
-  color: #ededed;
-}
-
 .case-card:hover .case-card__label { opacity: 0; }
 
-/* Exported Unicorn Studio video cover: its project name is baked in at
-   ~62% of the frame height, so only the domain sits above it. */
+/* Exported Unicorn Studio video covers: the project name is baked in
+   at ~62% of the frame height, so the domain sits just above it. */
 .case-card__video { background: #030b0f; }
 
-.case-card__label--over-video { top: 51%; }
+/* Anchored by its bottom edge just above the title's top (~57%), so a
+   proportionally larger label on a narrow card grows upward instead
+   of running into the title. */
+.case-card__label--over-video { top: 54.5%; transform: translate(-50%, -100%); }
 
 .case-card:hover .case-card__cover,
 .case-card:focus-within .case-card__cover { transform: scale(1.08); filter: blur(6px); }
