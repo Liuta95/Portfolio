@@ -4,6 +4,13 @@
    Rendering pauses while a card is offscreen, and draws one still frame
    under prefers-reduced-motion. */
 (function () {
+  // Video covers: hold the poster frame instead of looping under reduced motion.
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.case-card__video').forEach(function (v) {
+      v.removeAttribute('autoplay'); v.pause();
+    });
+  }
+
   var scenes = document.querySelectorAll('.case-card__scene');
   if (!scenes.length) return;
 

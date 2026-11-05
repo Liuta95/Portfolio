@@ -744,6 +744,12 @@ ul { list-style: none; }
 
 .case-card:hover .case-card__label { opacity: 0; }
 
+/* Exported Unicorn Studio video cover: its project name is baked in at
+   ~62% of the frame height, so only the domain sits above it. */
+.case-card__video { background: #030b0f; }
+
+.case-card__label--over-video { top: 51%; }
+
 .case-card:hover .case-card__cover,
 .case-card:focus-within .case-card__cover { transform: scale(1.08); filter: blur(6px); }
 
