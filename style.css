@@ -66,8 +66,8 @@ body {
 /* Faint dot-pattern texture for the light sections (About, Selected Work,
    Experience, Contact) — fixed so it doesn't repaint on scroll. Opaque
    card/tile backgrounds naturally occlude it where they sit, so it only
-   reads in the open background areas. The dark hero paints its own
-   opaque background over this, so it never shows through there. */
+   reads in the open background areas, the hero included (it has no
+   background image of its own). */
 body::before {
   content: '';
   position: fixed;
@@ -150,25 +150,6 @@ ul { list-style: none; }
   justify-content: flex-end;
   padding: 0 var(--hero-pad) 96px;
   --hero-pad: clamp(16px, 3vw, 48px);
-}
-
-/* Full-bleed background layers. The marble photo stays, dimmed so the
-   oversized white type sits on it cleanly. */
-.hero__bg {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background:
-    linear-gradient(180deg, rgba(10, 10, 12, 0.55) 0%, rgba(10, 10, 12, 0.35) 40%, rgba(10, 10, 12, 0.85) 82%, var(--bg) 100%),
-    radial-gradient(ellipse 60% 50% at 70% 60%, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
-}
-
-.hero__grid {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  pointer-events: none;
-  background: url("assets/hero-marble.jpg?v=10") center / cover no-repeat, var(--bg);
 }
 
 .hero__meta {
