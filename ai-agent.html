@@ -36,11 +36,6 @@
 
   <!-- CASE HERO -->
   <header class="case-hero">
-    <video class="case-hero__video" autoplay muted loop playsinline preload="auto" poster="assets/ai-agent-hero-bg-poster.jpg" aria-hidden="true">
-      <source src="assets/ai-agent-hero-bg.mp4" type="video/mp4" />
-    </video>
-    <div class="case-hero__video-overlay" aria-hidden="true"></div>
-
     <div class="case-hero__inner">
       <span class="case-hero__eyebrow">Enterprise AI Platform · Under NDA</span>
       <h1 class="case-hero__title">Genius AI</h1>
@@ -324,12 +319,6 @@
         });
       }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
       document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
-    }
-
-    var heroVideo = document.querySelector('.case-hero__video');
-    if (heroVideo && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      heroVideo.pause();
-      heroVideo.removeAttribute('autoplay');
     }
   </script>
 
