@@ -14,60 +14,52 @@
 </head>
 <body>
 
-  <!-- TOP NAV -->
-  <nav class="topnav">
-    <a href="index.html" class="topnav__logo">
-      <span class="logo-icon">✦</span>
-      <span>Anastasiia Liuta</span>
-    </a>
-    <div class="topnav__center">
-      <span class="dot"></span>
-      <span>Available for projects</span>
+  <!-- TOP BAR — same Let's talk / Menu pattern as the case pages -->
+  <nav class="case-topbar">
+    <a href="index.html" class="case-pill case-pill--brand">Anastasiia Liuta</a>
+    <div class="case-topbar__group">
+      <a href="https://t.me/LiuAna" target="_blank" rel="noopener" class="case-pill case-pill--cta">Let's talk →</a>
+      <div class="case-menu" id="caseMenu">
+        <button type="button" class="case-pill case-menu__trigger" aria-haspopup="true" aria-expanded="false">
+          Menu <span class="case-menu__dots">··</span>
+        </button>
+        <div class="case-menu__panel" role="menu">
+          <a href="#about" class="case-menu__link" role="menuitem">About</a>
+          <a href="#work" class="case-menu__link" role="menuitem">Work</a>
+          <a href="#experience" class="case-menu__link" role="menuitem">Experience</a>
+          <a href="#contact" class="case-menu__link" role="menuitem">Contact</a>
+          <a href="mailto:anasssta9@gmail.com" class="case-menu__link" role="menuitem">Email</a>
+        </div>
+      </div>
     </div>
-    <a href="https://t.me/LiuAna" target="_blank" rel="noopener" class="topnav__cta">Let's talk →</a>
   </nav>
 
-  <!-- HERO (Olena-style, full-screen) -->
+  <!-- HERO — oversized name with the portrait set into the second line -->
   <header class="hero">
     <div class="hero__bg" aria-hidden="true"></div>
     <div class="hero__grid" aria-hidden="true"></div>
 
-    <!-- Portrait — pinned to the true right edge of the viewport -->
-    <div class="hero__photo">
-      <img src="assets/profile.jpg" alt="Anastasiia Liuta" />
-    </div>
-
-    <!-- Scroll hint — pinned to the true bottom-right of the viewport -->
-    <div class="hero__scroll">
-      <span>scroll</span>
-      <span class="hero__scroll-line"></span>
-    </div>
-
-    <!-- Top meta row — spans the full hero width so "Kraków, Poland" lines up
-         with the photo's right edge, not the narrower text column's edge -->
     <div class="hero__top">
+      <span class="hero__meta">Product Designer · AI-driven</span>
+      <span class="hero__meta hero__meta--status"><span class="dot"></span>Available for projects</span>
+    </div>
+
+    <h1 class="hero__name">
+      <span class="hero__line">Anastasiia</span>
+      <span class="hero__line hero__line--second">
+        <span>Liuta</span>
+        <span class="hero__photo"><img src="assets/profile.jpg" alt="" width="300" height="400" /></span>
+        <span class="hero__accent">product<br />designer.</span>
+      </span>
+    </h1>
+
+    <div class="hero__foot">
       <span class="hero__meta">Portfolio · 2026</span>
       <span class="hero__meta">Kraków, Poland</span>
     </div>
 
-    <div class="hero__inner">
-
-      <!-- Big name -->
-      <h1 class="hero__name">
-        <span class="hero__line">Anastasiia</span>
-        <span class="hero__line hero__line--accent">Liuta.</span>
-      </h1>
-
-      <!-- Role -->
-      <div class="hero__role">
-        <p class="hero__role-main">Product Designer</p>
-        <p class="hero__role-sub">AI-driven · 5+ years</p>
-      </div>
-
-    </div>
-
-    <!-- Decorative ticker — full-bleed, pinned to the true bottom edge of the viewport -->
-    <div class="hero__marquee">
+    <!-- Decorative ticker — full-bleed, pinned to the bottom edge of the viewport -->
+    <div class="hero__marquee" aria-hidden="true">
       <div class="marquee__track">
         <span>Product Design</span><span class="marquee__dot">·</span>
         <span>UX / UI</span><span class="marquee__dot">·</span>
@@ -329,6 +321,23 @@
     }
   </script>
 
+  <!-- TOP BAR MENU -->
+  <script>
+    (function () {
+      var menu = document.getElementById('caseMenu');
+      if (!menu) return;
+      var trigger = menu.querySelector('.case-menu__trigger');
+      function close() { menu.classList.remove('is-open'); trigger.setAttribute('aria-expanded', 'false'); }
+      trigger.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = menu.classList.toggle('is-open');
+        trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      menu.querySelectorAll('.case-menu__link').forEach(function (a) { a.addEventListener('click', close); });
+      document.addEventListener('click', function (e) { if (!menu.contains(e.target)) close(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+    })();
+  </script>
   <script src="js/case-cover.js" defer></script>
 </body>
 </html>
