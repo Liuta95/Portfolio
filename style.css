@@ -160,7 +160,7 @@ ul { list-style: none; }
   z-index: -1;
   background:
     linear-gradient(180deg, rgba(10, 10, 12, 0.55) 0%, rgba(10, 10, 12, 0.35) 40%, rgba(10, 10, 12, 0.85) 82%, var(--bg) 100%),
-    radial-gradient(ellipse 60% 50% at 70% 60%, rgba(234, 179, 8, 0.14) 0%, transparent 70%);
+    radial-gradient(ellipse 60% 50% at 70% 60%, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
 }
 
 .hero__grid {
@@ -234,7 +234,7 @@ ul { list-style: none; }
   border-radius: 0.06em;
   overflow: hidden;
   border: 1px solid var(--panel-border);
-  box-shadow: var(--tile-shadow), 0 0 60px rgba(234, 179, 8, 0.16);
+  box-shadow: var(--tile-shadow);
 }
 
 .hero__photo img {
@@ -245,7 +245,7 @@ ul { list-style: none; }
   display: block;
 }
 
-/* Italic serif accent in the brand amber — two short lines so it
+/* Italic serif accent — two short lines so it
    stays the height of the caps beside it. */
 .hero__accent {
   font-family: var(--font-display);
@@ -255,7 +255,7 @@ ul { list-style: none; }
   font-size: 0.4em;
   line-height: 0.95;
   letter-spacing: -0.01em;
-  color: var(--accent);
+  color: var(--ink);
   margin-bottom: 0.12em;
 }
 
@@ -296,7 +296,7 @@ ul { list-style: none; }
   animation: marquee 40s linear infinite;
 }
 
-.marquee__dot { color: var(--accent); }
+.marquee__dot { color: var(--ink-faint); }
 
 @keyframes marquee {
   from { transform: translateX(0); }
