@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PetPal — Case Study · Anastasiia Liuta</title>
-  <meta name="description" content="PetPal — a pet-sitter marketplace case study. Product strategy, UX flows, and design system work by Anastasiia Liuta, Product Designer." />
+  <meta name="description" content="PetPal — a pet-sitter marketplace case study. Product strategy, owner and sitter flows, and a shared design system by Anastasiia Liuta, Product Designer." />
   <meta property="og:title" content="PetPal — Case Study · Anastasiia Liuta" />
   <meta property="og:description" content="A pet-sitter marketplace designed to make trusting a stranger with your pet feel safe and simple." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,258 +34,272 @@
     </div>
   </nav>
 
-  <!-- CASE HERO -->
-  <header class="case-hero">
-
-    <div class="case-hero__inner">
-      <span class="case-hero__eyebrow">Pet Care · Two-sided Marketplace · Web</span>
-      <h1 class="case-hero__title">PetPal</h1>
-      <p class="case-hero__tagline">
-        A pet-sitter marketplace designed to make trusting a stranger with your pet
-        feel safe, simple, and reassured — from first search to the walk itself.
-      </p>
-
-      <div class="case-hero__actions">
-        <a href="https://petpal-ivory.vercel.app" target="_blank" rel="noopener" class="case-hero__link">View live project ↗</a>
-        <a href="https://github.com/Liuta95/Petpal" target="_blank" rel="noopener" class="case-hero__link case-hero__link--ghost">View code ↗</a>
+  <!-- HERO -->
+  <header class="cs-hero">
+    <div class="cs-wrap cs-hero__grid">
+      <div>
+        <span class="cs-eyebrow">Pet Care · Two-sided Marketplace · Web</span>
+        <h1 class="cs-hero__title">PetPal</h1>
+        <p class="cs-hero__tagline">
+          A pet-sitter marketplace designed to make trusting a stranger with your pet feel safe
+          and simple, from the first search to the walk itself.
+        </p>
+        <dl class="cs-facts">
+          <div><dt>Role</dt><dd>Product Designer</dd></div>
+          <div><dt>Product type</dt><dd>Web marketplace for owners and sitters</dd></div>
+          <div><dt>Timeline</dt><dd>4 weeks · solo</dd></div>
+        </dl>
+        <div class="case-hero__actions">
+          <a href="https://petpal-ivory.vercel.app" target="_blank" rel="noopener" class="case-hero__link">View live project ↗</a>
+          <a href="https://github.com/Liuta95/Petpal" target="_blank" rel="noopener" class="case-hero__link case-hero__link--ghost">View code ↗</a>
+        </div>
+      </div>
+      <div class="cs-hero__visual">
+        <video autoplay muted loop playsinline preload="metadata" poster="assets/petpal-cover-poster.jpg" aria-hidden="true">
+          <source src="assets/petpal-cover.mp4" type="video/mp4" />
+        </video>
       </div>
     </div>
   </header>
 
-  <main class="content">
+  <main>
 
-    <!-- ROLE / TIMELINE / TEAM / SCOPE -->
-    <section class="case-meta reveal">
-      <div class="case-meta__item">
-        <span class="case-meta__label">Role</span>
-        <span class="case-meta__value">Product Designer</span>
-      </div>
-      <div class="case-meta__item">
-        <span class="case-meta__label">Timeline</span>
-        <span class="case-meta__value">4 weeks</span>
-      </div>
-      <div class="case-meta__item">
-        <span class="case-meta__label">Team</span>
-        <span class="case-meta__value">Solo project</span>
-      </div>
-      <div class="case-meta__item">
-        <span class="case-meta__label">Industry</span>
-        <span class="case-meta__value">Pet care · Owners &amp; sitters</span>
-      </div>
-    </section>
-
-    <ul class="case-tags reveal" aria-label="What I did">
-      <li>Product Strategy</li>
-      <li>User Flows</li>
-      <li>Sitter Onboarding</li>
-      <li>Registration &amp; Dashboard</li>
-      <li>Visual Design</li>
-      <li>Design System</li>
-      <li>Prototyping</li>
-      <li>Scenario Review</li>
-    </ul>
-
-    <!-- OVERVIEW -->
-    <section class="case-section reveal" id="overview">
-      <div class="section__head">
-        <h2 class="section__label">Overview</h2>
-        <span class="section__count">01</span>
-      </div>
-      <div class="case-section__body">
-        <p>
-          PetPal connects pet owners with verified, local sitters for walks, drop-in visits,
-          and boarding. The product's core bet: booking pet care should feel closer to
-          asking a trusted friend than gambling on a stranger's profile photo — so trust
-          signals had to be designed in from search all the way through to the walk itself,
-          not bolted on as a review score at the end.
-        </p>
-      </div>
-    </section>
-
-    <!-- PROBLEM / CHALLENGE -->
-    <section class="case-section reveal" id="challenge">
-      <div class="section__head">
-        <h2 class="section__label">The Challenge</h2>
-        <span class="section__count">02</span>
-      </div>
-      <div class="case-section__body">
-        <p>
-          Existing options for pet care sit at two extremes: informal networks (word of mouth,
-          neighborhood Facebook groups) that don't scale past people you already know, or
-          generic service marketplaces that treat a pet sitter like any other gig — sorted by
-          price and star rating, with no way to judge fit before you hand over your keys and
-          your dog.
-        </p>
-        <p>
-          Owners aren't just choosing a service, they're choosing who they trust in their home
-          with something they can't supervise. The interface had to answer three questions before
-          price ever came up: <strong>is this person verified, are they right for my pet, and will
-          I know what's happening while I'm not there?</strong>
-        </p>
-      </div>
-    </section>
-
-    <!-- PROCESS / APPROACH -->
-    <section class="case-section reveal" id="approach">
-      <div class="section__head">
-        <h2 class="section__label">Approach</h2>
-        <span class="section__count">03</span>
-      </div>
-      <div class="case-section__body">
-        <p>
-          I mapped the owner's journey as a trust curve, not a funnel — search, compare, book,
-          during-care reassurance, and after-care review each needed their own trust signal, not
-          just a rating carried over from the last step.
-        </p>
-        <ul class="case-list">
-          <li>Led with location, dates, and pet type as the primary filters, since those narrow results far more usefully than a generic keyword search.</li>
-          <li>Designed an optional AI-match path alongside manual filtering, so browsing never becomes the only way to decide when a list feels overwhelming.</li>
-          <li>Surfaced verification badges, reviews, and availability on the sitter profile ahead of price — trust signals first, transaction second.</li>
-          <li>Extended reassurance past the booking confirmation with real-time updates and GPS-tracked walks, so trust doesn't drop off the moment payment clears.</li>
-          <li>Built a small reusable design system — cards, filters, trust badges, and status states — shared across the owner and sitter-facing sides of the product.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- SITTER FLOW -->
-    <section class="case-section reveal" id="sitter-flow">
-      <div class="section__head">
-        <h2 class="section__label">The Sitter Side</h2>
-        <span class="section__count">04</span>
-      </div>
-      <div class="case-section__body">
-        <p>
-          The product has two scenarios — owners booking care, and sitters offering it. The most
-          detailed flow work went into the sitter side: the <strong>Become a Sitter</strong>
-          application, registration, and the sitter's own dashboard.
-        </p>
-        <ul class="case-list">
-          <li>Structured Become a Sitter as a step-by-step application instead of one long form.</li>
-          <li>Designed registration to hand a new sitter straight into a dedicated dashboard — their own space, separate from the owner-facing catalog.</li>
-          <li>Kept the prototype front-end only at this stage — no backend connection and no real email sending — to get the flow right before building infrastructure behind it.</li>
-        </ul>
-        <p class="case-note">
-          No owner surveys, personas, or competitor analysis were part of this project — the flow
-          work was driven by the product's two core scenarios.
-        </p>
-      </div>
-    </section>
-
-    <!-- TESTING & FEEDBACK -->
-    <section class="case-section reveal" id="testing">
-      <div class="section__head">
-        <h2 class="section__label">Testing &amp; Feedback</h2>
-        <span class="section__count">05</span>
-      </div>
-      <div class="case-section__body">
-        <p>
-          I walked through the prototype end-to-end as a new sitter would, and logged where the
-          flow broke:
-        </p>
-        <ul class="case-list">
-          <li>The application let you complete only two of its steps instead of the full sequence.</li>
-          <li>After submitting, the <strong>Explore</strong> button sent a new sitter to the sitter catalog — the owner's view — instead of to their own dashboard.</li>
-          <li>Registration needed to end in a sitter dashboard; without one, a new sitter had nowhere of their own to land.</li>
-        </ul>
-        <p class="case-note">
-          This was a scenario review I ran myself, not a test with participants. No external user
-          or client feedback was collected for this project.
-        </p>
-      </div>
-    </section>
-
-    <!-- KEY SCREENS -->
-    <section class="case-section reveal" id="screens">
-      <div class="section__head">
-        <h2 class="section__label">Key Screens</h2>
-        <span class="section__count">06</span>
-      </div>
-
-      <div class="case-screens">
-        <div class="case-screen">
-          <div class="case-screen__art case-screen__art--1"><span class="case-screen__mark">01</span></div>
-          <div class="case-screen__body">
-            <span class="case-screen__tag">Entry</span>
-            <h3 class="case-screen__title">Search &amp; Discover</h3>
-            <p class="case-screen__desc">Filters lead with location, dates, and pet type — the three inputs that actually narrow results, instead of a generic keyword search.</p>
-          </div>
+    <!-- PROJECT OVERVIEW -->
+    <section class="cs-section reveal" id="overview" aria-labelledby="overview-title">
+      <div class="cs-wrap cs-overview">
+        <div>
+          <h2 class="cs-h2" id="overview-title">Project Overview</h2>
+          <p class="cs-lead">
+            PetPal connects pet owners with verified local sitters for walks, drop-in visits and
+            boarding. The bet behind it: booking pet care should feel closer to asking a trusted
+            friend than gambling on a stranger's profile photo.
+          </p>
+          <p class="cs-lead">
+            Owners aren't only choosing a service. They're choosing who they trust in their home with
+            something they can't supervise. So the interface had to answer three questions before price
+            came up: <strong>is this person verified, are they right for my pet, and will I know what's
+            happening while I'm away?</strong>
+          </p>
+          <p class="cs-lead">
+            I designed both sides of the marketplace: the owner's path from search to a booking request,
+            and the sitter's path from application to their own dashboard.
+          </p>
         </div>
+        <figure class="cs-overview__media">
+          <img src="assets/petpal/search.jpg" width="1440" height="900" loading="lazy"
+               alt="PetPal home page: a headline about finding a trusted pet sitter, and a search bar with location, dates, pet type, service, Try AI Match and Search" />
+        </figure>
+      </div>
+    </section>
 
-        <div class="case-screen">
-          <div class="case-screen__art case-screen__art--2"><span class="case-screen__mark">02</span></div>
-          <div class="case-screen__body">
-            <span class="case-screen__tag">Decision point</span>
-            <h3 class="case-screen__title">AI Match &amp; Filtering</h3>
-            <p class="case-screen__desc">A one-tap "Try AI Match" sits next to manual filters, so owners can browse themselves or offload the decision when the list feels overwhelming.</p>
+    <!-- ROLE & CONTRIBUTIONS -->
+    <section class="cs-section reveal" aria-labelledby="role-title">
+      <div class="cs-wrap">
+        <div class="cs-band cs-band__grid">
+          <div>
+            <span class="cs-eyebrow">My role</span>
+            <h2 class="cs-h2" id="role-title">Role &amp; Contributions</h2>
+            <p class="cs-lead">
+              I worked on PetPal on my own over four weeks and took it from the product idea to a working
+              prototype: the trust model, both sides' flows, the visual design and a small design system.
+            </p>
           </div>
+          <ul class="cs-glass cs-contrib">
+            <li><strong>Product Strategy:</strong> Mapped the owner's journey as a trust curve rather than a funnel. Search, compare, book, care in progress and the review afterwards each got its own trust signal.</li>
+            <li><strong>Search &amp; AI Match:</strong> Led search with location, dates and pet type, the inputs that narrow results most, and added an optional AI match next to manual filters for owners who'd rather not browse a long list.</li>
+            <li><strong>Sitter Profile &amp; Booking:</strong> Put verification badges, reviews and availability ahead of price, so trust comes before the transaction.</li>
+            <li><strong>Sitter Side:</strong> Designed Become a Sitter as a step-by-step application, and registration that hands a new sitter straight into their own dashboard.</li>
+            <li><strong>Design System:</strong> Built a reusable set of cards, filters, trust badges and status states shared by the owner and sitter sides.</li>
+          </ul>
         </div>
+      </div>
+    </section>
 
-        <div class="case-screen">
-          <div class="case-screen__art case-screen__art--3"><span class="case-screen__mark">03</span></div>
-          <div class="case-screen__body">
-            <span class="case-screen__tag">Core action</span>
-            <h3 class="case-screen__title">Sitter Profile &amp; Booking</h3>
-            <p class="case-screen__desc">Verification badges, reviews, and availability are visible before price — trust signals come first, not the transaction.</p>
+    <!-- RESEARCH -->
+    <section class="cs-section reveal" aria-labelledby="research-title">
+      <div class="cs-wrap">
+        <div class="cs-band">
+          <div class="cs-band__grid">
+            <div>
+              <span class="cs-eyebrow">Research</span>
+              <h2 class="cs-h2" id="research-title">Scenario Review</h2>
+              <p class="cs-lead">
+                PetPal had no research with participants. To check the flows, I walked through the
+                prototype end to end the way a new sitter would meet it, and logged where it broke.
+              </p>
+              <ul class="cs-pills">
+                <li><b>2</b> core scenarios</li>
+                <li><b>Self-run</b> review</li>
+                <li><b>4</b> weeks</li>
+              </ul>
+            </div>
+            <dl class="cs-deflist">
+              <div><dt>Scenarios</dt><dd>Owners booking care, and sitters offering it. The most detailed flow work went into the sitter side.</dd></div>
+              <div><dt>Review scope</dt><dd>The Become a Sitter application, registration and the sitter dashboard, walked through as a first-time sitter.</dd></div>
+              <div><dt>Prototype</dt><dd>Front end only at this stage: no backend and no real email sending, so the flow could be right before any infrastructure was built behind it.</dd></div>
+              <div><dt>Not done</dt><dd>Owner surveys, personas, competitor analysis and tests with participants were not part of this project.</dd></div>
+            </dl>
           </div>
-        </div>
 
-        <div class="case-screen">
-          <div class="case-screen__art case-screen__art--4"><span class="case-screen__mark">04</span></div>
-          <div class="case-screen__body">
-            <span class="case-screen__tag">Outcome</span>
-            <h3 class="case-screen__title">Confirmed &amp; Live Tracking</h3>
-            <p class="case-screen__desc">Confirmation isn't the end of the reassurance — GPS-tracked walks and real-time photo updates carry trust through the actual care session.</p>
-          </div>
-        </div>
-
-        <div class="case-screen case-screen--edge">
-          <div class="case-screen__art case-screen__art--5"><span class="case-screen__mark">05</span></div>
-          <div class="case-screen__body">
-            <span class="case-screen__tag">Edge case</span>
-            <h3 class="case-screen__title">No Sitters Available</h3>
-            <p class="case-screen__desc">An empty search state suggests broadening dates or radius instead of a dead end, so the funnel never just stops.</p>
+          <div class="cs-sub">
+            <span class="cs-eyebrow">What the review found</span>
+            <div class="cs-cards">
+              <article class="cs-card">
+                <div class="cs-card__head"><span class="cs-num">1</span><h3>Application cut short</h3></div>
+                <p>The application let a sitter complete only two of its steps instead of the full sequence.</p>
+              </article>
+              <article class="cs-card">
+                <div class="cs-card__head"><span class="cs-num">2</span><h3>Wrong destination</h3></div>
+                <p>After submitting, the Explore button sent a new sitter to the sitter catalog, which is the owner's view, instead of to their own dashboard.</p>
+              </article>
+              <article class="cs-card">
+                <div class="cs-card__head"><span class="cs-num">3</span><h3>Nowhere to land</h3></div>
+                <p>Registration needed to end in a sitter dashboard. Without one, a new sitter had no space of their own.</p>
+              </article>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- OUTCOMES -->
-    <section class="case-section reveal" id="outcomes">
-      <div class="section__head">
-        <h2 class="section__label">Outcomes</h2>
-        <span class="section__count">07</span>
-      </div>
-      <div class="case-section__body">
-        <p>
-          Shipped a complete owner-facing experience — search, AI-assisted matching, sitter
-          profiles, booking, and real-time care tracking — as a working prototype, backed by a
-          small reusable design system rather than one-off screens.
-        </p>
-        <ul class="case-list">
-          <li>A trust-first information hierarchy: verification and availability read before price on every sitter profile.</li>
-          <li>An edge-case-aware search flow, not just a happy-path demo.</li>
-          <li>A component set (cards, filters, badges, status states) reused consistently across owner and sitter surfaces.</li>
-        </ul>
+    <!-- PART 1 · OWNER SIDE -->
+    <section class="cs-section reveal" id="owner" aria-labelledby="owner-title">
+      <div class="cs-wrap" data-slider>
+        <div class="cs-part__intro">
+          <span class="cs-eyebrow">Part 1 · Owner side</span>
+          <h2 class="cs-h2" id="owner-title">Finding and booking a sitter</h2>
+          <p class="cs-lead">
+            The owner's path is six screens long: search or get matched, compare sitters, check a
+            profile, request a booking and see what happens next. Trust signals appear on every step,
+            not only as a rating at the end.
+          </p>
+        </div>
+
+        <ol class="cs-steps">
+          <li><button type="button" class="cs-step"><span class="cs-num">1</span>Search</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">2</span>AI Match</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">3</span>Results</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">4</span>Profile</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">5</span>Booking</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">6</span>Request sent</button></li>
+        </ol>
+
+        <div class="cs-bar">
+          <span class="cs-counter" aria-live="polite"></span>
+          <span class="cs-progress"><span></span></span>
+          <div class="cs-arrows">
+            <button type="button" class="cs-arrow" data-prev aria-label="Previous screens">←</button>
+            <button type="button" class="cs-arrow" data-next aria-label="Next screens">→</button>
+          </div>
+        </div>
+
+        <div class="cs-track">
+          <figure class="cs-slide">
+            <div class="cs-shot"><img src="assets/petpal/search.jpg" width="1440" height="900" loading="lazy" alt="Home page search bar with location, dates, pet type and service, plus Try AI Match and Search buttons" /></div>
+            <figcaption><h3><span class="cs-num">1</span>Search</h3><p>Location, dates, pet type and service lead the search. Try AI Match sits right next to the Search button.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot"><img src="assets/petpal/ai-match.jpg" width="1440" height="900" loading="lazy" alt="AI Sitter Match dialog with chips for pet personality, special care needs and preferred sitter style, a free-text field and a Match me button" /></div>
+            <figcaption><h3><span class="cs-num">2</span>AI Match</h3><p>For owners who'd rather be matched than browse: pet personality, special care needs and preferred sitter style, then one button.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot"><img src="assets/petpal/results.jpg" width="1440" height="900" loading="lazy" alt="Search results for pet sitters in Warsaw: filter chips for Verified, rating and price, and sitter cards with photo, price, rating, distance and badges" /></div>
+            <figcaption><h3><span class="cs-num">3</span>Results</h3><p>Verified, rating and price work as quick filter chips. Every card shows ID verification, experience and distance next to the price.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot"><img src="assets/petpal/profile.jpg" width="1440" height="900" loading="lazy" alt="Sitter profile: name with ID Verified and Top Rated badges, rating, years of experience, distance, hourly price and a Request Booking button" /></div>
+            <figcaption><h3><span class="cs-num">4</span>Sitter profile</h3><p>Verification, a Top Rated badge, reviews and experience sit next to the name. The booking panel stays in view on the right.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot"><img src="assets/petpal/booking.jpg" width="1440" height="900" loading="lazy" alt="Request a booking: service, duration and dates with a calendar on the left, and a booking summary with fees, total and Send Request on the right" /></div>
+            <figcaption><h3><span class="cs-num">5</span>Booking</h3><p>Service, duration and dates on the left, a live summary with every fee on the right. Nothing is charged until the sitter confirms.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot"><img src="assets/petpal/request-sent.jpg" width="1440" height="900" loading="lazy" alt="Request Sent confirmation with the sitter, service, dates, pet, total, booking ID and a What happens next list" /></div>
+            <figcaption><h3><span class="cs-num">6</span>Request sent</h3><p>A confirmation with the booking details and what happens next, so the owner isn't left waiting without knowing the next step.</p></figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
-    <!-- REFLECTION -->
-    <section class="case-reflection reveal" id="reflection">
-      <div class="section__head">
-        <h2 class="section__label">Reflection</h2>
-        <span class="section__count">08</span>
+    <!-- PART 2 · SITTER SIDE -->
+    <section class="cs-section reveal" id="sitter" aria-labelledby="sitter-title">
+      <div class="cs-wrap" data-slider>
+        <div class="cs-part__intro">
+          <span class="cs-eyebrow">Part 2 · Sitter side</span>
+          <h2 class="cs-h2" id="sitter-title">Becoming a sitter</h2>
+          <p class="cs-lead">
+            The sitter side got the most detailed flow work: an application broken into steps, and a
+            registration that ends in the sitter's own space instead of the owner's catalog.
+          </p>
+        </div>
+
+        <ol class="cs-steps">
+          <li><button type="button" class="cs-step"><span class="cs-num">1</span>Application</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">2</span>Dashboard</button></li>
+        </ol>
+
+        <div class="cs-track">
+          <figure class="cs-slide">
+            <div class="cs-shot"><img src="assets/petpal/sitter-setup.jpg" width="1152" height="720" loading="lazy" alt="Sitter account setup with five steps: your profile, services and rates, identity verification, availability, and submit for review, with time estimates" /></div>
+            <figcaption><h3><span class="cs-num">1</span>Application</h3><p>Become a Sitter is five short steps with progress and a time estimate for each, instead of one long form.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot"><img src="assets/petpal-hero-mockup.jpg" width="2000" height="1500" loading="lazy" style="object-position: center" alt="Sitter dashboard on a tablet: new requests, bookings and earnings this month, upcoming bookings and recent messages" /></div>
+            <figcaption><h3><span class="cs-num">2</span>Dashboard</h3><p>Registration hands the sitter into their own dashboard: new requests, upcoming bookings, earnings and messages.</p></figcaption>
+          </figure>
+        </div>
       </div>
-      <blockquote class="case-reflection__quote">
-        Designing for trust taught me that reassurance has to be continuous, not just
-        upfront — the signals that matter <em>during</em> a booking turned out to carry as
-        much weight as the verification badge someone sees before it.
-      </blockquote>
     </section>
 
-    <!-- CASE NAV FOOTER -->
-    <section class="case-nav-footer reveal">
-      <a href="index.html#work" class="case-nav-footer__link">← All Selected Work</a>
-      <a href="mailto:anasssta9@gmail.com" class="case-nav-footer__cta">Let's talk about your project →</a>
+    <!-- RESULTS -->
+    <section class="cs-section reveal" id="results" aria-labelledby="results-title">
+      <div class="cs-wrap">
+        <div class="cs-results__head">
+          <h2 class="cs-h2" id="results-title">Results</h2>
+          <p class="cs-lead">
+            PetPal is a working prototype, not a launched business, so there are no usage numbers.
+            What it delivers is a complete flow on both sides of the marketplace.
+          </p>
+        </div>
+        <div class="cs-results__grid">
+          <article class="cs-result">
+            <p class="cs-result__label">Owner flow</p>
+            <p class="cs-result__value">Search → request sent</p>
+            <p>A full owner journey in a working prototype: search, AI matching, sitter profiles, booking and confirmation.</p>
+          </article>
+          <article class="cs-result">
+            <p class="cs-result__label">Trust first</p>
+            <p class="cs-result__value">Before price</p>
+            <p>Verification, reviews and availability read before price on every sitter card and profile.</p>
+          </article>
+          <article class="cs-result">
+            <p class="cs-result__label">Sitter side</p>
+            <p class="cs-result__value">5-step application</p>
+            <p>Become a Sitter split into short steps that end in the sitter's own dashboard, not in the owner's catalog.</p>
+          </article>
+          <article class="cs-result">
+            <p class="cs-result__label">Design system</p>
+            <p class="cs-result__value">One component set</p>
+            <p>Cards, filters, trust badges and status states reused across the owner and sitter sides instead of one-off screens.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="cs-section cs-close reveal">
+      <div class="cs-wrap">
+        <blockquote class="cs-quote">
+          Designing for trust taught me that reassurance has to be continuous, not only upfront. The
+          signals that matter <em>during</em> a booking carry as much weight as the verification badge
+          someone sees before it.
+        </blockquote>
+        <div class="case-nav-footer">
+          <a href="index.html#work" class="case-nav-footer__link">← All Selected Work</a>
+          <a href="mailto:anasssta9@gmail.com" class="case-nav-footer__cta">Let's talk about your project →</a>
+        </div>
+      </div>
     </section>
 
   </main>
@@ -301,46 +315,6 @@
     <p class="bottom-links__copyright">© 2026 Anastasiia Liuta · Kraków, Poland</p>
   </footer>
 
-  <script>
-    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
-      document.documentElement.classList.add('has-reveal');
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            io.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-      document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
-    }
-  </script>
-
-  <!-- CASE TOP BAR MENU -->
-  <script>
-    (function () {
-      var menu = document.getElementById('caseMenu');
-      if (!menu) return;
-      var trigger = menu.querySelector('.case-menu__trigger');
-
-      function close() {
-        menu.classList.remove('is-open');
-        trigger.setAttribute('aria-expanded', 'false');
-      }
-      function toggle(e) {
-        e.stopPropagation();
-        var open = menu.classList.toggle('is-open');
-        trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
-      }
-      trigger.addEventListener('click', toggle);
-      document.addEventListener('click', function (e) {
-        if (!menu.contains(e.target)) close();
-      });
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') close();
-      });
-    })();
-  </script>
-
+  <script src="js/case.js" defer></script>
 </body>
 </html>

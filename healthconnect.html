@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HealthConnect — Case Study · Anastasiia Liuta</title>
-  <meta name="description" content="HealthConnect — a multi-role healthcare platform case study. Role-based UX, CRM workflows, and design system work by Anastasiia Liuta, Product Designer." />
+  <meta name="description" content="HealthConnect — a multi-role healthcare platform case study. Intake-form restructuring, role-based UX, clinical documentation and design system work by Anastasiia Liuta, Product Designer." />
   <meta property="og:title" content="HealthConnect — Case Study · Anastasiia Liuta" />
   <meta property="og:description" content="A multi-role healthcare platform connecting patients, doctors, and attorneys through one coordinated workflow." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,487 +34,280 @@
     </div>
   </nav>
 
-  <!-- HORIZONTAL CASE SCROLL: on desktop, wheel/trackpad/keyboard input is
-       redirected to move this row sideways instead of scrolling the page
-       vertically (see script at the bottom). Below 768px it's a plain
-       vertical stack instead — see the matching CSS media query. -->
-  <div class="h-page" id="hPage">
+  <!-- HERO -->
+  <header class="cs-hero">
+    <div class="cs-wrap cs-hero__grid">
+      <div>
+        <span class="cs-eyebrow">HealthTech · Multi-role SaaS · Web &amp; Mobile</span>
+        <h1 class="cs-hero__title">HealthConnect</h1>
+        <p class="cs-hero__tagline">
+          A multi-role healthcare platform connecting patients, doctors and attorneys through one
+          coordinated workflow, for people moving between medical care and legal support after a
+          car accident.
+        </p>
+        <dl class="cs-facts">
+          <div><dt>Role</dt><dd>UX/UI Designer</dd></div>
+          <div><dt>Timeline</dt><dd>Mar 2024 – Jan 2025</dd></div>
+          <div><dt>Domain</dt><dd>HealthTech · Personal-injury care</dd></div>
+        </dl>
+      </div>
+      <div class="cs-hero__visual">
+        <video autoplay muted loop playsinline preload="metadata" poster="assets/healthconnect/cover-poster.jpg" aria-hidden="true">
+          <source src="assets/healthconnect/cover.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </header>
 
-    <!-- PANEL 1: HERO -->
-    <section class="h-panel h-panel--hero">
-      <header class="case-hero">
-        <div class="case-hero__inner">
-          <span class="case-hero__eyebrow">HealthTech · Personal-Injury Care · Multi-role SaaS · Web &amp; Mobile</span>
-          <h1 class="case-hero__title">HealthConnect</h1>
-          <p class="case-hero__tagline">
-            A multi-role healthcare platform connecting patients, doctors, and attorneys
-            through one coordinated workflow — built to help people navigating car-accident
-            injury claims move fast between medical care and legal support.
+  <main>
+
+    <!-- PROJECT OVERVIEW -->
+    <section class="cs-section reveal" id="overview" aria-labelledby="overview-title">
+      <div class="cs-wrap cs-overview">
+        <div>
+          <h2 class="cs-h2" id="overview-title">Project Overview</h2>
+          <p class="cs-lead">
+            HealthConnect is a multi-role healthcare SaaS platform built around a specific, high-stakes
+            moment: someone injured in a car accident who needs to reach a doctor and a lawyer fast,
+            without the process falling apart between the two.
+          </p>
+          <p class="cs-lead">
+            Four roles work off the same case without seeing the same interface. The design challenge
+            was building connected but role-specific workflows in a high-trust, data-heavy environment,
+            where getting the information architecture wrong puts someone's care or case at risk.
+          </p>
+          <p class="cs-lead">
+            I owned the product design across web and mobile: patient onboarding, appointment
+            scheduling, video consultations, clinical documentation, CRM tools for the care team and
+            the design system underneath them.
           </p>
         </div>
-      </header>
-    </section>
-
-    <!-- PANEL 2: META + OVERVIEW -->
-    <section class="h-panel">
-      <div class="h-panel__inner">
-        <div class="case-meta">
-          <div class="case-meta__item">
-            <span class="case-meta__label">Role</span>
-            <span class="case-meta__value">UX/UI Designer</span>
-          </div>
-          <div class="case-meta__item">
-            <span class="case-meta__label">Timeline</span>
-            <span class="case-meta__value">Mar 2024 – Jan 2025</span>
-          </div>
-          <div class="case-meta__item">
-            <span class="case-meta__label">Industry</span>
-            <span class="case-meta__value">HealthTech · Personal-injury care</span>
-          </div>
-          <div class="case-meta__item">
-            <span class="case-meta__label">Team</span>
-            <span class="case-meta__value">CEO · PM · Backend &amp; frontend engineers · QA</span>
-          </div>
-        </div>
-
-        <ul class="case-tags" aria-label="What I did">
-          <li>Requirements Analysis</li>
-          <li>Intake-Form Restructuring</li>
-          <li>Information Architecture</li>
-          <li>Role-based User Flows</li>
-          <li>Responsive UI</li>
-          <li>CRM Tooling</li>
-          <li>Design System</li>
-          <li>Interactive Prototyping</li>
-          <li>Developer Handoff</li>
-        </ul>
-
-        <section class="case-section" id="overview" style="padding-bottom: 0;">
-          <div class="section__head">
-            <h2 class="section__label">Overview</h2>
-            <span class="section__count">01</span>
-          </div>
-          <div class="case-section__body">
-            <p>
-              HealthConnect is a multi-role healthcare SaaS platform that connects patients, doctors,
-              and attorneys through one coordinated case — built around a specific, high-stakes
-              moment: someone injured in a car accident who needs to reach a doctor and a lawyer fast,
-              without the process falling apart between the two.
-            </p>
-            <p>
-              I owned the end-to-end product design across web and mobile — patient onboarding,
-              appointment scheduling, secure video consultations, CRM-style patient-data management
-              for the care team, and the design system underneath all four surfaces. The core
-              responsibility wasn't styling screens; it was structuring one connected ecosystem so a
-              single case stayed legible to four very different audiences at once.
-            </p>
-          </div>
-        </section>
+        <figure class="cs-overview__media">
+          <img src="assets/healthconnect/doctor-home.png?v=2" width="1350" height="960" loading="lazy"
+               alt="Doctor home screen: a Documentation Tasks queue listing patients needing a signature, incomplete records, or multi-visit review" />
+        </figure>
       </div>
     </section>
 
-    <!-- PANEL 3: CHALLENGE -->
-    <section class="h-panel">
-      <div class="h-panel__inner">
-        <section class="case-section" id="challenge" style="padding-bottom: 0;">
-          <div class="section__head">
-            <h2 class="section__label">The Challenge</h2>
-            <span class="section__count">02</span>
-          </div>
-          <div class="case-section__body">
-            <p>Four roles needed to work off the same case without seeing the same interface:</p>
-            <ul class="case-list">
-              <li><strong>Patients</strong> needed a calm, guided experience for registration, health information, appointment booking, and virtual consultations — not a clinical form dump.</li>
-              <li><strong>Doctors</strong> needed fast access to patient cases, visit details, clinical statuses, referrals, and whatever action was still outstanding before or after an appointment.</li>
-              <li><strong>Attorneys</strong> needed visibility into relevant case progress without exposure to clinical workflows that weren't theirs to see.</li>
-              <li><strong>Care and operations teams</strong> needed CRM tools to manage patient data, assignments, warnings, communications, and workflow states at scale.</li>
-            </ul>
-            <p>
-              The design challenge was building connected but role-specific workflows for a
-              high-trust, data-heavy environment — where getting the information architecture wrong
-              doesn't just look messy, it puts someone's care or case at risk.
+    <!-- ROLE & CONTRIBUTIONS -->
+    <section class="cs-section reveal" aria-labelledby="role-title">
+      <div class="cs-wrap">
+        <div class="cs-band cs-band__grid">
+          <div>
+            <span class="cs-eyebrow">My role</span>
+            <h2 class="cs-h2" id="role-title">Role &amp; Contributions</h2>
+            <p class="cs-lead">
+              Over about ten months I worked with the CEO, a product manager, backend and frontend
+              engineers and QA. I designed one connected system rather than four separate apps, and
+              stayed with the engineers through implementation.
             </p>
           </div>
-        </section>
-      </div>
-    </section>
-
-    <!-- PANEL: DISCOVERY -->
-    <section class="h-panel">
-      <div class="h-panel__inner">
-        <section class="case-section" id="discovery" style="padding-bottom: 0;">
-          <div class="section__head">
-            <h2 class="section__label">Discovery</h2>
-            <span class="section__count">03</span>
-          </div>
-          <div class="case-section__body">
-            <p>
-              The heaviest patient-facing piece was the <strong>medical intake form</strong> — a long,
-              dense questionnaire a patient had to complete before their first visit, often just days
-              after an accident. Before redesigning anything, I took the existing form apart.
-            </p>
-            <ul class="case-list">
-              <li>Collected every question from the form into Figma, so the whole questionnaire could be seen, grouped, and annotated in one place.</li>
-              <li>Analysed its structure — how questions were grouped, where the same information was asked more than once, and which sections demanded the most effort from the patient.</li>
-              <li>Identified where completion was most likely to break down: not any single question, but the sheer length and medical density of the form as a whole.</li>
-            </ul>
-            <p class="case-note">
-              Discovery here was a requirements and form analysis, done together with the CEO and a
-              physician familiar with these questionnaires. Separate interviews with doctors or
-              attorneys and a competitive analysis were not part of this project.
-            </p>
-          </div>
-        </section>
-      </div>
-    </section>
-
-    <!-- PANEL: WORKING SESSIONS -->
-    <section class="h-panel">
-      <div class="h-panel__inner">
-        <section class="case-section" id="sessions" style="padding-bottom: 0;">
-          <div class="section__head">
-            <h2 class="section__label">Working Sessions</h2>
-            <span class="section__count">04</span>
-          </div>
-          <div class="case-section__body">
-            <p>
-              I reviewed the form in working sessions with the <strong>CEO</strong> and a
-              <strong>physician</strong> who knew these questionnaires from practice — the physician
-              confirming what was clinically necessary, the CEO what the business needed to keep.
-              Together we decided:
-            </p>
-            <ul class="case-list">
-              <li>To split the form into thematic steps instead of one long scroll, so a patient moves through a few focused sections with visible progress.</li>
-              <li>Which overlapping questions to merge, and which to remove because they duplicated information already collected elsewhere.</li>
-              <li>To keep clinically required questions intact — changing their order and grouping, not their substance.</li>
-            </ul>
-            <p style="margin-top: 20px;">
-              <strong>The hardest trade-off</strong> was balancing the completeness doctors needed
-              against what an injured patient could realistically finish. Beyond restructuring the
-              form itself, I explored ways to support completion: reminders for unfinished profiles,
-              help from care-team staff, and filling the form in together with the patient on a call.
-            </p>
-          </div>
-        </section>
-      </div>
-    </section>
-
-    <!-- PANEL 4: APPROACH -->
-    <section class="h-panel">
-      <div class="h-panel__inner">
-        <section class="case-section" id="approach" style="padding-bottom: 0;">
-          <div class="section__head">
-            <h2 class="section__label">Approach</h2>
-            <span class="section__count">05</span>
-          </div>
-          <div class="case-section__body">
-            <p>
-              I designed the platform as one connected ecosystem rather than four separate apps —
-              patient-facing journeys, doctor workflows, attorney access, and internal CRM operations
-              all had to stay consistent with each other, not just internally polished.
-            </p>
-            <ul class="case-list">
-              <li>Mapped each role to its own entry point and information density — patients get a guided linear flow, doctors get a document-first queue, attorneys get a filtered case view, ops get a full CRM table.</li>
-              <li>Replaced free-text charting with a structured consultation-report builder: chief-complaint chips filter a coded diagnosis list, paired with referral, medication, and billing panels in one view.</li>
-              <li>Kept the referral chain — patient → doctor → attorney — visible on every visit record, so coordination didn't depend on someone remembering to loop the other side in.</li>
-              <li>Built a shared component system (status pills, chip filters, data tables, document cards) reused across all four surfaces, so the product read as one system even as each role's screens diverged.</li>
-              <li>Delivered high-fidelity, responsive interfaces and interactive prototypes, then worked directly with backend and frontend engineers through implementation.</li>
-            </ul>
-          </div>
-        </section>
-      </div>
-    </section>
-
-    <!-- PANEL 5: KEY SCREENS INTRO -->
-    <section class="h-panel">
-      <div class="h-panel__inner">
-        <section class="case-section" id="screens" style="padding-bottom: 0;">
-          <div class="section__head">
-            <h2 class="section__label">Key Screens</h2>
-            <span class="section__count">06</span>
-          </div>
-          <p style="font-size: 13px; color: var(--ink-faint); margin: -8px 0 28px; line-height: 1.6;">
-            Exported directly from the production Figma file, unedited — the logo shown is a
-            placeholder mark from the design file, not the client's real branding.
-          </p>
-          <ul class="case-screens-legend" style="margin-bottom: 0;">
-            <li>
-              <span class="case-screens-legend__tag">Entry</span>
-              <h3 class="case-screens-legend__title">Doctor Home &amp; Documentation Tasks</h3>
-              <p class="case-screens-legend__desc">A triaged task queue — signature-ready records, incomplete documentation, and multi-visit reviews — surfaces what needs the doctor's attention first, ahead of a flat patient list.</p>
-            </li>
-            <li>
-              <span class="case-screens-legend__tag">Core workflow</span>
-              <h3 class="case-screens-legend__title">Consultation Report &amp; Diagnosis</h3>
-              <p class="case-screens-legend__desc">A structured, step-by-step report — chief complaint and clinical assessment feed a suggested ICD-10 diagnosis list, and the record can't move to a treatment plan until one is selected.</p>
-            </li>
-            <li>
-              <span class="case-screens-legend__tag">Finalize</span>
-              <h3 class="case-screens-legend__title">Medical Record Review</h3>
-              <p class="case-screens-legend__desc">The full draft record next to the same diagnosis panel, with current complaints pulled forward and codes already suggested from referral — so signing off is a review, not a re-entry.</p>
-            </li>
+          <ul class="cs-glass cs-contrib">
+            <li><strong>Intake Form Restructuring:</strong> Took apart the long medical intake form with the CEO and a physician and rebuilt it as thematic steps with visible progress.</li>
+            <li><strong>Role-based Flows:</strong> Gave each role its own entry point and information density: a guided flow for patients, a document-first queue for doctors, a filtered case view for attorneys and a full CRM table for the care team.</li>
+            <li><strong>Clinical Documentation:</strong> Replaced free-text charting with a structured consultation report, where chief-complaint chips filter a coded diagnosis list.</li>
+            <li><strong>Referral Chain:</strong> Kept patient → doctor → attorney visible on every visit record, so coordination didn't depend on someone remembering to loop the other side in.</li>
+            <li><strong>Design System &amp; Handoff:</strong> Built shared status pills, chip filters, data tables and document cards for all four roles, and delivered responsive high-fidelity interfaces and interactive prototypes.</li>
           </ul>
-        </section>
+        </div>
       </div>
     </section>
 
-    <!-- PANEL 6: SHOWCASE — Doctor Home (primary) + Consultation Report (secondary) -->
-    <section class="h-panel h-panel--showcase">
-      <div class="showcase-container">
-        <div class="showcase-row">
-          <div class="showcase-frame showcase-frame--primary">
-            <img class="showcase-img" width="1350" height="960" src="assets/healthconnect/doctor-home.png?v=2" alt="Doctor home screen: a Documentation Tasks queue listing patients needing a signature, incomplete records, or multi-visit review, with counts for documentation tasks and records ready for signature" />
+    <!-- RESEARCH -->
+    <section class="cs-section reveal" aria-labelledby="research-title">
+      <div class="cs-wrap">
+        <div class="cs-band">
+          <div class="cs-band__grid">
+            <div>
+              <span class="cs-eyebrow">Research</span>
+              <h2 class="cs-h2" id="research-title">Discovery &amp; Working Sessions</h2>
+              <p class="cs-lead">
+                The heaviest patient-facing piece was the medical intake form: a long, dense
+                questionnaire a patient had to finish before their first visit, often days after an
+                accident. Before redesigning anything, I took it apart.
+              </p>
+              <ul class="cs-pills">
+                <li><b>Form</b> analysis</li>
+                <li><b>CEO</b> + <b>physician</b></li>
+                <li><b>Working</b> sessions</li>
+              </ul>
+            </div>
+            <dl class="cs-deflist">
+              <div><dt>Form analysis</dt><dd>Collected every question into Figma, then analysed how they were grouped, where the same information was asked twice and which sections demanded the most effort.</dd></div>
+              <div><dt>Working sessions</dt><dd>Reviewed the form with the CEO and a physician who knew these questionnaires from practice: the physician confirmed what was clinically necessary, the CEO what the business needed to keep.</dd></div>
+              <div><dt>Main risk</dt><dd>Completion was most likely to break down not on one question but on the length and medical density of the form as a whole.</dd></div>
+              <div><dt>Not done</dt><dd>Interviews with doctors or attorneys, competitive analysis and usability testing were not part of this project.</dd></div>
+            </dl>
           </div>
-          <div class="showcase-frame showcase-frame--secondary">
-            <img class="showcase-img" width="1440" height="1024" src="assets/healthconnect/screen-2.png?v=2" alt="Consultation report for a patient visit, on the Diagnosis step: patient and visit details, chief complaint, clinical assessment, and a right-hand panel of suggested ICD-10 diagnoses with one selected" />
+
+          <div class="cs-sub">
+            <span class="cs-eyebrow">Decisions from the sessions</span>
+            <div class="cs-cards">
+              <article class="cs-card">
+                <div class="cs-card__head"><span class="cs-num">1</span><h3>Thematic steps</h3></div>
+                <p>Split the form into a few focused sections with visible progress instead of one long scroll.</p>
+              </article>
+              <article class="cs-card">
+                <div class="cs-card__head"><span class="cs-num">2</span><h3>Merge and remove</h3></div>
+                <p>Merged overlapping questions and removed the ones that duplicated information already collected elsewhere.</p>
+              </article>
+              <article class="cs-card">
+                <div class="cs-card__head"><span class="cs-num">3</span><h3>Clinical core intact</h3></div>
+                <p>Kept clinically required questions, changing their order and grouping, not their substance.</p>
+              </article>
+            </div>
+            <p class="cs-note">
+              The hardest trade-off was the completeness doctors needed against what an injured patient
+              could realistically finish. Beyond the form itself, I explored ways to support completion:
+              reminders for unfinished profiles, help from care-team staff, and filling the form in
+              together with the patient on a call.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PANEL 7: SHOWCASE — Medical Record Review -->
-    <section class="h-panel h-panel--showcase">
-      <div class="showcase-container">
-        <div class="showcase-row">
-          <div class="showcase-frame showcase-frame--primary">
-            <img class="showcase-img" width="1440" height="1024" src="assets/healthconnect/screen-3.png" alt="Medical record draft for a patient visit next to a Select Diagnosis panel: current complaints, suggested and referral-sourced ICD-10 codes, and one diagnosis already selected as primary" />
-          </div>
+    <!-- PART 1 · FOUR ROLES -->
+    <section class="cs-section reveal" id="roles" aria-labelledby="roles-title">
+      <div class="cs-wrap">
+        <div class="cs-part__intro">
+          <span class="cs-eyebrow">Part 1 · System</span>
+          <h2 class="cs-h2" id="roles-title">Four roles, one case</h2>
+          <p class="cs-lead">
+            Patient-facing journeys, doctor workflows, attorney access and internal CRM operations had
+            to stay consistent with each other, not only polished on their own.
+          </p>
+        </div>
+        <div class="cs-cards">
+          <article class="cs-card">
+            <div class="cs-card__head"><span class="cs-num">1</span><h3>Patients</h3></div>
+            <p>A calm, guided experience for registration, health information, booking and virtual consultations, not a clinical form dump.</p>
+          </article>
+          <article class="cs-card">
+            <div class="cs-card__head"><span class="cs-num">2</span><h3>Doctors</h3></div>
+            <p>Fast access to cases, visit details, clinical statuses, referrals and whatever is still outstanding before or after an appointment.</p>
+          </article>
+          <article class="cs-card">
+            <div class="cs-card__head"><span class="cs-num">3</span><h3>Attorneys</h3></div>
+            <p>Visibility into relevant case progress without exposure to clinical workflows that aren't theirs to see.</p>
+          </article>
+          <article class="cs-card">
+            <div class="cs-card__head"><span class="cs-num">4</span><h3>Care team</h3></div>
+            <p>CRM tools to manage patient data, assignments, warnings, communications and workflow states at scale.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- PANEL: FEEDBACK & VALIDATION -->
-    <section class="h-panel">
-      <div class="h-panel__inner">
-        <section class="case-section" id="validation" style="padding-bottom: 0;">
-          <div class="section__head">
-            <h2 class="section__label">Feedback &amp; Validation</h2>
-            <span class="section__count">07</span>
+    <!-- PART 2 · DOCTOR WORKFLOW -->
+    <section class="cs-section reveal" id="doctor" aria-labelledby="doctor-title">
+      <div class="cs-wrap" data-slider>
+        <div class="cs-part__intro">
+          <span class="cs-eyebrow">Part 2 · Web</span>
+          <h2 class="cs-h2" id="doctor-title">The doctor's workflow</h2>
+          <p class="cs-lead">
+            A doctor's day runs from a task queue, through a structured consultation report, to a
+            record that is reviewed rather than re-entered. These screens are exported directly from
+            the production Figma file, unedited. The logo is a placeholder mark from the design file,
+            not the client's branding.
+          </p>
+        </div>
+
+        <ol class="cs-steps">
+          <li><button type="button" class="cs-step"><span class="cs-num">1</span>Task queue</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">2</span>Consultation report</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">3</span>Record review</button></li>
+        </ol>
+
+        <div class="cs-bar">
+          <span class="cs-counter" aria-live="polite"></span>
+          <span class="cs-progress"><span></span></span>
+          <div class="cs-arrows">
+            <button type="button" class="cs-arrow" data-prev aria-label="Previous screens">←</button>
+            <button type="button" class="cs-arrow" data-next aria-label="Next screens">→</button>
           </div>
-          <div class="case-section__body">
-            <p>
-              Design decisions were validated with the CEO and the physician in the working sessions
-              above. No formal usability testing or structured patient-feedback round was run within
-              this project, so I'm not presenting results from one.
-            </p>
-            <p>
-              The main risk — patients abandoning a long medical form partway through — came from my
-              own analysis of the form's length and density, and the design answers it directly:
-              thematic steps with visible progress, a way to save and come back later, and the
-              completion-support options explored alongside the form.
-            </p>
-            <p class="case-note">
-              If the project continued, the first thing I'd measure is completion rate per step —
-              to see where patients actually drop off, rather than where I expect them to.
-            </p>
-          </div>
-        </section>
+        </div>
+
+        <div class="cs-track">
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural"><img src="assets/healthconnect/doctor-home.png?v=2" width="1350" height="960" loading="lazy" alt="Doctor home screen: a Documentation Tasks queue listing patients needing a signature, incomplete records, or multi-visit review, with counts for each" /></div>
+            <figcaption><h3><span class="cs-num">1</span>Task queue</h3><p>Signature-ready records, incomplete documentation and multi-visit reviews come first, ahead of a flat patient list.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural"><img src="assets/healthconnect/screen-2.png?v=2" width="1440" height="1024" loading="lazy" alt="Consultation report on the Diagnosis step: patient and visit details, chief complaint, clinical assessment, and suggested ICD-10 diagnoses with one selected" /></div>
+            <figcaption><h3><span class="cs-num">2</span>Consultation report</h3><p>Chief complaint and clinical assessment feed a suggested ICD-10 list, and the record can't move to a treatment plan until a diagnosis is selected.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural"><img src="assets/healthconnect/screen-3.png" width="1440" height="1024" loading="lazy" alt="Medical record draft next to a Select Diagnosis panel with current complaints, suggested and referral-sourced ICD-10 codes, and one primary diagnosis selected" /></div>
+            <figcaption><h3><span class="cs-num">3</span>Record review</h3><p>The full draft next to the same diagnosis panel, with complaints pulled forward and codes suggested from the referral, so signing off is a review.</p></figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
-    <!-- PANEL 9: OUTCOMES -->
-    <section class="h-panel">
-      <div class="h-panel__inner">
-        <section class="case-section" id="outcomes" style="padding-bottom: 0;">
-          <div class="section__head">
-            <h2 class="section__label">Outcomes</h2>
-            <span class="section__count">08</span>
-          </div>
-          <div class="case-section__body">
-            <p>
-              Shipped role-based interfaces spanning patient onboarding, appointment scheduling,
-              video consultations, structured clinical documentation, and CRM operations — across
-              web and supporting mobile flows — over a ~10-month engagement with a full
-              cross-functional product team.
-            </p>
-            <ul class="case-list">
-              <li>A restructured patient intake form — thematic steps with visible progress, overlapping questions merged and duplicates removed, clinically required questions kept intact.</li>
-              <li>A shared component and design-system foundation reused consistently across all four roles, instead of one-off screens per surface.</li>
-              <li>A structured consultation-report workflow that replaced free-text charting with chip-driven, coded intake.</li>
-              <li>Design delivered through high-fidelity, responsive interfaces and interactive prototypes, with direct collaboration through developer implementation.</li>
-            </ul>
-          </div>
-        </section>
+    <!-- RESULTS -->
+    <section class="cs-section reveal" id="results" aria-labelledby="results-title">
+      <div class="cs-wrap">
+        <div class="cs-results__head">
+          <h2 class="cs-h2" id="results-title">Results</h2>
+          <p class="cs-lead">
+            No usability testing or patient-feedback round was run in this project, so there are no
+            before-and-after numbers. Design decisions were validated with the CEO and the physician.
+          </p>
+        </div>
+        <div class="cs-results__grid">
+          <article class="cs-result">
+            <p class="cs-result__label">Intake form</p>
+            <p class="cs-result__value">Thematic steps</p>
+            <p>Restructured with visible progress and a way to save and come back. Overlaps merged, duplicates removed, clinical questions kept.</p>
+          </article>
+          <article class="cs-result">
+            <p class="cs-result__label">Roles</p>
+            <p class="cs-result__value">4 in one system</p>
+            <p>Patients, doctors, attorneys and the care team on one shared component foundation instead of one-off screens per surface.</p>
+          </article>
+          <article class="cs-result">
+            <p class="cs-result__label">Clinical documentation</p>
+            <p class="cs-result__value">Coded, not free text</p>
+            <p>A structured consultation report with chip-driven intake and suggested ICD-10 codes replaced free-text charting.</p>
+          </article>
+          <article class="cs-result">
+            <p class="cs-result__label">Next to measure</p>
+            <p class="cs-result__value">Completion per step</p>
+            <p>If the project continued, I'd measure where patients actually drop off in the form, rather than where I expect them to.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- PANEL 10: REFLECTION -->
-    <section class="h-panel">
-      <div class="h-panel__inner">
-        <section class="case-reflection" id="reflection" style="padding-bottom: 0;">
-          <div class="section__head">
-            <h2 class="section__label">Reflection</h2>
-            <span class="section__count">09</span>
-          </div>
-          <blockquote class="case-reflection__quote">
-            Designing four roles into one connected system taught me that consistency isn't about
-            making every screen look the same — it's about keeping the <em>same</em> underlying case
-            legible from four completely different vantage points, without ever showing someone more
-            than their role needs to see.
-          </blockquote>
-        </section>
-      </div>
-    </section>
-
-    <!-- PANEL 11: CASE NAV FOOTER -->
-    <section class="h-panel">
-      <div class="h-panel__inner">
-        <section class="case-nav-footer">
+    <!-- CLOSING -->
+    <section class="cs-section cs-close reveal">
+      <div class="cs-wrap">
+        <blockquote class="cs-quote">
+          Designing four roles into one connected system taught me that consistency isn't about making
+          every screen look the same. It's about keeping the <em>same</em> case legible from four
+          different vantage points, without showing anyone more than their role needs to see.
+        </blockquote>
+        <div class="case-nav-footer">
           <a href="index.html#work" class="case-nav-footer__link">← All Selected Work</a>
           <a href="mailto:anasssta9@gmail.com" class="case-nav-footer__cta">Let's talk about your project →</a>
-        </section>
+        </div>
       </div>
     </section>
 
-    <!-- PANEL 12: BOTTOM LINKS -->
-    <section class="h-panel">
-      <div class="h-panel__inner">
-        <footer class="bottom-links" style="padding: 0;">
-          <div class="bottom-links__row">
-            <a href="mailto:anasssta9@gmail.com">anasssta9@gmail.com</a>
-            <a href="tel:+48577202312">+48 577 202 312</a>
-            <a href="#" target="_blank" rel="noopener">LinkedIn ↗</a>
-            <a href="#" target="_blank" rel="noopener">Behance ↗</a>
-          </div>
-          <p class="bottom-links__copyright">© 2026 Anastasiia Liuta · Kraków, Poland</p>
-        </footer>
-      </div>
-    </section>
+  </main>
 
-  </div>
+  <!-- BOTTOM LINKS -->
+  <footer class="bottom-links">
+    <div class="bottom-links__row">
+      <a href="mailto:anasssta9@gmail.com">anasssta9@gmail.com</a>
+      <a href="tel:+48577202312">+48 577 202 312</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="#" target="_blank" rel="noopener">Behance ↗</a>
+    </div>
+    <p class="bottom-links__copyright">© 2026 Anastasiia Liuta · Kraków, Poland</p>
+  </footer>
 
-  <!-- Scroll-direction hint: fades in once, hints that wheel input pans sideways -->
-  <div class="h-hint" id="hHint" aria-hidden="true">
-    <span>SCROLL</span>
-    <span class="h-hint__track"><span class="h-hint__fill" id="hHintFill"></span></span>
-    <span>→</span>
-  </div>
-
-  <!-- No scroll-triggered fade-up here: that .reveal animation is tuned
-       for vertical page scroll, and scrolling itself already IS the
-       reveal in this horizontal-panel layout — a second fade on top
-       of it fought with IntersectionObserver's async timing (a panel
-       jumped to could sit mid-transition, offset and translucent). -->
-
-
-  <!-- CASE TOP BAR MENU -->
-  <script>
-    (function () {
-      var menu = document.getElementById('caseMenu');
-      if (!menu) return;
-      var trigger = menu.querySelector('.case-menu__trigger');
-
-      function close() {
-        menu.classList.remove('is-open');
-        trigger.setAttribute('aria-expanded', 'false');
-      }
-      function toggle(e) {
-        e.stopPropagation();
-        var open = menu.classList.toggle('is-open');
-        trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
-      }
-      trigger.addEventListener('click', toggle);
-      document.addEventListener('click', function (e) {
-        if (!menu.contains(e.target)) close();
-      });
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') close();
-      });
-    })();
-  </script>
-
-  <!-- HORIZONTAL CASE SCROLL: redirects vertical wheel / trackpad / arrow-key
-       input into horizontal motion on the .h-page row, with simple inertia.
-       Disabled entirely below the 768px breakpoint — mobile uses the plain
-       vertical stack from the matching CSS media query instead. -->
-  <script>
-    (function () {
-      var BREAKPOINT = 768;
-      var page = document.getElementById('hPage');
-      if (!page) return;
-
-      function isDesktop() { return window.innerWidth > BREAKPOINT; }
-      if (!isDesktop()) return;
-
-      var current = 0;
-      var target = 0;
-      var maxX = 0;
-      var raf = null;
-
-      function recalcMax() {
-        maxX = Math.max(0, page.scrollWidth - window.innerWidth);
-      }
-
-      var hintFill = document.getElementById('hHintFill');
-      var hint = document.getElementById('hHint');
-
-      function updateHint() {
-        if (!hintFill) return;
-        var pct = maxX > 0 ? Math.min(100, (current / maxX) * 100) : 0;
-        hintFill.style.width = Math.max(6, pct) + '%';
-        if (pct > 2 && hint) hint.style.animation = 'none', hint.style.opacity = '0';
-      }
-
-      function tick() {
-        var diff = target - current;
-        if (Math.abs(diff) < 0.5) {
-          current = target;
-          page.scrollLeft = current;
-          updateHint();
-          raf = null;
-          return;
-        }
-        current += diff * 0.14;
-        page.scrollLeft = current;
-        updateHint();
-        raf = requestAnimationFrame(tick);
-      }
-
-      function go(delta) {
-        recalcMax();
-        target = Math.max(0, Math.min(maxX, target + delta));
-        if (!raf) raf = requestAnimationFrame(tick);
-      }
-
-      window.addEventListener('wheel', function (e) {
-        if (!isDesktop()) return;
-        var active = document.activeElement;
-        if (active && /INPUT|TEXTAREA|SELECT/.test(active.tagName)) return;
-        e.preventDefault();
-        go(e.deltaY || e.deltaX);
-      }, { passive: false });
-
-      var touchX = 0, touchY = 0, touching = false;
-      window.addEventListener('touchstart', function (e) {
-        if (!isDesktop()) return;
-        touchX = e.touches[0].clientX;
-        touchY = e.touches[0].clientY;
-        touching = true;
-      }, { passive: true });
-
-      window.addEventListener('touchmove', function (e) {
-        if (!isDesktop() || !touching) return;
-        var dx = touchX - e.touches[0].clientX;
-        var dy = touchY - e.touches[0].clientY;
-        if (Math.abs(dx) > Math.abs(dy)) {
-          e.preventDefault();
-          go(dx * 1.6);
-          touchX = e.touches[0].clientX;
-        }
-      }, { passive: false });
-
-      window.addEventListener('keydown', function (e) {
-        if (!isDesktop()) return;
-        var active = document.activeElement;
-        if (active && /INPUT|TEXTAREA|SELECT/.test(active.tagName)) return;
-        if (e.key === 'ArrowRight' || e.key === 'PageDown') { go(window.innerWidth); e.preventDefault(); }
-        if (e.key === 'ArrowLeft' || e.key === 'PageUp') { go(-window.innerWidth); e.preventDefault(); }
-      });
-
-      recalcMax();
-      window.addEventListener('resize', recalcMax);
-    })();
-  </script>
-
+  <script src="js/case.js" defer></script>
 </body>
 </html>
