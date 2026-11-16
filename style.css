@@ -1332,7 +1332,7 @@ ul { list-style: none; }
 
 .cs-slide { scroll-snap-align: start; display: flex; flex-direction: column; gap: 18px; }
 .cs-shot {
-  border-radius: 16px;
+  border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--panel-border);
   background: #111114;
@@ -1629,9 +1629,9 @@ ul { list-style: none; }
   background: #fff;
   box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.6);
 }
-.cs-show__desk { left: 5%; top: 11%; width: 80%; aspect-ratio: 1440 / 819; border-radius: 10px; container-type: inline-size; }
+.cs-show__desk { left: 5%; top: 11%; width: 80%; aspect-ratio: 1440 / 819; border-radius: 8px; container-type: inline-size; }
 .cs-show__desk .cs-show__slide { top: 1.875cqw; }
-.cs-show__phone { right: 4%; bottom: 7%; width: 24%; aspect-ratio: 390 / 844; border-radius: 16px; outline: 3px solid #120d1b; }
+.cs-show__phone { right: 4%; bottom: 7%; width: 24%; aspect-ratio: 390 / 844; border-radius: 8px; outline: 3px solid #120d1b; }
 .cs-show__slide { position: absolute; top: 0; left: 0; width: 100%; height: auto; opacity: 0; will-change: opacity; }
 .cs-show__slide[style*="--n:0"] { opacity: 1; }
 .cs-show__labels { position: absolute; left: 6%; bottom: 6%; height: 26px; }
