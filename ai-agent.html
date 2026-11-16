@@ -77,9 +77,10 @@
             <strong>Skills</strong> (reusable AI capabilities), and <strong>managing roles</strong>.
           </p>
         </div>
-        <figure class="cs-overview__media">
-          <img src="assets/ai-agent-hero-mockup.jpg" width="2400" height="1800" loading="lazy"
-               alt="The workspace's Welcome screen on a laptop: a sidebar with chats, tools and projects, a greeting, a prompt field and suggested prompts" />
+        <figure class="cs-overview__media cs-show" role="img" aria-label="Lumen AI on desktop and phone, cycling through the Welcome, Briefs and Skills screens">
+          <div class="cs-show__desk"><img class="cs-show__slide" style="--n:0" src="assets/lumen-ai/welcome.png" alt="" /><img class="cs-show__slide" style="--n:1" src="assets/lumen-ai/briefs.png" alt="" /><img class="cs-show__slide" style="--n:2" src="assets/lumen-ai/skills.png" alt="" /></div>
+          <div class="cs-show__phone"><img class="cs-show__slide" style="--n:0" src="assets/lumen-ai/welcome-mobile.png" alt="" /><img class="cs-show__slide" style="--n:1" src="assets/lumen-ai/briefs-mobile.png" alt="" /><img class="cs-show__slide" style="--n:2" src="assets/lumen-ai/skills-mobile.png" alt="" /></div>
+          <div class="cs-show__labels" aria-hidden="true"><span class="cs-show__label" style="--n:0">Welcome screen</span><span class="cs-show__label" style="--n:1">Briefs</span><span class="cs-show__label" style="--n:2">Skills</span></div>
         </figure>
       </div>
     </section>
@@ -222,7 +223,7 @@
           <h2 class="cs-h2" id="workspace-title">The workspace</h2>
           <p class="cs-lead">
             The scenarios I designed live inside one workspace, built to get people from a blank page
-            to a finished document. The Welcome, Briefs and Skills screens below are from my Figma file. The
+            to a finished document. The Welcome, Briefs, Skills and Skill builder screens below are from my Figma file. The
             rest of the product is under NDA, so those screens are described rather than shown.
           </p>
         </div>
@@ -250,6 +251,53 @@
           </div>
           <figcaption><h3><span class="cs-num">3</span>Skills</h3><p>Every Skill shows where it is in its lifecycle: Published, Draft, or published with unpublished edits, along with how long those edits are kept and a link to review them. Tabs with counts filter by status, and opening a row shows its change log, from submitted for review to approved, edited or rejected, so it's clear who changed what and when.</p><p class="cs-feature__devices"><b>On a phone</b> each Skill becomes a card with its status at the top, the status tabs scroll sideways, and the change log opens inside the card.</p></figcaption>
         </figure>
+
+        <div class="cs-builder" data-slider>
+          <div class="cs-part__intro">
+            <span class="cs-eyebrow">Creating a Skill</span>
+            <h3 class="cs-h3">Six steps, a live preview and nothing to lose</h3>
+            <p class="cs-lead">
+              Building a Skill is split into six steps with a preview of the finished Skill beside the
+              form. The draft saves itself, so there is no separate "save" to confuse with publishing.
+              The first four steps are below; Test and Publish follow.
+            </p>
+          </div>
+
+          <ol class="cs-steps">
+          <li><button type="button" class="cs-step"><span class="cs-num">1</span>Identity</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">2</span>Instructions</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">3</span>Capabilities</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">4</span>Knowledge</button></li>
+          </ol>
+
+          <div class="cs-bar">
+            <span class="cs-counter" aria-live="polite"></span>
+            <span class="cs-progress"><span></span></span>
+            <div class="cs-arrows">
+              <button type="button" class="cs-arrow" data-prev aria-label="Previous step">←</button>
+              <button type="button" class="cs-arrow" data-next aria-label="Next step">→</button>
+            </div>
+          </div>
+
+          <div class="cs-track cs-track--one">
+            <figure class="cs-slide">
+              <div class="cs-shot cs-shot--natural"><img src="assets/lumen-ai/skill-builder-1.png" width="1440" height="900" loading="lazy" alt="Skill builder, step 1 of 6, Identity: the form on the left and a live preview of the Skill on the right" /></div>
+              <figcaption><h3><span class="cs-num">1</span>Identity</h3><p>Name, icon, contact, short and full descriptions and the model. Each field says where it shows up and counts characters, and the preview on the right updates as you type.</p></figcaption>
+            </figure>
+            <figure class="cs-slide">
+              <div class="cs-shot cs-shot--natural"><img src="assets/lumen-ai/skill-builder-2.png" width="1440" height="900" loading="lazy" alt="Skill builder, step 2 of 6, Instructions: the form on the left and a live preview of the Skill on the right" /></div>
+              <figcaption><h3><span class="cs-num">2</span>Instructions</h3><p>AI drafts the instructions from three quick questions, such as what the response should look like. Everything stays editable, with Improve with AI and a history of earlier versions.</p></figcaption>
+            </figure>
+            <figure class="cs-slide">
+              <div class="cs-shot cs-shot--natural"><img src="assets/lumen-ai/skill-builder-3.png" width="1440" height="900" loading="lazy" alt="Skill builder, step 3 of 6, Capabilities: the form on the left and a live preview of the Skill on the right" /></div>
+              <figcaption><h3><span class="cs-num">3</span>Capabilities</h3><p>Capabilities are grouped into Core, Voice and Output, with a count of what is switched on. Whatever is on appears as a chip in the preview.</p></figcaption>
+            </figure>
+            <figure class="cs-slide">
+              <div class="cs-shot cs-shot--natural"><img src="assets/lumen-ai/skill-builder-4.png" width="1440" height="900" loading="lazy" alt="Skill builder, step 4 of 6, Knowledge: the form on the left and a live preview of the Skill on the right" /></div>
+              <figcaption><h3><span class="cs-num">4</span>Knowledge</h3><p>Choose between general knowledge and your own files. Uploaded files show their processing status and topic, and the preview shows how many files the Skill can draw on.</p></figcaption>
+            </figure>
+          </div>
+        </div>
 
         <div class="cs-sub">
           <span class="cs-eyebrow">More of the workspace · under NDA</span>

@@ -1612,3 +1612,66 @@ ul { list-style: none; }
   .cs-id__palette { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .cs-id__lockup { flex-direction: column; }
 }
+
+/* ---- Overview showcase: real screens cycling on desktop and phone ---- */
+.cs-show {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border: 0;
+  border-radius: 16px;
+  background:
+    radial-gradient(70% 60% at 40% 45%, rgba(151, 71, 255, 0.3), transparent 70%),
+    #231c33;
+}
+.cs-show__desk, .cs-show__phone {
+  position: absolute;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.6);
+}
+.cs-show__desk { left: 6%; top: 11%; width: 78%; aspect-ratio: 1440 / 900; border-radius: 10px; }
+.cs-show__phone { right: 5%; bottom: 7%; width: 21%; aspect-ratio: 390 / 844; border-radius: 14px; outline: 3px solid #120d1b; }
+.cs-show__slide { position: absolute; top: 0; left: 0; width: 100%; height: auto; opacity: 0; }
+.cs-show__slide[style*="--n:0"] { opacity: 1; }
+.cs-show__labels { position: absolute; left: 6%; bottom: 6%; height: 26px; }
+.cs-show__label {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  white-space: nowrap;
+  padding: 5px 11px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+}
+.cs-show__label[style*="--n:0"] { opacity: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  .cs-show__slide, .cs-show__label { opacity: 0; animation: cs-show 12s cubic-bezier(0.3, 0.7, 0.2, 1) infinite; animation-delay: calc(var(--n) * 4s); }
+  .cs-show__slide[style*="--n:0"], .cs-show__label[style*="--n:0"] { opacity: 0; }
+  .cs-show__phone .cs-show__slide { animation-delay: calc(var(--n) * 4s + 0.3s); }
+}
+@keyframes cs-show {
+  0% { opacity: 0; transform: translateY(16px) scale(1.02); }
+  6% { opacity: 1; transform: none; }
+  33% { opacity: 1; transform: none; }
+  39% { opacity: 0; transform: translateY(-8px); }
+  100% { opacity: 0; }
+}
+
+/* ---- Skill builder slider inside the workspace part ---- */
+.cs-builder { margin-top: 72px; }
+.cs-h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(28px, 3.4vw, 40px);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 10px 0 16px;
+}
