@@ -22,6 +22,26 @@
     document.querySelectorAll('.cs-hero__visual video').forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); });
   }
 
+  // Typewriter: cycles the phrases in data-typewriter ("a|b|c"); static under reduced motion
+  document.querySelectorAll('[data-typewriter]').forEach(function (el) {
+    if (reduced) return;
+    var phrases = el.getAttribute('data-typewriter').split('|');
+    var p = 0, i = phrases[0].length, deleting = true;
+    function tick() {
+      var full = phrases[p];
+      if (deleting) {
+        i--;
+        if (i <= 0) { deleting = false; p = (p + 1) % phrases.length; }
+      } else {
+        i++;
+        if (i >= phrases[p].length) { deleting = true; el.textContent = phrases[p]; return setTimeout(tick, 2400); }
+      }
+      el.textContent = phrases[p].slice(0, Math.max(0, i));
+      setTimeout(tick, deleting ? 22 : 48);
+    }
+    setTimeout(tick, 2600);
+  });
+
   // Top-bar menu
   var menu = document.getElementById('caseMenu');
   if (menu) {
