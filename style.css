@@ -1855,3 +1855,25 @@ ul { list-style: none; }
   .cs-ds__sem { grid-column: 1 / -1; }
   .cs-ds__use { grid-column: 1 / -1; }
 }
+
+/* ---- Guidelines: the docs written for developers and the team ---- */
+.cs-guides { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: center; margin-top: 72px; }
+.cs-guides__value { list-style: none; display: grid; gap: 12px; margin-top: 22px; }
+.cs-guides__value li { position: relative; padding-left: 22px; font-size: 15px; line-height: 1.6; color: var(--ink-soft); }
+.cs-guides__value li::before { content: ''; position: absolute; left: 0; top: 0.62em; width: 8px; height: 8px; border-radius: 2px; background: #6E598E; }
+.cs-guides__value b { color: var(--ink); font-weight: 600; }
+.cs-guides__pages { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 28px; border-radius: 16px; background: #231c33; }
+.cs-guides__page {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.6);
+  -webkit-mask-image: linear-gradient(#000 78%, transparent);
+  mask-image: linear-gradient(#000 78%, transparent);
+}
+.cs-guides__page:nth-child(2) { margin-top: 40px; }
+.cs-guides__page img { width: 100%; height: auto; display: block; }
+@media (max-width: 960px) {
+  .cs-guides { grid-template-columns: 1fr; gap: 28px; }
+}
