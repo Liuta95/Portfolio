@@ -236,6 +236,75 @@
       </div>
     </section>
 
+    <!-- DESIGN SYSTEM -->
+    <section class="cs-section reveal cs-ds" id="system" aria-labelledby="system-title">
+      <div class="cs-wrap">
+        <div class="cs-part__intro">
+          <span class="cs-eyebrow">Design system</span>
+          <h2 class="cs-h2" id="system-title">Tokens first, then components</h2>
+          <p class="cs-lead">
+            Every screen in this case is built from one Figma library. Colours, sizes and type live in
+            four variable collections. Semantic tokens point at colour primitives and switch between Light
+            and Dark, and the components are styled with those semantic tokens.
+          </p>
+        </div>
+
+        <ul class="cs-ds__stats">
+          <li><b>54</b><span>Colour primitives</span><small>7 ramps</small></li>
+          <li><b>145</b><span>Semantic tokens</span><small>Light &amp; Dark · 122 aliases</small></li>
+          <li><b>44</b><span>Size tokens</span><small>Spacing, radius, border, icon, height</small></li>
+          <li><b>19</b><span>Type tokens</span><small>Open Sans · 11 sizes · 7 line heights</small></li>
+        </ul>
+
+        <div class="cs-ds__grid">
+          <div class="cs-ds__card cs-ds__card--wide">
+            <h3>Primitive → semantic</h3>
+            <p>One semantic name, two primitives: Light on the left, Dark on the right.</p>
+            <ul class="cs-ds__chains"><li><span class="cs-ds__tok"><i style="--c:#55456e"></i><code>purple/700</code></span><span class="cs-ds__tok"><i style="--c:#7821de"></i><code>purple/500</code></span><span class="cs-ds__arrow" aria-hidden="true">→</span><code class="cs-ds__sem">button/primary/background</code><span class="cs-ds__use">Primary button</span></li><li><span class="cs-ds__tok"><i style="--c:#6e598e"></i><code>purple/600</code></span><span class="cs-ds__tok"><i style="--c:#c4a1ff"></i><code>purple/200</code></span><span class="cs-ds__arrow" aria-hidden="true">→</span><code class="cs-ds__sem">text/brand</code><span class="cs-ds__use">Brand text & icons</span></li><li><span class="cs-ds__tok"><i style="--c:#f5f2fa"></i><code>purple/50</code></span><span class="cs-ds__tok"><i style="--c:#1f1730"></i><code>purple/950</code></span><span class="cs-ds__arrow" aria-hidden="true">→</span><code class="cs-ds__sem">background/brand-subtle</code><span class="cs-ds__use">Hover & selected</span></li><li><span class="cs-ds__tok"><i style="--c:#f0fdf4"></i><code>green/50</code></span><span class="cs-ds__tok"><i style="--c:#15803d"></i><code>green/700</code></span><span class="cs-ds__arrow" aria-hidden="true">→</span><code class="cs-ds__sem">status/success/background</code><span class="cs-ds__use">Published status</span></li></ul>
+          </div>
+          <div class="cs-ds__card">
+            <h3>Colour primitives</h3>
+            <p>Seven ramps, numbered from light to dark.</p>
+            <div class="cs-ds__ramp"><span class="cs-ds__rname">purple</span><div class="cs-ds__steps"><i style="--c:#f8f4fa" title="purple/25 #f8f4fa"></i><i style="--c:#f5f2fa" title="purple/50 #f5f2fa"></i><i style="--c:#e0d7ee" title="purple/75 #e0d7ee"></i><i style="--c:#d1c4e6" title="purple/100 #d1c4e6"></i><i style="--c:#c4a1ff" title="purple/200 #c4a1ff"></i><i style="--c:#b080ff" title="purple/250 #b080ff"></i><i style="--c:#8d73b6" title="purple/300 #8d73b6"></i><i style="--c:#9747ff" title="purple/400 #9747ff"></i><i style="--c:#7821de" title="purple/500 #7821de"></i><i style="--c:#6e598e" title="purple/600 #6e598e"></i><i style="--c:#55456e" title="purple/700 #55456e"></i><i style="--c:#231c2e" title="purple/925 #231c2e"></i><i style="--c:#1f1730" title="purple/950 #1f1730"></i></div></div><div class="cs-ds__ramp"><span class="cs-ds__rname">neutral</span><div class="cs-ds__steps"><i style="--c:#ffffff" title="neutral/white #ffffff"></i><i style="--c:#f6f7f7" title="neutral/50 #f6f7f7"></i><i style="--c:#f2f3f3" title="neutral/100 #f2f3f3"></i><i style="--c:#e3e4e5" title="neutral/200 #e3e4e5"></i><i style="--c:#b0b2be" title="neutral/300 #b0b2be"></i><i style="--c:#6b6978" title="neutral/400 #6b6978"></i><i style="--c:#62606e" title="neutral/500 #62606e"></i><i style="--c:#3d3845" title="neutral/700 #3d3845"></i><i style="--c:#2e2b33" title="neutral/800 #2e2b33"></i><i style="--c:#1c1b1f" title="neutral/900 #1c1b1f"></i></div></div><div class="cs-ds__ramp"><span class="cs-ds__rname">green</span><div class="cs-ds__steps"><i style="--c:#f4faf2" title="green/25 #f4faf2"></i><i style="--c:#f0fdf4" title="green/50 #f0fdf4"></i><i style="--c:#cde7c7" title="green/150 #cde7c7"></i><i style="--c:#86efac" title="green/300 #86efac"></i><i style="--c:#22c55e" title="green/500 #22c55e"></i><i style="--c:#15803d" title="green/700 #15803d"></i><i style="--c:#0a1c10" title="green/950 #0a1c10"></i></div></div><div class="cs-ds__ramp"><span class="cs-ds__rname">orange</span><div class="cs-ds__steps"><i style="--c:#fffcf0" title="orange/25 #fffcf0"></i><i style="--c:#fff7ed" title="orange/50 #fff7ed"></i><i style="--c:#faeebd" title="orange/100 #faeebd"></i><i style="--c:#fdba74" title="orange/300 #fdba74"></i><i style="--c:#f97316" title="orange/500 #f97316"></i><i style="--c:#c2410c" title="orange/700 #c2410c"></i><i style="--c:#1a0e00" title="orange/950 #1a0e00"></i></div></div><div class="cs-ds__ramp"><span class="cs-ds__rname">red</span><div class="cs-ds__steps"><i style="--c:#fef5f4" title="red/50 #fef5f4"></i><i style="--c:#fadede" title="red/100 #fadede"></i><i style="--c:#fec4bf" title="red/150 #fec4bf"></i><i style="--c:#f09693" title="red/300 #f09693"></i><i style="--c:#dd524c" title="red/500 #dd524c"></i><i style="--c:#b91c1c" title="red/700 #b91c1c"></i><i style="--c:#58231e" title="red/800 #58231e"></i></div></div><div class="cs-ds__ramp"><span class="cs-ds__rname">blue</span><div class="cs-ds__steps"><i style="--c:#eef4fe" title="blue/25 #eef4fe"></i><i style="--c:#bde4f3" title="blue/150 #bde4f3"></i><i style="--c:#6ab4d4" title="blue/200 #6ab4d4"></i><i style="--c:#47c8ff" title="blue/400 #47c8ff"></i><i style="--c:#007bae" title="blue/500 #007bae"></i><i style="--c:#061219" title="blue/950 #061219"></i></div></div><div class="cs-ds__ramp"><span class="cs-ds__rname">gray-blue</span><div class="cs-ds__steps"><i style="--c:#d9e3ed" title="gray-blue/50 #d9e3ed"></i><i style="--c:#e8eef4" title="gray-blue/100 #e8eef4"></i><i style="--c:#61647a" title="gray-blue/400 #61647a"></i><i style="--c:#7f829a" title="gray-blue/500 #7f829a"></i></div></div>
+          </div>
+          <div class="cs-ds__card">
+            <h3>Semantic groups</h3>
+            <p>The 145 Theme tokens, named by role.</p>
+            <ul class="cs-ds__groups"><li><code>background/</code><b>8</b></li><li><code>text/</code><b>11</b></li><li><code>icon/</code><b>11</b></li><li><code>border/</code><b>6</b></li><li><code>button/</code><b>15</b></li><li><code>input/</code><b>17</b></li><li><code>controls/</code><b>18</b></li><li><code>prompt-bar/</code><b>12</b></li><li><code>alerts/</code><b>12</b></li><li><code>status/</code><b>4</b></li><li><code>interactive/</code><b>4</b></li><li><code>file-format/</code><b>15</b></li><li><code>misk/</code><b>11</b></li></ul>
+          </div>
+          <div class="cs-ds__card">
+            <h3>Spacing</h3>
+            <p>From 0 to 120, on a 4px grid above 4.</p>
+            <ul class="cs-ds__space"><li><i style="--s:4"></i><code>spacing/4</code></li><li><i style="--s:8"></i><code>spacing/8</code></li><li><i style="--s:12"></i><code>spacing/12</code></li><li><i style="--s:16"></i><code>spacing/16</code></li><li><i style="--s:24"></i><code>spacing/24</code></li><li><i style="--s:32"></i><code>spacing/32</code></li><li><i style="--s:48"></i><code>spacing/48</code></li><li><i style="--s:64"></i><code>spacing/64</code></li></ul>
+          </div>
+          <div class="cs-ds__card">
+            <h3>Radius</h3>
+            <p>Eight steps, from none to full.</p>
+            <ul class="cs-ds__radius"><li><i style="--r:2px"></i><code>radius/xs</code></li><li><i style="--r:4px"></i><code>radius/sm</code></li><li><i style="--r:8px"></i><code>radius/md</code></li><li><i style="--r:12px"></i><code>radius/lg</code></li><li><i style="--r:16px"></i><code>radius/xl</code></li><li><i style="--r:24px"></i><code>radius/2xl</code></li><li><i style="--r:999px"></i><code>radius/full</code></li></ul>
+          </div>
+        </div>
+
+        <div class="cs-ds__tiles">
+          <figure class="cs-ds__tile">
+            <div class="cs-shot cs-shot--natural"><img src="assets/lumen-ai/ds-prompt.png" width="900" height="560" loading="lazy" alt="The prompt bar in three of its eight states: empty, typing a question, and with four attached files including one that failed" /></div>
+            <figcaption><b>Prompt bar</b> 8 states, from empty to typing, attached files and a drop zone.</figcaption>
+          </figure>
+          <figure class="cs-ds__tile">
+            <div class="cs-shot cs-shot--natural"><img src="assets/lumen-ai/ds-cards.png" width="900" height="560" loading="lazy" alt="Brief cards: a brief result card, a brief template card, the result card on hover and a compact template card" /></div>
+            <figcaption><b>Cards</b> Brief result and brief template, with hover and a compact size, all driven by text and icon properties.</figcaption>
+          </figure>
+          <figure class="cs-ds__tile cs-ds__tile--wide">
+            <div class="cs-shot cs-shot--natural"><img src="assets/lumen-ai/ds-lists.png" width="1186" height="537" loading="lazy" alt="List rows: three Skill rows (Published, Draft, unpublished edits with a timer) and two brief rows (Active and Paused)" /></div>
+            <figcaption><b>List rows</b> Skill rows for Published, Draft and unpublished edits; brief rows for Active and Paused.</figcaption>
+          </figure>
+          <figure class="cs-ds__tile cs-ds__tile--wide">
+            <div class="cs-shot cs-shot--natural"><img src="assets/lumen-ai/ds-controls.png" width="1242" height="312" loading="lazy" alt="Controls: switch on and off, checkbox states, radio buttons, tabs, coloured tags and four alert types" /></div>
+            <figcaption><b>Controls</b> Switch, checkbox, radio, tabs, tags and alerts, each with its full set of states in the library.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <!-- PART 1 · THE WORKSPACE -->
     <section class="cs-section reveal" id="workspace" aria-labelledby="workspace-title">
       <div class="cs-wrap">

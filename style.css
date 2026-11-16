@@ -1799,3 +1799,57 @@ ul { list-style: none; }
 @keyframes hx-pulse { 50% { background: rgba(185, 166, 255, 0.34); } }
 @keyframes hx-draft { 0%, 30% { opacity: 1; } 38%, 94% { opacity: 0; } 100% { opacity: 1; } }
 @keyframes hx-pub { 0%, 30% { opacity: 0; transform: scale(0.9); } 38%, 94% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+
+/* ---- Design system: tokens and components ---- */
+.cs-ds__stats { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-bottom: 16px; }
+.cs-ds__stats li { padding: 22px; border-radius: 16px; background: #231c33; color: #fff; display: flex; flex-direction: column; gap: 4px; }
+.cs-ds__stats b { font-family: var(--font-display); font-weight: 400; font-size: 52px; line-height: 1; letter-spacing: -0.01em; }
+.cs-ds__stats span { font-size: 14.5px; font-weight: 600; margin-top: 8px; }
+.cs-ds__stats small { font-size: 12.5px; color: rgba(255, 255, 255, 0.6); }
+
+.cs-ds__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.cs-ds__card { padding: 24px; border-radius: 16px; border: 1px solid var(--panel-border); background: #fff; }
+.cs-ds__card--wide { grid-column: 1 / -1; }
+.cs-ds__card h3 { font-size: 16px; font-weight: 600; color: var(--ink); }
+.cs-ds__card > p { font-size: 13.5px; color: var(--ink-muted); margin: 4px 0 18px; }
+.cs-ds code { font-family: var(--font-mono); font-size: 12px; color: var(--ink-soft); }
+
+.cs-ds__chains { list-style: none; display: grid; gap: 10px; }
+.cs-ds__chains li { display: grid; grid-template-columns: 150px 150px 24px minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 10px; background: #f6f6f3; }
+.cs-ds__tok { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.cs-ds__tok i, .cs-ds__steps i { display: block; background: var(--c); box-shadow: inset 0 0 0 1px rgba(17, 17, 20, 0.1); }
+.cs-ds__tok i { width: 22px; height: 22px; border-radius: 6px; flex: none; }
+.cs-ds__arrow { color: var(--ink-faint); text-align: center; }
+.cs-ds__sem { color: #55456E; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cs-ds__use { font-size: 12.5px; color: var(--ink-faint); white-space: nowrap; }
+
+.cs-ds__ramp { display: grid; grid-template-columns: 74px minmax(0, 1fr); align-items: center; gap: 10px; margin-top: 8px; }
+.cs-ds__rname { font-family: var(--font-mono); font-size: 12px; color: var(--ink-muted); }
+.cs-ds__steps { display: flex; height: 26px; border-radius: 7px; overflow: hidden; }
+.cs-ds__steps i { flex: 1; box-shadow: none; }
+
+.cs-ds__groups { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.cs-ds__groups li { display: inline-flex; align-items: center; gap: 8px; padding: 6px 6px 6px 12px; border-radius: 999px; background: #F5F2FA; }
+.cs-ds__groups b { font-size: 12px; font-weight: 600; color: #fff; background: #6E598E; border-radius: 999px; padding: 2px 8px; }
+
+.cs-ds__space { list-style: none; display: grid; gap: 8px; }
+.cs-ds__space li { display: grid; grid-template-columns: 1fr 96px; align-items: center; gap: 12px; }
+.cs-ds__space i { display: block; height: 12px; width: calc(var(--s) * 3px); max-width: 100%; border-radius: 3px; background: linear-gradient(90deg, #9747FF, #b080ff); }
+.cs-ds__radius { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px 10px; }
+.cs-ds__radius li { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.cs-ds__radius i { width: 52px; height: 52px; border: 2px solid #6E598E; border-right: 0; border-bottom: 0; border-top-left-radius: var(--r); background: #F5F2FA; }
+
+.cs-ds__tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 16px; }
+.cs-ds__tile { display: flex; flex-direction: column; gap: 12px; }
+.cs-ds__tile--wide { grid-column: 1 / -1; }
+.cs-ds__tile figcaption { font-size: 14px; line-height: 1.55; color: var(--ink-soft); }
+.cs-ds__tile figcaption b { color: var(--ink); font-weight: 600; }
+
+@media (max-width: 960px) {
+  .cs-ds__stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cs-ds__grid, .cs-ds__tiles { grid-template-columns: 1fr; }
+  .cs-ds__chains li { grid-template-columns: 1fr 1fr; }
+  .cs-ds__arrow { display: none; }
+  .cs-ds__sem { grid-column: 1 / -1; }
+  .cs-ds__use { grid-column: 1 / -1; }
+}
