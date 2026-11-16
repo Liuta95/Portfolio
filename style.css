@@ -1842,6 +1842,8 @@ ul { list-style: none; }
 .cs-ds__tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 16px; }
 .cs-ds__tile { display: flex; flex-direction: column; gap: 12px; }
 .cs-ds__tile--wide { grid-column: 1 / -1; }
+.cs-ds__tile .cs-shot { background: #f5f2fa; display: flex; justify-content: center; }
+.cs-ds__tile .cs-shot img { width: auto; max-width: 100%; height: auto; }
 .cs-ds__tile figcaption { font-size: 14px; line-height: 1.55; color: var(--ink-soft); }
 .cs-ds__tile figcaption b { color: var(--ink); font-weight: 600; }
 
