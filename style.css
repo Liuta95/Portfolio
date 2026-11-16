@@ -1332,7 +1332,7 @@ ul { list-style: none; }
 
 .cs-slide { scroll-snap-align: start; display: flex; flex-direction: column; gap: 18px; }
 .cs-shot {
-  border-radius: var(--r-lg);
+  border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--panel-border);
   background: #111114;
@@ -1350,18 +1350,38 @@ ul { list-style: none; }
 .cs-feature figcaption h3 { display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
 .cs-feature figcaption p { font-size: 14.5px; line-height: 1.6; color: var(--ink-soft); max-width: 70ch; }
 
-/* Tablet and phone versions of a feature screen, shown at equal height */
-.cs-devices { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 0.695fr) minmax(0, 0.462fr); gap: 20px; align-items: end; margin-top: 18px; }
-.cs-devices__note { align-self: center; display: flex; flex-direction: column; gap: 10px; padding-right: 12px; }
-.cs-devices__note p { font-size: 14.5px; line-height: 1.6; color: var(--ink-soft); }
-.cs-shot--tablet { border-radius: 22px; }
-.cs-shot--phone { border-radius: 30px; }
-@media (max-width: 720px) {
-  .cs-devices { grid-template-columns: minmax(0, 0.695fr) minmax(0, 0.462fr); gap: 12px; }
-  .cs-devices__note { grid-column: 1 / -1; padding-right: 0; }
-  .cs-shot--tablet { border-radius: 14px; }
-  .cs-shot--phone { border-radius: 18px; }
+/* Desktop, tablet and phone versions of one screen, side by side at the same
+   scale on a dark panel, top-aligned and cut off at the bottom edge */
+.cs-trio {
+  --trio-gap: clamp(12px, 1.6vw, 22px);
+  width: min(1360px, calc(100vw - 32px));
+  margin-left: calc(50% - min(680px, 50vw - 16px));
+  display: grid;
+  grid-template-columns: 1440fr 820fr 390fr;
+  gap: var(--trio-gap);
+  align-items: start;
+  padding: clamp(18px, 3vw, 40px) clamp(18px, 3vw, 40px) 0;
+  background: #231c33;
+  border-radius: 16px;
+  overflow: hidden;
 }
+.cs-trio__item { min-width: 0; }
+.cs-trio__item--desktop .cs-shot { aspect-ratio: 1440 / 760; }
+.cs-trio__item--desktop .cs-shot img { height: 100%; object-fit: cover; object-position: top center; }
+.cs-trio__item--tablet, .cs-trio__item--phone { position: relative; align-self: stretch; }
+.cs-trio__item--tablet .cs-shot, .cs-trio__item--phone .cs-shot { position: absolute; inset: 0 0 auto 0; }
+.cs-trio .cs-shot { border-color: rgba(255,255,255,.08); }
+.cs-feature__devices { margin-top: 10px; }
+.cs-feature__devices b { font-weight: 600; color: var(--ink); }
+@media (max-width: 720px) {
+  .cs-trio { grid-template-columns: 820fr 390fr; padding-bottom: clamp(18px, 3vw, 40px); }
+  .cs-trio__item--desktop { grid-column: 1 / -1; }
+  .cs-trio__item--desktop .cs-shot { aspect-ratio: auto; }
+  .cs-trio__item--desktop .cs-shot img { height: auto; }
+  .cs-trio__item--tablet, .cs-trio__item--phone { position: static; }
+  .cs-trio__item--tablet .cs-shot, .cs-trio__item--phone .cs-shot { position: static; }
+}
+
 
 /* ---- Results ---- */
 .cs-results__head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: end; margin-bottom: 40px; }
