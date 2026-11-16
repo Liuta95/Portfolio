@@ -1346,6 +1346,7 @@ ul { list-style: none; }
 
 /* One large screen with its caption, for a part shown as a single view */
 .cs-feature { display: flex; flex-direction: column; gap: 18px; }
+.cs-feature + .cs-feature { margin-top: 56px; }
 .cs-feature figcaption h3 { display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
 .cs-feature figcaption p { font-size: 14.5px; line-height: 1.6; color: var(--ink-soft); max-width: 70ch; }
 
