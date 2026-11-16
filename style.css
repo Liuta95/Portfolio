@@ -1351,10 +1351,8 @@ ul { list-style: none; }
 .cs-feature figcaption p { font-size: 14.5px; line-height: 1.6; color: var(--ink-soft); max-width: 70ch; }
 
 /* Desktop and phone versions of one screen, side by side at the same scale
-   on a dark panel, top-aligned, nothing cropped */
+   on a dark panel within the text grid, top-aligned, nothing cropped */
 .cs-trio {
-  width: min(1360px, calc(100vw - 32px));
-  margin-left: calc(50% - min(680px, 50vw - 16px));
   display: grid;
   grid-template-columns: 1440fr 390fr;
   gap: clamp(12px, 2vw, 28px);
