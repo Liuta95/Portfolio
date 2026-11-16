@@ -1629,9 +1629,10 @@ ul { list-style: none; }
   background: #fff;
   box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.6);
 }
-.cs-show__desk { left: 6%; top: 11%; width: 78%; aspect-ratio: 1440 / 900; border-radius: 10px; }
-.cs-show__phone { right: 5%; bottom: 7%; width: 21%; aspect-ratio: 390 / 844; border-radius: 14px; outline: 3px solid #120d1b; }
-.cs-show__slide { position: absolute; top: 0; left: 0; width: 100%; height: auto; opacity: 0; }
+.cs-show__desk { left: 5%; top: 11%; width: 80%; aspect-ratio: 1440 / 819; border-radius: 10px; container-type: inline-size; }
+.cs-show__desk .cs-show__slide { top: 1.875cqw; }
+.cs-show__phone { right: 4%; bottom: 7%; width: 24%; aspect-ratio: 390 / 844; border-radius: 16px; outline: 3px solid #120d1b; }
+.cs-show__slide { position: absolute; top: 0; left: 0; width: 100%; height: auto; opacity: 0; will-change: opacity; }
 .cs-show__slide[style*="--n:0"] { opacity: 1; }
 .cs-show__labels { position: absolute; left: 6%; bottom: 6%; height: 26px; }
 .cs-show__label {
@@ -1652,15 +1653,15 @@ ul { list-style: none; }
 }
 .cs-show__label[style*="--n:0"] { opacity: 1; }
 @media (prefers-reduced-motion: no-preference) {
-  .cs-show__slide, .cs-show__label { opacity: 0; animation: cs-show 12s cubic-bezier(0.3, 0.7, 0.2, 1) infinite; animation-delay: calc(var(--n) * 4s); }
+  .cs-show__slide, .cs-show__label { opacity: 0; animation: cs-show 12s ease-in-out infinite; animation-delay: calc(var(--n) * 4s); }
   .cs-show__slide[style*="--n:0"], .cs-show__label[style*="--n:0"] { opacity: 0; }
   .cs-show__phone .cs-show__slide { animation-delay: calc(var(--n) * 4s + 0.3s); }
 }
 @keyframes cs-show {
-  0% { opacity: 0; transform: translateY(16px) scale(1.02); }
-  6% { opacity: 1; transform: none; }
-  33% { opacity: 1; transform: none; }
-  39% { opacity: 0; transform: translateY(-8px); }
+  0% { opacity: 0; }
+  6% { opacity: 1; }
+  33% { opacity: 1; }
+  39% { opacity: 0; }
   100% { opacity: 0; }
 }
 
@@ -1675,3 +1676,26 @@ ul { list-style: none; }
   color: var(--ink);
   margin: 10px 0 16px;
 }
+
+/* macOS-style menu bar on top of desktop screenshots; sized relative to the
+   screenshot width (27px on a 1440px screen) */
+.cs-shot:has(> .cs-menubar), .cs-show__desk { container-type: inline-size; }
+.cs-menubar {
+  display: flex;
+  align-items: center;
+  gap: 1.35cqw;
+  height: 1.875cqw;
+  padding: 0 1.1cqw;
+  background: #ecebf1;
+  border-bottom: 1px solid rgba(17, 17, 20, 0.08);
+  color: #1c1b1f;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+  font-size: 0.92cqw;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.cs-show__desk .cs-menubar { position: absolute; inset: 0 0 auto 0; z-index: 1; }
+.cs-menubar__app { font-weight: 700; }
+.cs-menubar__right { margin-left: auto; display: flex; align-items: center; gap: 1.1cqw; }
+.cs-menubar svg { height: 0.85cqw; width: auto; display: block; }
