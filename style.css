@@ -1413,3 +1413,60 @@ ul { list-style: none; }
   .cs-step { font-size: 13px; }
   .cs-quote { padding-left: 20px; }
 }
+
+/* ============================================
+   LIGHT THEME (per page: <body class="theme-light">)
+   Redefines the tokens, then repaints the few
+   surfaces that use fixed white-on-dark tints.
+   The accent darkens to an amber that passes 4.5:1
+   as text on the light background; the Let's talk
+   pill keeps the bright brand amber.
+   ============================================ */
+.theme-light {
+  --bg: #f6f6f3;
+  --panel-bg: rgba(255, 255, 255, 0.9);
+  --panel-bg-soft: rgba(0, 0, 0, 0.02);
+  --panel-bg-hover: rgba(0, 0, 0, 0.04);
+  --panel-border: rgba(17, 17, 20, 0.1);
+  --panel-border-strong: rgba(17, 17, 20, 0.2);
+  --panel-divider: rgba(17, 17, 20, 0.09);
+  --panel-highlight: rgba(255, 255, 255, 0.8);
+  --tile-shadow: 0 24px 50px -30px rgba(20, 20, 30, 0.28);
+
+  --ink: #111114;
+  --ink-soft: #3f3f46;
+  --ink-muted: #5c5c66;
+  --ink-faint: #676770;
+
+  --accent: #a16207;
+  --accent-soft: rgba(202, 138, 4, 0.12);
+
+  color-scheme: light;
+}
+
+.theme-light::before { background-image: radial-gradient(circle, rgba(17, 17, 20, 0.07) 1px, transparent 1px); }
+.theme-light ::selection { background: rgba(234, 179, 8, 0.35); color: #111114; }
+
+.theme-light .case-pill {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: var(--panel-border);
+  box-shadow: 0 6px 16px -8px rgba(20, 20, 30, 0.25);
+}
+.theme-light .case-pill:hover { border-color: var(--panel-border-strong); }
+.theme-light .case-pill--cta { background: #eab308; border-color: transparent; color: #141008; }
+.theme-light .case-menu__link:hover { background: rgba(17, 17, 20, 0.05); }
+
+.theme-light .cs-hero__visual { background: #030b0f; }
+.theme-light .cs-band { background: #ffffff; box-shadow: var(--tile-shadow); }
+.theme-light .cs-glass,
+.theme-light .cs-band .cs-card { background: var(--bg); }
+.theme-light .cs-card,
+.theme-light .cs-result { background: #ffffff; }
+.theme-light .cs-note { background: rgba(17, 17, 20, 0.035); }
+.theme-light .cs-shot { background: #ffffff; }
+.theme-light .cs-num { color: #ffffff; }
+.theme-light .cs-step .cs-num { background: rgba(17, 17, 20, 0.07); color: var(--ink-muted); }
+.theme-light .cs-step.is-active .cs-num { background: var(--accent); color: #ffffff; }
+.theme-light .cs-progress { background: rgba(17, 17, 20, 0.08); }
+.theme-light .cs-arrow { background: #ffffff; }
+.theme-light .cs-arrow:hover { background: rgba(17, 17, 20, 0.05); }
