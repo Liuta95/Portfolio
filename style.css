@@ -1193,6 +1193,8 @@ ul { list-style: none; }
   box-shadow: var(--tile-shadow);
 }
 .cs-overview__media img { width: 100%; height: auto; display: block; }
+/* A product screen (web or mobile) rather than a mockup: same 8px corner as .cs-shot */
+.cs-overview__media--screen { border-radius: 8px; }
 
 /* ---- Band: a rounded panel holding Role and Research ---- */
 .cs-band {
