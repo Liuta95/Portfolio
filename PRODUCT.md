@@ -73,3 +73,4 @@ WCAG contrast (4.5:1 minimum for text) is a standing requirement — already aud
 - Figma icon fix (Nov 2026): `Icon / …` components (34:22xx, 44:2952) now scale their artwork when resized; earlier resized copies were clipped (e.g. the video icon). Re-exported welcome video, h3, h4, vs1, vs2 and the mobile components board.
 
 - HealthConnect case: added Part 5 "The care team's console" (#care-team), 7 web screens of the admin / care team redesign (Figma section 135:5235, A1–A7), exported at 2x to assets/healthconnect/admin/. Design system renumbered to Part 6.
+- HealthConnect hero v2: phone now shows the patient Welcome screen (app tile with the brand mark, spinning orbit ring), floating cards Intake form → Video visit → Visit summary appear in step with the work list row going Incomplete → Ready to sign → Signed; a cursor clicks the row action; a dark in-call tile (Dr. Watson, audio bars) floats under the desk. Reduced motion hides the cursor and stops animations.
