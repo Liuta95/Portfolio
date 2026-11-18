@@ -470,6 +470,95 @@
       </div>
     </section>
 
+    <!-- PART 5 · DESIGN SYSTEM -->
+    <section class="cs-section reveal" id="system" aria-labelledby="system-title">
+      <div class="cs-wrap">
+        <div class="cs-part__intro">
+          <span class="cs-eyebrow">Part 5 · Design system</span>
+          <h2 class="cs-h2" id="system-title">One system, two platforms</h2>
+          <p class="cs-lead">
+            Web and mobile share one set of tokens: colour, spacing, radius and states. What changes is
+            scale. Clinicians work on large screens with a mouse, patients on a phone with one thumb, so
+            each platform gets its own type scale and control sizes. Components and boards below are from
+            the same Figma file as the 2026 redesign.
+          </p>
+        </div>
+
+        <figure class="cs-feature">
+          <div class="cs-shot cs-shot--natural"><img src="assets/healthconnect/ds-foundations.png" width="3200" height="2468" loading="lazy" alt="Foundations board: semantic colour tokens with hex values, a 4 pt spacing scale, corner radii, and the web and mobile type scales side by side" /></div>
+          <figcaption><h3>Foundations</h3><p>Semantic colours, a 4 pt spacing scale, four radii, and a type scale for each platform.</p></figcaption>
+        </figure>
+
+        <div class="cs-sub">
+          <span class="cs-eyebrow">Shared rules</span>
+          <div class="cs-cards">
+              <article class="cs-card">
+                <div class="cs-card__head"><span class="cs-num">1</span><h3>4 pt grid</h3></div>
+                <p>Every padding, gap and corner radius is a multiple of 4, bound to spacing and radius tokens, so web and mobile line up.</p>
+              </article>
+              <article class="cs-card">
+                <div class="cs-card__head"><span class="cs-num">2</span><h3>Semantic colour</h3></div>
+                <p>Components use roles such as text/secondary or warning/subtle, never raw hex, so one blue accent and its states change in one place.</p>
+              </article>
+              <article class="cs-card">
+                <div class="cs-card__head"><span class="cs-num">3</span><h3>Contrast and status</h3></div>
+                <p>Text meets WCAG AA 4.5:1, including disabled labels. Status is always a word on a badge, with colour only as support.</p>
+              </article>
+              <article class="cs-card">
+                <div class="cs-card__head"><span class="cs-num">4</span><h3>Every state drawn</h3></div>
+                <p>Default, hover, focus and disabled exist for each control. Focus is a 2 pt ring offset from the edge, so keyboard users can see where they are.</p>
+              </article>
+          </div>
+        </div>
+
+        <figure class="cs-feature">
+          <div class="cs-shot cs-shot--natural"><img src="assets/healthconnect/ds-web-components.png" width="3200" height="3224" loading="lazy" alt="Web components board: buttons in four variants and four states and three sizes, input states, checkboxes, radios and tabs, status badges and a toast, breadcrumbs and pagination, and the documents queue rows" /></div>
+          <figcaption><h3>Web components</h3><p>Buttons, inputs, selection, status and navigation, plus the documents queue built from them.</p></figcaption>
+        </figure>
+
+        <div class="cs-sub">
+          <span class="cs-eyebrow">Web guidelines</span>
+          <div class="cs-cards">
+              <article class="cs-card">
+                <div class="cs-card__head"><span class="cs-num">1</span><h3>Dense, but readable</h3></div>
+                <p>Clinicians scan long queues, so body text is 13–14 px and buttons are 32–40 px for a mouse, with a 28 px page title.</p>
+              </article>
+              <article class="cs-card">
+                <div class="cs-card__head"><span class="cs-num">2</span><h3>Status leads the row</h3></div>
+                <p>A row’s tint, badge and single action all follow the document status, so the next step is obvious without opening anything.</p>
+              </article>
+          </div>
+        </div>
+
+        <figure class="cs-feature">
+          <div class="cs-shot cs-shot--natural"><img src="assets/healthconnect/ds-mobile-components.png" width="3200" height="2724" loading="lazy" alt="Mobile components board: iOS navigation and tab bars, 48 pt buttons and fields, form footer, chips, segmented control and switch, day and time pickers, progress steps and status marks, video call controls and participant tiles" /></div>
+          <figcaption><h3>Mobile components</h3><p>Navigation, 48 pt controls, pickers, progress and the video call kit, all on the shared tokens.</p></figcaption>
+        </figure>
+
+        <div class="cs-sub">
+          <span class="cs-eyebrow">Mobile guidelines</span>
+          <div class="cs-cards">
+              <article class="cs-card">
+                <div class="cs-card__head"><span class="cs-num">1</span><h3>Touch targets</h3></div>
+                <p>Buttons and fields have a mobile size L of 48 pt, above Apple’s 44 pt and Material’s 48 dp minimums. Icon buttons get a 48 pt hit area.</p>
+              </article>
+              <article class="cs-card">
+                <div class="cs-card__head"><span class="cs-num">2</span><h3>Type for reading</h3></div>
+                <p>A separate mobile scale on iOS Dynamic Type sizes: body 17 pt, footnote 13, captions no smaller than 11.</p>
+              </article>
+              <article class="cs-card">
+                <div class="cs-card__head"><span class="cs-num">3</span><h3>Platform patterns</h3></div>
+                <p>iOS status bar, a 44 pt navigation bar with a back chevron, a 49 pt tab bar, switches for consent and bottom sheets with a grabber.</p>
+              </article>
+              <article class="cs-card">
+                <div class="cs-card__head"><span class="cs-num">4</span><h3>Checked twice</h3></div>
+                <p>Screens were audited against Apple’s Human Interface Guidelines and Material Design for targets, text size, contrast and the 4 pt grid, then fixed.</p>
+              </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ILLUSTRATIONS -->
     <section class="cs-section reveal" id="illustrations" aria-labelledby="illustrations-title">
       <div class="cs-wrap">
