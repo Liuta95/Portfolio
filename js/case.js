@@ -86,7 +86,10 @@
       }
       if (bar) bar.style.width = (last / total * 100) + '%';
       steps.forEach(function (s, i) {
-        var on = i >= first && i < last;
+        // Chips with data-slide mark a group that starts at that slide
+        var from = s.dataset.slide != null ? +s.dataset.slide : i;
+        var to = s.dataset.slide != null ? (steps[i + 1] && steps[i + 1].dataset.slide != null ? +steps[i + 1].dataset.slide : total) : i + 1;
+        var on = from < last && to > first;
         s.classList.toggle('is-active', on);
         if (on) s.setAttribute('aria-current', 'true'); else s.removeAttribute('aria-current');
       });
@@ -99,7 +102,7 @@
       track.scrollTo({ left: slides[i].offsetLeft - slides[0].offsetLeft, behavior: reduced ? 'auto' : 'smooth' });
     }
 
-    steps.forEach(function (s, i) { s.addEventListener('click', function () { goTo(i); }); });
+    steps.forEach(function (s, i) { s.addEventListener('click', function () { goTo(s.dataset.slide != null ? +s.dataset.slide : i); }); });
     if (prev) prev.addEventListener('click', function () { goTo(Math.round(track.scrollLeft / step()) - visible()); });
     if (next) next.addEventListener('click', function () { goTo(Math.round(track.scrollLeft / step()) + visible()); });
 

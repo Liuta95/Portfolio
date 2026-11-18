@@ -276,6 +276,120 @@
       </div>
     </section>
 
+    <!-- PART 3 · PATIENT APP -->
+    <section class="cs-section reveal" id="patient" aria-labelledby="patient-title">
+      <div class="cs-wrap" data-slider>
+        <div class="cs-part__intro">
+          <span class="cs-eyebrow">Part 3 · Mobile</span>
+          <h2 class="cs-h2" id="patient-title">The patient's path to a first visit</h2>
+          <p class="cs-lead">
+            After an accident, a patient has to share what happened, describe their symptoms and book a
+            video visit, often while in pain. These screens are a 2026 redesign of the production patient
+            app, made in the same Figma file: one long form became short steps, every step says what comes
+            next, and help is a tab instead of a floating button. Built for iPhone (390 × 844) and checked
+            against Apple's and Material's guidelines for touch targets, text size and contrast.
+          </p>
+        </div>
+
+        <ol class="cs-steps">
+          <li><button type="button" class="cs-step" data-slide="0"><span class="cs-num">1</span>Start</button></li>
+          <li><button type="button" class="cs-step" data-slide="1"><span class="cs-num">2</span>Intake form</button></li>
+          <li><button type="button" class="cs-step" data-slide="6"><span class="cs-num">3</span>Visit form</button></li>
+          <li><button type="button" class="cs-step" data-slide="10"><span class="cs-num">4</span>Booking</button></li>
+          <li><button type="button" class="cs-step" data-slide="13"><span class="cs-num">5</span>Visit day</button></li>
+          <li><button type="button" class="cs-step" data-slide="14"><span class="cs-num">6</span>Visits & help</button></li>
+        </ol>
+
+        <div class="cs-bar">
+          <span class="cs-counter" aria-live="polite"></span>
+          <span class="cs-progress"><span></span></span>
+          <div class="cs-arrows">
+            <button type="button" class="cs-arrow" data-prev aria-label="Previous screens">←</button>
+            <button type="button" class="cs-arrow" data-next aria-label="Next screens">→</button>
+          </div>
+        </div>
+
+        <div class="cs-track cs-track--phones">
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/h1-start.png" width="780" height="2252" loading="lazy" alt="Home: three steps to a first visit, intake form next, contacts for the care team" /></div>
+            <figcaption><h3><span class="cs-num">1</span>Start here</h3><p>The first screen says who referred the patient and shows three steps to a first visit. Each step unlocks the next.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/f1-accident.png" width="780" height="2162" loading="lazy" alt="Intake step 1: date and state of the accident, yes-no questions and multi-select chips" /></div>
+            <figcaption><h3><span class="cs-num">2</span>Intake: the accident</h3><p>One topic per step. Yes / No / Not sure instead of two radio buttons, and chips where several answers apply.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/f2-treatment.png" width="780" height="2290" loading="lazy" alt="Intake step 2: imaging and tests expanded, other treatment types as rows with add buttons" /></div>
+            <figcaption><h3><span class="cs-num">3</span>Intake: treatment so far</h3><p>Only the category the patient picks opens up, with an option to add another test. No treatment is a separate answer.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/f3-photos.png" width="780" height="2190" loading="lazy" alt="Intake step 3: checklist of documents with status, upload area with take photo and choose file" /></div>
+            <figcaption><h3><span class="cs-num">4</span>Intake: photos and documents</h3><p>A checklist says exactly what to upload. Photos can be taken in the app, and anything missing can be added later.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/f4-health.png" width="780" height="2458" loading="lazy" alt="Intake step 4: height and weight, segmented answers and condition chips" /></div>
+            <figcaption><h3><span class="cs-num">5</span>Intake: your health</h3><p>Plain-language questions about medicines, allergies and history, grouped so the step stays short.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/f5-sign.png" width="780" height="1957" loading="lazy" alt="Intake step 5: summary of answers, typed signature and consent switch" /></div>
+            <figcaption><h3><span class="cs-num">6</span>Review and sign</h3><p>A summary of every step with Edit, links to each consent, and the signature.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/h2-visit-form-next.png" width="780" height="1688" loading="lazy" alt="Home after intake: visit form is the next step" /></div>
+            <figcaption><h3><span class="cs-num">7</span>Next: the visit form</h3><p>The intake form is marked done and the next step is waiting.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/v1-what-bothers.png" width="780" height="2064" loading="lazy" alt="Visit form step 1: symptom and body-area chips" /></div>
+            <figcaption><h3><span class="cs-num">8</span>Visit form: what bothers you</h3><p>Symptoms and body areas as chips. Each pick adds a few questions on the next screens.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/v2-head.png" width="780" height="2216" loading="lazy" alt="Visit form step 2: questions about head pain with a 0 to 10 scale" /></div>
+            <figcaption><h3><span class="cs-num">9</span>Visit form: head</h3><p>How it started, how often, a 0–10 pain scale and what makes it better or worse.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/v3-symptoms.png" width="780" height="2690" loading="lazy" alt="Visit form step 3: symptom questionnaire with 0 to 4 scales" /></div>
+            <figcaption><h3><span class="cs-num">10</span>Visit form: symptoms check</h3><p>The 16-symptom questionnaire as compact 0–4 scales with a legend and a progress count.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/sc1-location.png" width="780" height="2018" loading="lazy" alt="Booking: state selection with an unsupported-state error and a call-care-team option" /></div>
+            <figcaption><h3><span class="cs-num">11</span>Where you will be</h3><p>Doctors can only treat patients where they are licensed. The error explains why and what to do next.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/sc2-time.png" width="780" height="1688" loading="lazy" alt="Booking: day picker and morning and afternoon time slots" /></div>
+            <figcaption><h3><span class="cs-num">12</span>Pick a time</h3><p>Days with free slots, booked times shown as unavailable, and the choice summarised above the button.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/h3-waiting.png" width="780" height="2048" loading="lazy" alt="Home after booking: visit waiting for confirmation with change and cancel" /></div>
+            <figcaption><h3><span class="cs-num">13</span>Waiting for confirmation</h3><p>The clinic confirms the time; until then the patient can change or cancel it.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/h4-visit-today.png" width="780" height="1688" loading="lazy" alt="Home on the visit day: join visit and a device checklist" /></div>
+            <figcaption><h3><span class="cs-num">14</span>Visit today</h3><p>Join is the main action, with a quick camera, microphone and connection check before the call.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/vs1-visits.png" width="780" height="1860" loading="lazy" alt="Visits tab: follow-up waiting for a visit form, confirmed visit and past visit with summary" /></div>
+            <figcaption><h3><span class="cs-num">15</span>Visits</h3><p>A follow-up the doctor asked for shows as the patient’s turn, next to confirmed and past visits.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/vs2-follow-up.png" width="780" height="1860" loading="lazy" alt="Bottom sheet to request a follow-up with reason chips and a note" /></div>
+            <figcaption><h3><span class="cs-num">16</span>Request a follow-up</h3><p>A reason and a short note go to the doctor, who decides whether another visit is needed.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/dc1-documents.png" width="780" height="1824" loading="lazy" alt="Documents tab: intake form signed, follow-up form to fill, optional vehicle form" /></div>
+            <figcaption><h3><span class="cs-num">17</span>Documents</h3><p>Forms grouped by when they are needed: once, for each visit, or optional.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/hp1-help.png" width="780" height="2776" loading="lazy" alt="Help tab: call 911, request a visit, video troubleshooting and contacts" /></div>
+            <figcaption><h3><span class="cs-num">18</span>Help</h3><p>Emergency first, then an extra visit, help with the video call and the care team’s contacts.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/h5-no-visit.png" width="780" height="1852" loading="lazy" alt="Home when no visit is set up yet, with care-team contacts" /></div>
+            <figcaption><h3><span class="cs-num">19</span>No visit yet</h3><p>When nobody has set up a visit, the screen says who does it and how to chase it.</p></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <!-- ILLUSTRATIONS -->
     <section class="cs-section reveal" id="illustrations" aria-labelledby="illustrations-title">
       <div class="cs-wrap">
