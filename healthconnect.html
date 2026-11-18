@@ -52,8 +52,8 @@
         </dl>
       </div>
       <div class="cs-hero__visual">
-        <video autoplay muted loop playsinline preload="metadata" poster="assets/healthconnect/cover-poster.jpg" aria-hidden="true">
-          <source src="assets/healthconnect/cover.mp4" type="video/mp4" />
+        <video autoplay muted loop playsinline preload="metadata" poster="assets/healthconnect/cover-poster.jpg?v=2" aria-hidden="true">
+          <source src="assets/healthconnect/cover.mp4?v=2" type="video/mp4" />
         </video>
       </div>
     </div>
@@ -206,26 +206,24 @@
           <span class="cs-eyebrow">Part 2 · Web</span>
           <h2 class="cs-h2" id="doctor-title">The doctor's workflow</h2>
           <p class="cs-lead">
-            A doctor's day runs from a work list, through a structured consultation report, to a
-            record that is reviewed and signed rather than re-entered. The consultation report and
-            record review are exported directly from the production Figma file, unedited; the work
-            list, visits, visit form, send-for-processing, signing, next-document, report-a-problem and manage-documents screens are a 2026 redesign of the production flow,
-            made in the same file. The logo is a placeholder mark
-            from the design file, not the client's branding.
+            A doctor's day runs from a work list, through a structured visit form, to a record that is
+            reviewed and signed rather than re-entered. These screens are a 2026 redesign of the
+            production flow in the new blue palette, made in the same Figma file; the logic follows
+            the production product. The logo is a placeholder mark from the design file, not the
+            client's branding.
           </p>
         </div>
 
         <ol class="cs-steps">
           <li><button type="button" class="cs-step"><span class="cs-num">1</span>Work list</button></li>
           <li><button type="button" class="cs-step"><span class="cs-num">2</span>Visits</button></li>
-          <li><button type="button" class="cs-step"><span class="cs-num">3</span>Consultation report</button></li>
-          <li><button type="button" class="cs-step"><span class="cs-num">4</span>Visit form</button></li>
-          <li><button type="button" class="cs-step"><span class="cs-num">5</span>Send for processing</button></li>
-          <li><button type="button" class="cs-step"><span class="cs-num">6</span>Record review</button></li>
-          <li><button type="button" class="cs-step"><span class="cs-num">7</span>Signing</button></li>
-          <li><button type="button" class="cs-step"><span class="cs-num">8</span>Next document</button></li>
-          <li><button type="button" class="cs-step"><span class="cs-num">9</span>Report a problem</button></li>
-          <li><button type="button" class="cs-step"><span class="cs-num">10</span>Manage documents</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">3</span>Visit form</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">4</span>Send for processing</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">5</span>Record review</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">6</span>Signing</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">7</span>Next document</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">8</span>Report a problem</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">9</span>Manage documents</button></li>
         </ol>
 
         <div class="cs-bar">
@@ -247,36 +245,32 @@
             <figcaption><h3><span class="cs-num">2</span>Visits</h3><p>The day's visits with their documentation status next to the schedule, so the next step for each visit, from joining a call to signing, sits on the same row.</p></figcaption>
           </figure>
           <figure class="cs-slide">
-            <div class="cs-shot cs-shot--natural"><img src="assets/healthconnect/screen-2.png?v=2" width="1440" height="1024" loading="lazy" alt="Consultation report on the Diagnosis step: patient and visit details, chief complaint, clinical assessment, and suggested ICD-10 diagnoses with one selected" /></div>
-            <figcaption><h3><span class="cs-num">3</span>Consultation report</h3><p>Chief complaint and clinical assessment feed a suggested ICD-10 list, and the record can't move to a treatment plan until a diagnosis is selected.</p></figcaption>
-          </figure>
-          <figure class="cs-slide">
             <div class="cs-shot cs-shot--natural"><img src="assets/healthconnect/doctor-visit-form.png" width="2700" height="1920" loading="lazy" alt="Redesigned consultation report: three steps for diagnosis, treatment plan and billing codes, report sections in one column, and an ICD-10 diagnosis panel on the right with one code selected" /></div>
-            <figcaption><h3><span class="cs-num">4</span>Visit form</h3><p>The same report as three steps: diagnosis, treatment plan, billing codes. Later sections stay locked until the step before them is done, and the diagnosis panel stays beside the report.</p></figcaption>
+            <figcaption><h3><span class="cs-num">3</span>Visit form</h3><p>The same report as three steps: diagnosis, treatment plan, billing codes. Later sections stay locked until the step before them is done, and the diagnosis panel stays beside the report.</p></figcaption>
           </figure>
           <figure class="cs-slide">
             <div class="cs-shot cs-shot--natural"><img src="assets/healthconnect/doctor-send-processing.png" width="2700" height="1920" loading="lazy" alt="Send for processing dialog over the finished visit form: a summary of diagnosis, treatment plan and billing codes, an Ask for proofreading option, and Keep editing or Send for processing" /></div>
-            <figcaption><h3><span class="cs-num">5</span>Send for processing</h3><p>Before the report leaves the doctor, a short summary shows what is being sent and the option to have it proofread, since it can't be edited while the team works on it.</p></figcaption>
+            <figcaption><h3><span class="cs-num">4</span>Send for processing</h3><p>Before the report leaves the doctor, a short summary shows what is being sent and the option to have it proofread, since it can't be edited while the team works on it.</p></figcaption>
           </figure>
           <figure class="cs-slide">
-            <div class="cs-shot cs-shot--natural"><img src="assets/healthconnect/screen-3.png" width="1440" height="1024" loading="lazy" alt="Medical record draft next to a Select Diagnosis panel with current complaints, suggested and referral-sourced ICD-10 codes, and one primary diagnosis selected" /></div>
-            <figcaption><h3><span class="cs-num">6</span>Record review</h3><p>The full draft next to the same diagnosis panel, with complaints pulled forward and codes suggested from the referral, so signing off is a review.</p></figcaption>
+            <div class="cs-shot cs-shot--natural"><img src="assets/healthconnect/record-review.png" width="2700" height="1920" loading="lazy" alt="Medical record as a live preview: the record laid out as a document on a grey canvas, a Select diagnosis panel on the right, and a bar saying one change is ready to apply to the record with Review change and Update preview" /></div>
+            <figcaption><h3><span class="cs-num">5</span>Record review</h3><p>The record reads as the document that will be signed. Diagnoses picked in the side panel wait as a change until the doctor updates the preview, so what's on the page is always what goes out.</p></figcaption>
           </figure>
           <figure class="cs-slide">
             <div class="cs-shot cs-shot--natural"><img src="assets/healthconnect/doctor-signing.png" width="2700" height="1920" loading="lazy" alt="Medical record in signing mode: the visit's documents on the left, the record in the centre, a Before you sign summary of diagnosis, referrals, billing and the documentation team's edits on the right, and Report problem and Sign at the bottom" /></div>
-            <figcaption><h3><span class="cs-num">7</span>Signing</h3><p>Signing works as a queue. A summary shows what goes on the record and what the documentation team changed, and the next document opens after each signature.</p></figcaption>
+            <figcaption><h3><span class="cs-num">6</span>Signing</h3><p>Signing works as a queue. A summary shows what goes on the record and what the documentation team changed, and the next document opens after each signature.</p></figcaption>
           </figure>
           <figure class="cs-slide">
             <div class="cs-shot cs-shot--natural"><img src="assets/healthconnect/doctor-signed-next.png" width="2700" height="1920" loading="lazy" alt="After signing: the medical record is marked Signed in the documents list, the invoice opens next as 2 of 4 to sign, and a toast confirms the signature with an Undo action" /></div>
-            <figcaption><h3><span class="cs-num">8</span>Next document</h3><p>After a signature the next document in the visit opens on its own, the signed one is marked in the list, and Undo stays available for a few seconds.</p></figcaption>
+            <figcaption><h3><span class="cs-num">7</span>Next document</h3><p>After a signature the next document in the visit opens on its own, the signed one is marked in the list, and Undo stays available for a few seconds.</p></figcaption>
           </figure>
           <figure class="cs-slide">
             <div class="cs-shot cs-shot--natural"><img src="assets/healthconnect/doctor-report-problem.png" width="2700" height="1920" loading="lazy" alt="Report a problem dialog over the signing screen: a choice of what needs fixing, a required note for the documentation team, and Send back to team" /></div>
-            <figcaption><h3><span class="cs-num">9</span>Report a problem</h3><p>When something is wrong, the doctor sends the document back with a reason and a note instead of editing a file that has already been processed.</p></figcaption>
+            <figcaption><h3><span class="cs-num">8</span>Report a problem</h3><p>When something is wrong, the doctor sends the document back with a reason and a note instead of editing a file that has already been processed.</p></figcaption>
           </figure>
           <figure class="cs-slide">
             <div class="cs-shot cs-shot--natural"><img src="assets/healthconnect/doctor-manage-documents.png" width="2700" height="2320" loading="lazy" alt="Manage documents dialog over the work list for a merged file with mixed statuses: documents grouped into Ready to sign, Incomplete and In processing, each group with its own action or a note that no action is needed" /></div>
-            <figcaption><h3><span class="cs-num">10</span>Manage documents</h3><p>A merged file can hold documents in different states. Grouping them by status gives each group one clear action, and says when nothing is needed from the doctor.</p></figcaption>
+            <figcaption><h3><span class="cs-num">9</span>Manage documents</h3><p>A merged file can hold documents in different states. Grouping them by status gives each group one clear action, and says when nothing is needed from the doctor.</p></figcaption>
           </figure>
         </div>
       </div>
