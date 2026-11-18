@@ -1485,7 +1485,7 @@ ul { list-style: none; }
 .theme-light .case-pill--cta { background: #eab308; border-color: transparent; color: #141008; }
 .theme-light .case-menu__link:hover { background: rgba(17, 17, 20, 0.05); }
 
-.theme-light .cs-hero__visual:not(.cs-hx) { background: #030b0f; }
+.theme-light .cs-hero__visual:not(.cs-hx):not(.cs-hc) { background: #030b0f; }
 .theme-light .cs-band { background: #ffffff; box-shadow: var(--tile-shadow); }
 .theme-light .cs-glass,
 .theme-light .cs-band .cs-card { background: var(--bg); }
@@ -1811,42 +1811,72 @@ ul { list-style: none; }
 @keyframes hx-draft { 0%, 30% { opacity: 1; } 38%, 94% { opacity: 0; } 100% { opacity: 1; } }
 @keyframes hx-pub { 0%, 30% { opacity: 0; transform: scale(0.9); } 38%, 94% { opacity: 1; transform: none; } 100% { opacity: 0; } }
 
-/* ---- HealthConnect hero: same floating-pieces idea as Lumen, in the product's blue ---- */
-.cs-hh { background: #0d1530; font-family: var(--font-sans); }
-.cs-hh__glow { position: absolute; inset: 0;
-  background: radial-gradient(45% 55% at 72% 50%, rgba(47, 91, 234, 0.45), transparent 70%), radial-gradient(35% 45% at 12% 18%, rgba(157, 180, 255, 0.28), transparent 70%); }
-.cs-hh__msg { left: 6cqw; top: 8cqw; width: 56cqw; display: flex; align-items: center; gap: 1.6cqw; padding: 1.8cqw 2.2cqw; }
-.cs-hh__av { width: 5cqw; height: 5cqw; flex: none; border-radius: 50%; display: grid; place-items: center; background: rgba(157, 180, 255, 0.2); color: #dbe4ff; font-size: 1.7cqw; font-weight: 600; }
-.cs-hh__bubble { min-width: 0; flex: 1; }
-.cs-hh__bubble small { margin: 0 0 0.4cqw; }
-.cs-hh__line { display: flex; align-items: center; font-size: 2.05cqw; white-space: nowrap; overflow: hidden; }
-.cs-hh .cs-hx__caret { background: #9db4ff; }
-.cs-hh__ring { top: 4.5cqw; }
-.cs-hh .cs-hx__arc { stroke: #2F5BEA; }
-.cs-hh__mark { position: absolute; left: 9cqw; top: 26cqw; width: 12cqw; aspect-ratio: 1; border-radius: 3cqw; background: #fff; display: grid; place-items: center; box-shadow: 0 1.6cqw 4cqw -0.6cqw rgba(47, 91, 234, 0.6); }
-.cs-hh__mark svg { width: 64%; height: 64%; display: block; }
-.cs-hh__case { right: 5cqw; top: 26.5cqw; width: 46cqw; padding: 2.2cqw; }
-.cs-hh__case ul { list-style: none; margin-top: 1.8cqw; display: grid; gap: 1.1cqw; padding: 1.4cqw 1.6cqw; border-radius: 1.4cqw; background: rgba(255, 255, 255, 0.05); }
-.cs-hh__case li { display: grid; grid-template-columns: 15cqw 1fr 2cqw; align-items: center; gap: 1.4cqw; font-size: 1.6cqw; color: rgba(255, 255, 255, 0.82); }
-.cs-hh__case li i { height: 0.7cqw; border-radius: 1cqw; background: linear-gradient(90deg, #2F5BEA, #9db4ff); width: calc(var(--w) * 100%); }
-.cs-hh__case li:nth-child(-n+2) i { background: #34d399; }
-.cs-hh__case li b { text-align: right; color: #86efac; font-size: 1.5cqw; }
-.cs-hh .cs-hx__head em { background: rgba(157, 180, 255, 0.18); color: #dbe4ff; }
-.cs-hh__tile { background: rgba(157, 180, 255, 0.16); color: #dbe4ff; }
-.cs-hh__doc { left: 5cqw; bottom: 5.5cqw; width: 46cqw; display: flex; align-items: center; gap: 1.6cqw; padding: 1.8cqw 2cqw; font-size: 1.95cqw; }
-.cs-hh__doc > span:nth-child(2) { flex: 1; min-width: 0; }
-.cs-hh__ready { background: rgba(47, 91, 234, 0.3) !important; color: #dbe4ff !important; }
+/* ---- HealthConnect hero: the doctor's work list and the patient's phone moving together ---- */
+.cs-hc { container-type: inline-size; border: 0; border-radius: 16px; font-family: var(--font-sans); color: #1a1a18;
+  background: radial-gradient(60% 70% at 85% 90%, rgba(157, 180, 255, 0.55), transparent 70%), linear-gradient(135deg, #2F5BEA 0%, #2449c8 100%); }
+.cs-hc::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,0.18) 1px, transparent 1.2px); background-size: 3cqw 3cqw; }
+.cs-hc b { font-weight: 600; }
+.cs-hc small { display: block; color: #70706a; font-size: 1.35cqw; margin-top: 0.2cqw; }
+.cs-hc__desk { position: absolute; left: 5cqw; top: 7cqw; width: 66cqw; padding: 0 0 2cqw; border-radius: 1.6cqw; background: #fff; box-shadow: 0 3cqw 6cqw -2cqw rgba(10, 20, 70, 0.55); overflow: hidden; }
+.cs-hc__bar { display: flex; align-items: center; gap: 0.8cqw; padding: 1.4cqw 2cqw; border-bottom: 1px solid #ebebe7; font-size: 1.6cqw; }
+.cs-hc__bar i { width: 0.9cqw; height: 0.9cqw; border-radius: 50%; background: #dadad5; }
+.cs-hc__bar span { margin-left: 1cqw; font-weight: 600; flex: 1; }
+.cs-hc__count { font-style: normal; font-size: 1.3cqw; padding: 0.5cqw 1.1cqw; border-radius: 1cqw; background: #f1f1ee; color: #70706a; }
+.cs-hc__count b { color: #1a1a18; margin-right: 0.3cqw; }
+.cs-hc__count--warn b { color: #b4651d; }
+.cs-hc__patient { padding: 1.8cqw 2cqw 0.8cqw; font-size: 1.75cqw; }
+.cs-hc__row { margin: 0.8cqw 2cqw 0; display: grid; grid-template-columns: 2.4cqw 1fr 14cqw 15cqw; align-items: center; gap: 1.4cqw; padding: 1.2cqw 1.4cqw; border-radius: 1cqw; font-size: 1.55cqw; background: #fcefd9; }
+.cs-hc__row--blue { background: #eef2fe; }
+.cs-hc__row--grey { background: #f1f1ee; }
+.cs-hc__file { width: 2.2cqw; height: 2.6cqw; border: 0.25cqw solid #5a5a55; border-radius: 0.4cqw; }
+.cs-hc__file--folder { height: 2cqw; border-radius: 0.4cqw 0.4cqw 0.3cqw 0.3cqw; }
+.cs-hc__badges, .cs-hc__acts { position: relative; display: grid; }
+.cs-hc__b { grid-area: 1 / 1; justify-self: start; font-style: normal; font-size: 1.15cqw; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.35cqw 0.9cqw; border-radius: 0.6cqw; }
+.cs-hc__b--inc { background: rgba(217, 130, 43, 0.16); color: #9a5414; }
+.cs-hc__b--rdy, .cs-hc__b--static-rdy { background: rgba(47, 91, 234, 0.12); color: #2449c8; }
+.cs-hc__b--sgn { background: rgba(46, 158, 71, 0.14); color: #23773a; }
+.cs-hc__b--mix { background: #e3e3df; color: #5a5a55; }
+.cs-hc__acts u { grid-area: 1 / 1; justify-self: end; text-decoration: none; font-size: 1.35cqw; font-weight: 600; padding: 0.6cqw 1.2cqw; border-radius: 99cqw; background: #fff; border: 1px solid #ebebe7; white-space: nowrap; }
+.cs-hc__badges .cs-hc__b--rdy, .cs-hc__badges .cs-hc__b--sgn, .cs-hc__a2, .cs-hc__a3 { opacity: 0; }
+.cs-hc__toast { position: absolute; left: 50%; bottom: 2cqw; transform: translate(-50%, 6cqw); padding: 1cqw 1.8cqw; border-radius: 1cqw; background: #1a1a18; color: #fff; font-size: 1.45cqw; white-space: nowrap; opacity: 0; }
+.cs-hc__toast b { margin-left: 1.2cqw; text-decoration: underline; }
+.cs-hc__phone { position: absolute; right: 6cqw; top: 13cqw; width: 23cqw; aspect-ratio: 390 / 760; border-radius: 3.4cqw; background: #fff; border: 0.7cqw solid #0d1530; box-shadow: 0 3cqw 6cqw -2cqw rgba(10, 20, 70, 0.6); overflow: hidden; }
+.cs-hc__notch { width: 7cqw; height: 1.6cqw; margin: 0.8cqw auto 0; border-radius: 1cqw; background: #0d1530; }
+.cs-hc__ph-body { padding: 2.2cqw 1.8cqw; display: flex; flex-direction: column; gap: 1.2cqw; font-size: 1.9cqw; }
+.cs-hc__ph-body > small { margin: 0; }
+.cs-hc__steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6cqw; font-size: 1.05cqw; color: #70706a; }
+.cs-hc__steps i { display: block; height: 0.5cqw; border-radius: 1cqw; margin-bottom: 0.5cqw; background: #ebebe7; background-image: linear-gradient(#2e9e47, #2e9e47); background-repeat: no-repeat; background-size: 100% 100%; }
+.cs-hc__visit { display: flex; gap: 1cqw; align-items: center; padding: 1.2cqw; border: 1px solid #ebebe7; border-radius: 1.2cqw; font-size: 1.45cqw; }
+.cs-hc__visit small { font-size: 1.15cqw; }
+.cs-hc__cam { width: 3.2cqw; height: 3.2cqw; flex: none; border-radius: 0.9cqw; background: #eef2fe; position: relative; }
+.cs-hc__cam::after { content: ""; position: absolute; inset: 1cqw 0.8cqw; border: 0.25cqw solid #2F5BEA; border-radius: 0.3cqw; }
+.cs-hc__btn { margin-top: 0.4cqw; padding: 1.2cqw; border-radius: 99cqw; background: #2F5BEA; color: #fff; text-align: center; font-size: 1.45cqw; font-weight: 600; }
 @media (prefers-reduced-motion: no-preference) {
-  .cs-hh__mark { animation: hx-float 6s ease-in-out infinite -3s; }
-  .cs-hh__msg { animation-duration: 8s; animation-delay: -1s; }
-  .cs-hh__case { animation-duration: 9s; animation-delay: -4s; }
-  .cs-hh__doc { animation-duration: 7.5s; animation-delay: -2s; }
-  .cs-hh__case li i { transform-origin: left; animation: hx-bar 6s cubic-bezier(0.2, 0.8, 0.2, 1) infinite; }
-  .cs-hh__case li:nth-child(2) i { animation-delay: 0.2s; }
-  .cs-hh__case li:nth-child(3) i { animation-delay: 0.4s; }
-  .cs-hh__case .cs-hx__head em { animation: hh-pulse 3s ease-in-out infinite; }
+  .cs-hc__row--live { animation: hc-row 9s infinite; }
+  .cs-hc__b--inc, .cs-hc__a1 { animation: hc-s1 9s infinite; }
+  .cs-hc__badges .cs-hc__b--rdy, .cs-hc__a2 { animation: hc-s2 9s infinite; }
+  .cs-hc__badges .cs-hc__b--sgn, .cs-hc__a3 { animation: hc-s3 9s infinite; }
+  .cs-hc__toast { animation: hc-toast 9s infinite; }
+  .cs-hc__steps span:nth-child(1) i { animation: hc-fill1 9s infinite; }
+  .cs-hc__steps span:nth-child(2) i { animation: hc-fill2 9s infinite; }
+  .cs-hc__steps span:nth-child(3) i { animation: hc-fill3 9s infinite; }
+  .cs-hc__phone { animation: hx-float 7s ease-in-out infinite; }
+  .cs-hc__btn { animation: hc-btn 9s infinite; }
 }
-@keyframes hh-pulse { 50% { background: rgba(157, 180, 255, 0.34); } }
+@media (prefers-reduced-motion: reduce) {
+  .cs-hc__b--inc, .cs-hc__a1 { opacity: 0; }
+  .cs-hc__badges .cs-hc__b--rdy, .cs-hc__a2 { opacity: 1; }
+  .cs-hc__row--live { background: #eef2fe; }
+}
+@keyframes hc-row { 0%, 30% { background: #fcefd9; } 34%, 63% { background: #eef2fe; } 67%, 96% { background: #eaf6ec; } 100% { background: #fcefd9; } }
+@keyframes hc-s1 { 0%, 30% { opacity: 1; } 34%, 96% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes hc-s2 { 0%, 30% { opacity: 0; } 34%, 63% { opacity: 1; } 67%, 100% { opacity: 0; } }
+@keyframes hc-s3 { 0%, 63% { opacity: 0; } 67%, 96% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes hc-toast { 0%, 66% { opacity: 0; transform: translate(-50%, 6cqw); } 70%, 92% { opacity: 1; transform: translate(-50%, 0); } 96%, 100% { opacity: 0; transform: translate(-50%, 6cqw); } }
+@keyframes hc-fill1 { 0% { background-size: 0 100%; } 10%, 96% { background-size: 100% 100%; } 100% { background-size: 0 100%; } }
+@keyframes hc-fill2 { 0%, 30% { background-size: 0 100%; } 40%, 96% { background-size: 100% 100%; } 100% { background-size: 0 100%; } }
+@keyframes hc-fill3 { 0%, 63% { background-size: 0 100%; } 73%, 96% { background-size: 100% 100%; } 100% { background-size: 0 100%; } }
+@keyframes hc-btn { 0%, 70% { box-shadow: 0 0 0 0 rgba(47, 91, 234, 0); } 78% { box-shadow: 0 0 0 1.2cqw rgba(47, 91, 234, 0.25); } 86%, 100% { box-shadow: 0 0 0 0 rgba(47, 91, 234, 0); } }
 
 /* ---- Design system: tokens and components ---- */
 .cs-ds__stats { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-bottom: 16px; }

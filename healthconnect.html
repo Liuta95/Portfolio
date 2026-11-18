@@ -51,30 +51,28 @@
           <div><dt>Domain</dt><dd>HealthTech · Personal-injury care</dd></div>
         </dl>
       </div>
-      <div class="cs-hero__visual cs-hx cs-hh" role="img" aria-label="Pieces of the HealthConnect interface: a patient's message being typed, a countdown to the next video visit, a case moving through its steps and a medical record being signed">
-        <div class="cs-hh__glow" aria-hidden="true"></div>
-        <div class="cs-hx__card cs-hh__msg" aria-hidden="true">
-          <span class="cs-hh__av">IR</span>
-          <span class="cs-hh__bubble"><small>Irvin · patient</small><span class="cs-hh__line"><span class="cs-hx__typed" data-typewriter="Headaches are back every afternoon|Can I move my visit to Thursday?|I uploaded my insurance card">Headaches are back every afternoon</span><span class="cs-hx__caret"></span></span></span>
+      <div class="cs-hero__visual cs-hc" role="img" aria-label="The HealthConnect flow in motion: in the doctor's work list a medical record goes from Incomplete to Ready to sign to Signed, while on the patient's phone the steps to a first visit fill up">
+        <div class="cs-hc__desk" aria-hidden="true">
+          <div class="cs-hc__bar"><i></i><i></i><i></i><span>Work list</span><em class="cs-hc__count cs-hc__count--warn"><b>6</b> Incomplete</em><em class="cs-hc__count"><b>4</b> Ready to sign</em></div>
+          <div class="cs-hc__patient"><b>Irvin Rippin</b><small>Primary care · Visit Oct 3</small></div>
+          <div class="cs-hc__row cs-hc__row--live">
+            <span class="cs-hc__file"></span><span class="cs-hc__name"><b>Medical record.pdf</b><small>Primary care · follow-up</small></span>
+            <span class="cs-hc__badges"><em class="cs-hc__b cs-hc__b--inc">Incomplete</em><em class="cs-hc__b cs-hc__b--rdy">Ready to sign</em><em class="cs-hc__b cs-hc__b--sgn">Signed</em></span>
+            <span class="cs-hc__acts"><u class="cs-hc__a1">Complete visit form</u><u class="cs-hc__a2">Review &amp; sign</u><u class="cs-hc__a3">View</u></span>
+          </div>
+          <div class="cs-hc__row cs-hc__row--blue"><span class="cs-hc__file"></span><span class="cs-hc__name"><b>Invoice.pdf</b><small>3 billing codes · $240.00</small></span><span class="cs-hc__badges"><em class="cs-hc__b cs-hc__b--static-rdy">Ready to sign</em></span><span class="cs-hc__acts"><u>Review &amp; sign</u></span></div>
+          <div class="cs-hc__row cs-hc__row--grey"><span class="cs-hc__file cs-hc__file--folder"></span><span class="cs-hc__name"><b>Visit documents</b><small>Merged file · 3 documents</small></span><span class="cs-hc__badges"><em class="cs-hc__b cs-hc__b--mix">Mixed</em></span><span class="cs-hc__acts"><u>Manage</u></span></div>
+          <div class="cs-hc__toast">✓ Medical record.pdf signed <b>Undo</b></div>
         </div>
-        <div class="cs-hx__card cs-hx__ring cs-hh__ring" aria-hidden="true">
-          <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" class="cs-hx__track"/><circle cx="50" cy="50" r="42" class="cs-hx__arc"/></svg>
-          <b>10:00</b><small>Video visit</small>
-        </div>
-        <div class="cs-hh__mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M15.56 30.22h-4.53V19.34H1.86v-8.36h9.17M11.03 10.98V1.78h8.13M11.03 10.98v4.91h6.97" stroke="#2F5BEA" stroke-width="4.46" stroke-linejoin="round"/><path d="M19.17 1.78h2.09v9.2h8.88v8.36h-8.88M18 15.89h3.26v14.33h-4.76" stroke="#7491F1" stroke-width="4.46" stroke-linejoin="round"/></svg></div>
-        <div class="cs-hx__card cs-hh__case" aria-hidden="true">
-          <div class="cs-hx__head"><span class="cs-hx__tile cs-hh__tile"><svg viewBox="0 0 16 16"><rect x="3" y="2.5" width="10" height="11" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M5.5 6h5M5.5 8.5h5M5.5 11h3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></span>
-            <span><b>First visit</b><small>Marjorie Klein · 3 steps</small></span><em>Next</em></div>
-          <ul>
-            <li><span>Intake form</span><i style="--w:1"></i><b>✓</b></li>
-            <li><span>Visit form</span><i style="--w:1"></i><b>✓</b></li>
-            <li><span>Book a time</span><i style="--w:.6"></i><b></b></li>
-          </ul>
-        </div>
-        <div class="cs-hx__card cs-hh__doc" aria-hidden="true">
-          <span class="cs-hx__tile cs-hh__tile"><svg viewBox="0 0 16 16"><path d="M4 2.5h5.5L12 5v8.5H4z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M6 8.5l1.5 1.5L10.5 7" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <span><b>Medical record.pdf</b><small>Dr. Cruickshank · visit Oct 3</small></span>
-          <span class="cs-hx__status"><em class="cs-hx__draft cs-hh__ready">Ready to sign</em><em class="cs-hx__pub">Signed</em></span>
+        <div class="cs-hc__phone" aria-hidden="true">
+          <div class="cs-hc__notch"></div>
+          <div class="cs-hc__ph-body">
+            <small>Welcome back, Marjorie</small>
+            <b>Your first visit</b>
+            <div class="cs-hc__steps"><span><i></i>Intake</span><span><i></i>Visit form</span><span><i></i>Schedule</span></div>
+            <div class="cs-hc__visit"><span class="cs-hc__cam"></span><span><b>Video visit</b><small>Dr. Watson · 10:00</small></span></div>
+            <div class="cs-hc__btn">Join visit</div>
+          </div>
         </div>
       </div>
     </div>
@@ -329,7 +327,7 @@
 
         <div class="cs-track cs-track--phones">
           <figure class="cs-slide">
-            <div class="cs-shot cs-shot--natural cs-shot--phone"><video autoplay muted loop playsinline preload="metadata" width="780" height="1688" poster="assets/healthconnect/patient/welcome-poster.jpg?v=2" aria-label="Welcome screen: the HealthConnect logo appears with a pulsing ring, cards for the intake form, video visit and signed visit summary float in, then the headline and Get started button"><source src="assets/healthconnect/patient/welcome.mp4?v=2" type="video/mp4" /></video></div>
+            <div class="cs-shot cs-shot--natural cs-shot--phone"><video autoplay muted loop playsinline preload="metadata" width="780" height="1688" poster="assets/healthconnect/patient/welcome-poster.jpg?v=3" aria-label="Welcome screen: the HealthConnect logo appears with a pulsing ring, cards for the intake form, video visit and signed visit summary float in, then the headline and Get started button"><source src="assets/healthconnect/patient/welcome.mp4?v=3" type="video/mp4" /></video></div>
             <figcaption><h3><span class="cs-num">1</span>Welcome</h3><p>The first screen shows the whole journey in three cards, intake, video visit and a signed summary, so a patient knows what to expect before signing up.</p></figcaption>
           </figure>
           <figure class="cs-slide">
@@ -381,19 +379,19 @@
             <figcaption><h3><span class="cs-num">13</span>Pick a time</h3><p>Days with free slots, booked times shown as unavailable, and the choice summarised above the button.</p></figcaption>
           </figure>
           <figure class="cs-slide">
-            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/h3-waiting.png?v=2" width="780" height="1924" loading="lazy" alt="Home after booking: visit waiting for confirmation with change and cancel" /></div>
+            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/h3-waiting.png?v=3" width="780" height="1960" loading="lazy" alt="Home after booking: visit waiting for confirmation with change and cancel" /></div>
             <figcaption><h3><span class="cs-num">14</span>Waiting for confirmation</h3><p>The clinic confirms the time; until then the patient can change or cancel it.</p></figcaption>
           </figure>
           <figure class="cs-slide">
-            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/h4-visit-today.png" width="780" height="1688" loading="lazy" alt="Home on the visit day: join visit and a device checklist" /></div>
+            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/h4-visit-today.png?v=2" width="780" height="1688" loading="lazy" alt="Home on the visit day: join visit and a device checklist" /></div>
             <figcaption><h3><span class="cs-num">15</span>Visit today</h3><p>Join is the main action, with a quick camera, microphone and connection check before the call.</p></figcaption>
           </figure>
           <figure class="cs-slide">
-            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/vs1-visits.png" width="780" height="1860" loading="lazy" alt="Visits tab: follow-up waiting for a visit form, confirmed visit and past visit with summary" /></div>
+            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/vs1-visits.png?v=2" width="780" height="1848" loading="lazy" alt="Visits tab: follow-up waiting for a visit form, confirmed visit and past visit with summary" /></div>
             <figcaption><h3><span class="cs-num">16</span>Visits</h3><p>A follow-up the doctor asked for shows as the patient’s turn, next to confirmed and past visits.</p></figcaption>
           </figure>
           <figure class="cs-slide">
-            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/vs2-follow-up.png" width="780" height="1860" loading="lazy" alt="Bottom sheet to request a follow-up with reason chips and a note" /></div>
+            <div class="cs-shot cs-shot--natural cs-shot--phone"><img src="assets/healthconnect/patient/vs2-follow-up.png?v=2" width="780" height="1848" loading="lazy" alt="Bottom sheet to request a follow-up with reason chips and a note" /></div>
             <figcaption><h3><span class="cs-num">17</span>Request a follow-up</h3><p>A reason and a short note go to the doctor, who decides whether another visit is needed.</p></figcaption>
           </figure>
           <figure class="cs-slide">
@@ -594,7 +592,7 @@
         </div>
 
         <figure class="cs-feature">
-          <div class="cs-shot cs-shot--natural"><img src="assets/healthconnect/ds-mobile-components.png?v=3" width="3200" height="4064" loading="lazy" alt="Mobile components board: iOS navigation and tab bars, 48 pt buttons and fields, form footer, chips, segmented control and switch, day and time pickers, progress steps and status marks, video call controls and participant tiles, plus notices, list rows, a rating scale and the call header with status and controls" /></div>
+          <div class="cs-shot cs-shot--natural"><img src="assets/healthconnect/ds-mobile-components.png?v=4" width="3200" height="4064" loading="lazy" alt="Mobile components board: iOS navigation and tab bars, 48 pt buttons and fields, form footer, chips, segmented control and switch, day and time pickers, progress steps and status marks, video call controls and participant tiles, plus notices, list rows, a rating scale and the call header with status and controls" /></div>
           <figcaption><h3>Mobile components</h3><p>Navigation, 48 pt controls, pickers, progress and the video call kit, plus the blocks that repeat across screens: notices, list rows, rating scales and the call header and controls. All on the shared tokens.</p></figcaption>
         </figure>
 
