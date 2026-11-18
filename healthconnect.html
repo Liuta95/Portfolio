@@ -83,8 +83,8 @@
           </p>
         </div>
         <figure class="cs-overview__media cs-overview__media--screen">
-          <img src="assets/healthconnect/doctor-home.png?v=3" width="2700" height="1920" loading="lazy"
-               alt="Doctor home screen: a Documentation Tasks table with patient, task, status and due date for each record, one row expanded to show its documents" />
+          <img src="assets/healthconnect/doctor-queue.png" width="2700" height="2320" loading="lazy"
+               alt="Doctor work list: documents that need the doctor, grouped by patient and visit, each with a status and one action, and a merged file expanded to show the medical record and invoice inside it" />
         </figure>
       </div>
     </section>
@@ -206,18 +206,22 @@
           <span class="cs-eyebrow">Part 2 · Web</span>
           <h2 class="cs-h2" id="doctor-title">The doctor's workflow</h2>
           <p class="cs-lead">
-            A doctor's day runs from a task queue, through a structured consultation report, to a
-            record that is reviewed rather than re-entered. The consultation report and record review
-            are exported directly from the production Figma file, unedited; the task queue is a 2026
-            redesign of that production screen, made in the same file. The logo is a placeholder mark
+            A doctor's day runs from a work list, through a structured consultation report, to a
+            record that is reviewed and signed rather than re-entered. The consultation report and
+            record review are exported directly from the production Figma file, unedited; the work
+            list, signing, next-document and report-a-problem screens are a 2026 redesign of the production flow,
+            made in the same file. The logo is a placeholder mark
             from the design file, not the client's branding.
           </p>
         </div>
 
         <ol class="cs-steps">
-          <li><button type="button" class="cs-step"><span class="cs-num">1</span>Task queue</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">1</span>Work list</button></li>
           <li><button type="button" class="cs-step"><span class="cs-num">2</span>Consultation report</button></li>
           <li><button type="button" class="cs-step"><span class="cs-num">3</span>Record review</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">4</span>Signing</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">5</span>Next document</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">6</span>Report a problem</button></li>
         </ol>
 
         <div class="cs-bar">
@@ -231,8 +235,8 @@
 
         <div class="cs-track">
           <figure class="cs-slide">
-            <div class="cs-shot cs-shot--natural"><img src="assets/healthconnect/doctor-home.png?v=3" width="2700" height="1920" loading="lazy" alt="Doctor home screen: a Documentation Tasks table with columns for patient, task, status and due date, one action per row, the first row expanded to show a draft record that needs a signature, and pagination below" /></div>
-            <figcaption><h3><span class="cs-num">1</span>Task queue</h3><p>Each row says who the patient is, what needs doing, its status and when it's due, with one action per row. Expanding a task shows the documents behind it.</p></figcaption>
+            <div class="cs-shot cs-shot--natural"><img src="assets/healthconnect/doctor-queue.png" width="2700" height="2320" loading="lazy" alt="Doctor work list: counters for incomplete and ready-to-sign documents, then patient groups with visits and documents, each row tinted by status with one action such as Complete visit form, Review &amp; sign or Manage documents" /></div>
+            <figcaption><h3><span class="cs-num">1</span>Work list</h3><p>Only what needs the doctor: visit forms to finish and files to sign, grouped by patient and visit, oldest visit first. A merged file opens to show the documents inside it.</p></figcaption>
           </figure>
           <figure class="cs-slide">
             <div class="cs-shot cs-shot--natural"><img src="assets/healthconnect/screen-2.png?v=2" width="1440" height="1024" loading="lazy" alt="Consultation report on the Diagnosis step: patient and visit details, chief complaint, clinical assessment, and suggested ICD-10 diagnoses with one selected" /></div>
@@ -241,6 +245,18 @@
           <figure class="cs-slide">
             <div class="cs-shot cs-shot--natural"><img src="assets/healthconnect/screen-3.png" width="1440" height="1024" loading="lazy" alt="Medical record draft next to a Select Diagnosis panel with current complaints, suggested and referral-sourced ICD-10 codes, and one primary diagnosis selected" /></div>
             <figcaption><h3><span class="cs-num">3</span>Record review</h3><p>The full draft next to the same diagnosis panel, with complaints pulled forward and codes suggested from the referral, so signing off is a review.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural"><img src="assets/healthconnect/doctor-signing.png" width="2700" height="1920" loading="lazy" alt="Medical record in signing mode: the visit's documents on the left, the record in the centre, a Before you sign summary of diagnosis, referrals, billing and the documentation team's edits on the right, and Report problem and Sign at the bottom" /></div>
+            <figcaption><h3><span class="cs-num">4</span>Signing</h3><p>Signing works as a queue. A summary shows what goes on the record and what the documentation team changed, and the next document opens after each signature.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural"><img src="assets/healthconnect/doctor-signed-next.png" width="2700" height="1920" loading="lazy" alt="After signing: the medical record is marked Signed in the documents list, the invoice opens next as 2 of 4 to sign, and a toast confirms the signature with an Undo action" /></div>
+            <figcaption><h3><span class="cs-num">5</span>Next document</h3><p>After a signature the next document in the visit opens on its own, the signed one is marked in the list, and Undo stays available for a few seconds.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural"><img src="assets/healthconnect/doctor-report-problem.png" width="2700" height="1920" loading="lazy" alt="Report a problem dialog over the signing screen: a choice of what needs fixing, a required note for the documentation team, and Send back to team" /></div>
+            <figcaption><h3><span class="cs-num">6</span>Report a problem</h3><p>When something is wrong, the doctor sends the document back with a reason and a note instead of editing a file that has already been processed.</p></figcaption>
           </figure>
         </div>
       </div>
