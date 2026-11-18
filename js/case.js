@@ -19,7 +19,7 @@
 
   // Hero cover videos hold their poster frame under reduced motion
   if (reduced) {
-    document.querySelectorAll('.cs-hero__visual video').forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); });
+    document.querySelectorAll('.cs-hero__visual video, .cs-shot video').forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); });
   }
 
   // Typewriter: cycles the phrases in data-typewriter ("a|b|c"); static under reduced motion
