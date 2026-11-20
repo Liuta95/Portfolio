@@ -423,6 +423,53 @@
       </div>
     </section>
 
+    <!-- ANALYTICS · MIXPANEL -->
+    <section class="cs-section reveal" id="analytics" aria-labelledby="analytics-title">
+      <div class="cs-wrap">
+        <div class="cs-band">
+          <div class="cs-band__grid">
+            <div>
+              <span class="cs-eyebrow">Analytics</span>
+              <h2 class="cs-h2" id="analytics-title">Measuring the intake in Mixpanel</h2>
+              <p class="cs-lead">
+                The intake form was long, so final completion alone said little. We used Mixpanel to
+                follow the whole path: where patients moved forward, where they stopped and whether
+                they came back.
+              </p>
+              <ul class="cs-pills">
+                <li><b>Mixpanel</b> funnel</li>
+                <li><b>Drop-off</b> per step</li>
+                <li><b>Mobile</b> · tablet · desktop</li>
+              </ul>
+            </div>
+            <dl class="cs-deflist">
+              <div><dt>What we looked at</dt><dd>Conversion between steps, the steps with the biggest drop-off and differences between mobile, tablet and desktop.</dd></div>
+              <div><dt>Coming back</dt><dd>How many patients returned to an unfinished form after a reminder, and how many needed an assisted path through support or a doctor.</dd></div>
+              <div><dt>My part</dt><dd>I didn't set up the technical integration. I helped define which events should match the key moments of the flow, then used the data with the team to prioritise the next UX iterations.</dd></div>
+              <div><dt>Privacy</dt><dd>Because of the healthcare context, no medical answers or other sensitive data went to Mixpanel. Only behavioural events: start, step completed, error, return, completion, booking.</dd></div>
+            </dl>
+          </div>
+
+          <div class="cs-sub">
+            <span class="cs-eyebrow">The intake funnel</span>
+            <ol class="cs-funnel">
+              <li><span class="cs-num">1</span>Intake started</li>
+              <li><span class="cs-num">2</span>Step completed</li>
+              <li><span class="cs-num">3</span>Progress saved</li>
+              <li><span class="cs-num">4</span>Returned to draft</li>
+              <li><span class="cs-num">5</span>Intake completed</li>
+              <li><span class="cs-num">6</span>Call booked</li>
+            </ol>
+            <p class="cs-note">
+              The data showed where to work next: which questions to simplify, where explanations needed
+              to be clearer, whether to change the order of steps and where the way to get help had to
+              be more visible.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- PART 4 · VIDEO VISIT -->
     <section class="cs-section reveal" id="video" aria-labelledby="video-title">
       <div class="cs-wrap" data-slider>
@@ -746,9 +793,9 @@
             <p>A structured consultation report with chip-driven intake and suggested ICD-10 codes replaced free-text charting.</p>
           </article>
           <article class="cs-result">
-            <p class="cs-result__label">Next to measure</p>
-            <p class="cs-result__value">Completion per step</p>
-            <p>If the project continued, I'd measure where patients actually drop off in the form, rather than where I expect them to.</p>
+            <p class="cs-result__label">Analytics</p>
+            <p class="cs-result__value">Funnel in Mixpanel</p>
+            <p>Step-to-step conversion and drop-off by device set the priorities for the next UX iterations, tracked with behavioural events only.</p>
           </article>
         </div>
       </div>

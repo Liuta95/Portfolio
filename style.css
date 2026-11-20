@@ -1488,7 +1488,8 @@ ul { list-style: none; }
 .theme-light .cs-hero__visual:not(.cs-hx):not(.cs-hc) { background: #030b0f; }
 .theme-light .cs-band { background: #ffffff; box-shadow: var(--tile-shadow); }
 .theme-light .cs-glass,
-.theme-light .cs-band .cs-card { background: var(--bg); }
+.theme-light .cs-band .cs-card,
+.theme-light .cs-band .cs-funnel li { background: var(--bg); }
 .theme-light .cs-card,
 .theme-light .cs-result { background: #ffffff; }
 .theme-light .cs-note { background: rgba(17, 17, 20, 0.035); }
@@ -2001,3 +2002,21 @@ ul { list-style: none; }
 @media (max-width: 960px) {
   .cs-guides { grid-template-columns: 1fr; gap: 28px; }
 }
+
+/* HealthConnect: analytics funnel (event chain) */
+.cs-funnel { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; margin-top: 20px; counter-reset: none; }
+.cs-funnel li {
+  position: relative;
+  display: flex; flex-direction: column; gap: 12px;
+  padding: 18px 16px;
+  border: 1px solid var(--panel-border);
+  border-radius: var(--r-lg);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 14.5px; font-weight: 600; line-height: 1.35; color: var(--ink);
+}
+.cs-funnel li + li::before {
+  content: "→"; position: absolute; left: -11px; top: 50%; transform: translate(-50%, -50%);
+  font-size: 13px; color: var(--ink-soft); font-weight: 400;
+}
+@media (max-width: 1024px) { .cs-funnel { grid-template-columns: repeat(3, minmax(0, 1fr)); } .cs-funnel li:nth-child(4)::before { display: none; } }
+@media (max-width: 560px) { .cs-funnel { grid-template-columns: repeat(2, minmax(0, 1fr)); } .cs-funnel li:nth-child(odd)::before { display: none; } .cs-funnel li:nth-child(4)::before { display: block; } }
