@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clarus — Case Study · Anastasiia Liuta</title>
+  <meta name="description" content="Clarus — an internal AI workspace for confidential lease documents. Document and AI chat side by side, citations to the page and paragraph, validation, statuses and export. Product design by Anastasiia Liuta." />
+  <meta property="og:title" content="Clarus — Case Study · Anastasiia Liuta" />
+  <meta property="og:description" content="An internal AI workspace that answers questions about confidential leases and shows exactly where each answer comes from." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-light">
+
+  <!-- CASE TOP BAR -->
+  <nav class="case-topbar">
+    <a href="index.html#work" class="case-pill">← Back</a>
+    <div class="case-topbar__group">
+      <a href="https://t.me/LiuAna" target="_blank" rel="noopener" class="case-pill case-pill--cta">Let's talk →</a>
+      <div class="case-menu" id="caseMenu">
+        <button type="button" class="case-pill case-menu__trigger" aria-haspopup="true" aria-expanded="false">
+          Menu <span class="case-menu__dots">··</span>
+        </button>
+        <div class="case-menu__panel" role="menu">
+          <a href="index.html" class="case-menu__link" role="menuitem">Home</a>
+          <a href="ai-agent.html" class="case-menu__link" role="menuitem">Lumen AI</a>
+          <a href="healthconnect.html" class="case-menu__link" role="menuitem">HealthConnect</a>
+          <a href="clarus.html" class="case-menu__link is-current" role="menuitem">Clarus</a>
+          <a href="petpal.html" class="case-menu__link" role="menuitem">PetPal</a>
+          <a href="mailto:anasssta9@gmail.com" class="case-menu__link" role="menuitem">Email</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="cs-hero">
+    <div class="cs-wrap cs-hero__grid">
+      <div>
+        <span class="cs-eyebrow">PropTech · Internal AI tool · Web</span>
+        <h1 class="cs-hero__title">Clarus</h1>
+        <p class="cs-hero__tagline">
+          An internal AI workspace for long, confidential lease documents. It answers questions,
+          extracts the key terms and shows the exact page and paragraph behind every answer, so the
+          team checks answers instead of rereading the lease.
+        </p>
+        <dl class="cs-facts">
+          <div><dt>Role</dt><dd>Product Designer</dd></div>
+          <div><dt>Product type</dt><dd>Internal AI tool · Under NDA</dd></div>
+          <div><dt>Domain</dt><dd>Real estate · Lease abstraction</dd></div>
+        </dl>
+      </div>
+      <div class="cs-hero__visual">
+        <img src="assets/clarus/workspace.png" width="2880" height="1800"
+             alt="The Clarus workspace: a field index on the left, answer cards with citation chips in the middle and the lease on the right with the cited paragraph highlighted" />
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PROJECT OVERVIEW -->
+    <section class="cs-section reveal" id="overview" aria-labelledby="overview-title">
+      <div class="cs-wrap cs-overview">
+        <div>
+          <h2 class="cs-h2" id="overview-title">Project Overview</h2>
+          <p class="cs-lead">
+            Compliance rules meant the team couldn't use external AI services or upload lease documents
+            to the internet. The business asked for its own internal tool to find information in leases
+            quickly, extract the key data and prepare it for analysis.
+          </p>
+          <p class="cs-lead">
+            It had to be a workspace, not just a chat: the document and the AI conversation side by
+            side, several documents in one chat, and every answer pointing to the place in the lease it
+            came from. The end goal was a new document built from answers the user had checked.
+          </p>
+          <p class="cs-lead">
+            The project is under NDA. <b>Clarus</b> is the name this case study uses, and the brand,
+            screens and data on this page are a redesign I made for the portfolio. The product logic
+            is the real one; lease names, addresses and numbers are invented.
+          </p>
+        </div>
+        <figure class="cs-overview__media cs-overview__media--screen">
+          <img src="assets/clarus/cover-board.png" width="2880" height="1920" loading="lazy"
+               alt="Clarus cover: the headline Lease answers you can verify, a lease paragraph with a highlighted line and a citation chip, and the project's role, product, constraint and outcome" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ROLE & CONTRIBUTIONS -->
+    <section class="cs-section reveal" aria-labelledby="role-title">
+      <div class="cs-wrap">
+        <div class="cs-band cs-band__grid">
+          <div>
+            <span class="cs-eyebrow">My role</span>
+            <h2 class="cs-h2" id="role-title">Role &amp; Contributions</h2>
+            <p class="cs-lead">
+              As the product designer I owned the experience end to end. Most of the work wasn't
+              visible on the happy path: it was the logic of how the product behaves when something is
+              missing, wrong or not allowed.
+            </p>
+          </div>
+          <ul class="cs-glass cs-contrib">
+            <li><strong>Document + AI workspace:</strong> Designed the layout where the lease and the chat sit side by side, with one or more documents added to a chat.</li>
+            <li><strong>Attributes &amp; clauses:</strong> A list of key fields (office name, address, city, ZIP) and clause summaries (alterations, audit rights, base rent) that jump straight to the matching fragment in the document.</li>
+            <li><strong>Citations:</strong> Every answer shows the page, paragraph and line it came from, with the fragment highlighted in the open document.</li>
+            <li><strong>Statuses &amp; validation:</strong> Specified the status lifecycle, what each status allows, and how a user enters and leaves validation, accepts, edits or rejects an answer.</li>
+            <li><strong>Rules, errors &amp; edge cases:</strong> Wrote the behaviour for empty and invalid input, restricted actions on attributes and clauses, and how a change in one place affects the rest of the flow.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="cs-section reveal" aria-labelledby="research-title">
+      <div class="cs-wrap">
+        <div class="cs-band">
+          <div class="cs-band__grid">
+            <div>
+              <span class="cs-eyebrow">Research</span>
+              <h2 class="cs-h2" id="research-title">Sessions, Observation &amp; Manual Checks</h2>
+              <p class="cs-lead">
+                The users weren't AI experts. They shouldn't need to know how the model works, where
+                data is stored or how an answer is put together. They upload a lease, ask a question,
+                see the answer with its source, check it and move on.
+              </p>
+              <ul class="cs-pills">
+                <li><b>User</b> sessions</li>
+                <li><b>Observation</b></li>
+                <li><b>Manual</b> answer checks</li>
+              </ul>
+            </div>
+            <dl class="cs-deflist">
+              <div><dt>User sessions</dt><dd>Sessions and feedback from the people using the tool showed whether they trusted the answers and the citations.</dd></div>
+              <div><dt>Observation</dt><dd>Watching users work through real leases showed where they lost the thread between the chat, the fields and the document.</dd></div>
+              <div><dt>Manual checks</dt><dd>On a sample of answers, we compared what the AI returned with the actual text of the lease, to see where search, extraction or the way sources were shown needed work.</dd></div>
+              <div><dt>Main challenge</dt><dd>Many scenarios had to fit together: choosing documents, attributes and clauses, search, citations, validation, editing, accepting or rejecting answers, and generating the final document.</dd></div>
+            </dl>
+          </div>
+
+          <div class="cs-sub">
+            <span class="cs-eyebrow">What guided the design</span>
+            <div class="cs-cards">
+              <article class="cs-card">
+                <div class="cs-card__head"><span class="cs-num">1</span><h3>Show the source</h3></div>
+                <p>An answer is only useful if it can be checked, so the citation and the highlighted fragment are always one click away.</p>
+              </article>
+              <article class="cs-card">
+                <div class="cs-card__head"><span class="cs-num">2</span><h3>The user decides</h3></div>
+                <p>The AI drafts; the person accepts, edits or rejects. Nothing goes into the final document without that step.</p>
+              </article>
+              <article class="cs-card">
+                <div class="cs-card__head"><span class="cs-num">3</span><h3>Status sets the actions</h3></div>
+                <p>What a user can do depends on where the lease is in its lifecycle, so the interface only offers actions that are allowed right now.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PART 1 · THE WORKSPACE -->
+    <section class="cs-section reveal" id="workspace" aria-labelledby="workspace-title">
+      <div class="cs-wrap" data-slider>
+        <div class="cs-part__intro">
+          <span class="cs-eyebrow">Part 1 · Web</span>
+          <h2 class="cs-h2" id="workspace-title">From a lease package to a checked abstract</h2>
+          <p class="cs-lead">
+            The main flow: pick a lease, check what the AI extracted against the document, ask
+            follow-up questions and export the result. These screens are the portfolio redesign of
+            that flow.
+          </p>
+        </div>
+
+        <ol class="cs-steps">
+          <li><button type="button" class="cs-step"><span class="cs-num">1</span>Leases</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">2</span>Validate</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">3</span>Chat</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">4</span>Documents changed</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">5</span>Publish</button></li>
+        </ol>
+
+        <div class="cs-bar">
+          <span class="cs-counter" aria-live="polite"></span>
+          <span class="cs-progress"><span></span></span>
+          <div class="cs-arrows">
+            <button type="button" class="cs-arrow" data-prev aria-label="Previous screens">←</button>
+            <button type="button" class="cs-arrow" data-next aria-label="Next screens">→</button>
+          </div>
+        </div>
+
+        <div class="cs-track">
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural"><img src="assets/clarus/leases.png" width="2880" height="1800" loading="lazy" alt="Leases list with an expanded sidebar, status filter tiles, a table with status badges and validation progress for each lease, and pagination" /></div>
+            <figcaption><h3><span class="cs-num">1</span>Leases</h3><p>Every lease with its status in plain words and how many fields are validated. The tiles on top filter the list by status.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural"><img src="assets/clarus/workspace.png" width="2880" height="1800" loading="lazy" alt="Validation workspace: field index with progress, answer cards with Accept, Edit and Reject, and the lease with the cited paragraph highlighted" /></div>
+            <figcaption><h3><span class="cs-num">2</span>Validate</h3><p>Fields on the left, one card per answer in the middle, the document on the right. Each card shows its citations; clicking one highlights the fragment in the lease.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural"><img src="assets/clarus/chat.png" width="2880" height="1800" loading="lazy" alt="Chat with the lease: questions and AI answers with citation chips to several documents, next to the open document" /></div>
+            <figcaption><h3><span class="cs-num">3</span>Chat</h3><p>Free questions across all documents in the chat. Answers carry the same citation chips as the fields, so a chat answer is checked the same way.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural"><img src="assets/clarus/documents-changed.png" width="2880" height="1800" loading="lazy" alt="Documents changed: a notice that an amendment was added and only the affected fields are being re-abstracted, while validated fields stay as they are" /></div>
+            <figcaption><h3><span class="cs-num">4</span>Documents changed</h3><p>When a document is added or removed, only the fields it affects go back to review. Answers the user already validated stay.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural"><img src="assets/clarus/publish.png" width="2880" height="1800" loading="lazy" alt="Publish dialog: a summary of validated, edited and custom fields, export options and a note on reopening validation later" /></div>
+            <figcaption><h3><span class="cs-num">5</span>Publish</h3><p>Once every field is validated, a summary shows what goes out and where: the records system, a PDF abstract or Excel. Each field keeps its citation in the export.</p></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- PART 2 · LOGIC -->
+    <section class="cs-section reveal" id="logic" aria-labelledby="logic-title">
+      <div class="cs-wrap">
+        <div class="cs-part__intro">
+          <span class="cs-eyebrow">Part 2 · Logic</span>
+          <h2 class="cs-h2" id="logic-title">Statuses decide what's allowed</h2>
+          <p class="cs-lead">
+            A lease moves from abstraction to validation to export, and each status allows a
+            different set of actions. I mapped the lifecycle, the exceptions and the actions for
+            every status before drawing screens, because a change in one place had to be traced
+            through the rest of the flow.
+          </p>
+        </div>
+
+        <figure class="cs-feature">
+          <div class="cs-shot cs-shot--natural"><img src="assets/clarus/logic.png" width="2880" height="2236" loading="lazy" alt="Lease lifecycle from Not abstracted to Published, the exceptions, a table of permitted actions for each status, and six cards on what was simplified" /></div>
+          <figcaption><h3>Lifecycle and permissions</h3><p>Six statuses, the exceptions between them, and which actions each one allows: chat, edit documents, add a custom clause, accept or reject, regenerate, publish and export.</p></figcaption>
+        </figure>
+
+        <div class="cs-sub">
+          <span class="cs-eyebrow">What I simplified in the redesign</span>
+          <div class="cs-cards">
+            <article class="cs-card">
+              <div class="cs-card__head"><span class="cs-num">1</span><h3>A stepper, not a mode</h3></div>
+              <p>Entering and leaving "validation mode" became Abstract → Validate → Publish with progress, so users always know where they are.</p>
+            </article>
+            <article class="cs-card">
+              <div class="cs-card__head"><span class="cs-num">2</span><h3>The document stays open</h3></div>
+              <p>The source is a permanent third column rather than a panel to open, so checking a citation takes no extra step.</p>
+            </article>
+            <article class="cs-card">
+              <div class="cs-card__head"><span class="cs-num">3</span><h3>One card, one decision</h3></div>
+              <p>Value, sources and Accept / Edit / Reject live together, with keyboard shortcuts for long lists of fields.</p>
+            </article>
+            <article class="cs-card">
+              <div class="cs-card__head"><span class="cs-num">4</span><h3>Statuses in words</h3></div>
+              <p>Labelled badges and a validated-of-total bar replace a meter users had to decode.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PART 3 · STATES -->
+    <section class="cs-section reveal" id="states" aria-labelledby="states-title">
+      <div class="cs-wrap" data-slider>
+        <div class="cs-part__intro">
+          <span class="cs-eyebrow">Part 3 · Edge cases</span>
+          <h2 class="cs-h2" id="states-title">Empty, invalid and not allowed</h2>
+          <p class="cs-lead">
+            Users couldn't freely add, delete or edit attributes and clauses, and input had to be
+            validated before AI work started. Each state says what happened and what to do next.
+          </p>
+        </div>
+
+        <ol class="cs-steps">
+          <li><button type="button" class="cs-step"><span class="cs-num">1</span>First run</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">2</span>New lease errors</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">3</span>Add a clause</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">4</span>Delete a lease</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">5</span>Abstraction failed</button></li>
+          <li><button type="button" class="cs-step"><span class="cs-num">6</span>Chat limits</button></li>
+        </ol>
+
+        <div class="cs-bar">
+          <span class="cs-counter" aria-live="polite"></span>
+          <span class="cs-progress"><span></span></span>
+          <div class="cs-arrows">
+            <button type="button" class="cs-arrow" data-prev aria-label="Previous screens">←</button>
+            <button type="button" class="cs-arrow" data-next aria-label="Next screens">→</button>
+          </div>
+        </div>
+
+        <div class="cs-track">
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural"><img src="assets/clarus/empty.png" width="2880" height="1800" loading="lazy" alt="Empty leases page with an upload area and three steps explaining how Clarus works" /></div>
+            <figcaption><h3><span class="cs-num">1</span>First run</h3><p>No leases yet: one place to drop files and three steps that explain the flow before anything is uploaded.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural"><img src="assets/clarus/new-lease-errors.png" width="2880" height="1800" loading="lazy" alt="New lease dialog with a missing name error, an unsupported file flagged in the document list and a disabled Create button" /></div>
+            <figcaption><h3><span class="cs-num">2</span>New lease errors</h3><p>Errors sit next to their cause with the fix. A file in the wrong format is skipped, not blocking, and Create stays disabled until there's a name and at least one valid file.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural"><img src="assets/clarus/add-clause.png" width="2880" height="1800" loading="lazy" alt="Add clause dialog with a searchable clause library, clauses already added shown as unavailable, and a field for a custom clause" /></div>
+            <figcaption><h3><span class="cs-num">3</span>Add a clause</h3><p>Clauses come from a library; ones already in the lease can't be added twice. A custom clause is possible, within a limit.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural"><img src="assets/clarus/delete-lease.png" width="2880" height="1800" loading="lazy" alt="Delete lease dialog listing the documents, answers and chats that will be affected, with a type-the-name confirmation field and a disabled Delete button" /></div>
+            <figcaption><h3><span class="cs-num">4</span>Delete a lease</h3><p>The dialog lists what will be lost. Typing the lease name confirms it, and only the lease owner can delete.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural"><img src="assets/clarus/abstraction-failed.png" width="2880" height="1800" loading="lazy" alt="Workspace with a Needs attention status, an error banner about fields that weren't found and cards offering Fill manually or Regenerate" /></div>
+            <figcaption><h3><span class="cs-num">5</span>Abstraction failed</h3><p>When the AI can't find a field, the lease is marked Needs attention and the card offers two ways forward: fill it in by hand or regenerate.</p></figcaption>
+          </figure>
+          <figure class="cs-slide">
+            <div class="cs-shot cs-shot--natural"><img src="assets/clarus/chat-limits.png" width="2880" height="1800" loading="lazy" alt="Chat with a warning that a source document was deleted, a greyed-out citation chip, and an info banner that the question limit is reached with a Start new chat button" /></div>
+            <figcaption><h3><span class="cs-num">6</span>Chat limits</h3><p>If a cited document is deleted, its chips turn grey instead of breaking. When a chat reaches its question limit, the composer is disabled and a new chat is one click away.</p></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- PART 4 · DESIGN SYSTEM -->
+    <section class="cs-section reveal" id="system" aria-labelledby="system-title">
+      <div class="cs-wrap">
+        <div class="cs-part__intro">
+          <span class="cs-eyebrow">Part 4 · Brand &amp; design system</span>
+          <h2 class="cs-h2" id="system-title">A brand that is about checking</h2>
+          <p class="cs-lead">
+            Clarus is Latin for "clear". The mark is a page with one highlighted line, the product's
+            promise in a single shape: every answer points to a place in the source. Pine green stands
+            for validated work; marker yellow is used only for citations and highlighted text.
+          </p>
+        </div>
+
+        <figure class="cs-feature">
+          <div class="cs-shot cs-shot--natural"><img src="assets/clarus/ds-foundations.png" width="2864" height="3748" loading="lazy" alt="Foundations board: brand idea, colour primitives, lease status colours, the type scale and the spacing and radius scales" /></div>
+          <figcaption><h3>Foundations</h3><p>Colour primitives and semantic tokens, one colour pair per lease status, four typefaces with clear jobs and a 4 pt spacing scale.</p></figcaption>
+        </figure>
+
+        <div class="cs-sub">
+          <span class="cs-eyebrow">Rules</span>
+          <div class="cs-cards">
+            <article class="cs-card">
+              <div class="cs-card__head"><span class="cs-num">1</span><h3>Status is a word</h3></div>
+              <p>Every status is a labelled badge with its own colour pair. Colour supports the label; it never carries the meaning alone.</p>
+            </article>
+            <article class="cs-card">
+              <div class="cs-card__head"><span class="cs-num">2</span><h3>Type with a job</h3></div>
+              <p>Geist for the interface, a serif for the lease text so the document reads apart from the UI, and a mono face for citations, which read like coordinates.</p>
+            </article>
+            <article class="cs-card">
+              <div class="cs-card__head"><span class="cs-num">3</span><h3>Tokens, not hex</h3></div>
+              <p>Components use semantic tokens such as text/secondary or status/validating, aliased to primitives, so one change updates every screen.</p>
+            </article>
+            <article class="cs-card">
+              <div class="cs-card__head"><span class="cs-num">4</span><h3>Every state drawn</h3></div>
+              <p>Buttons have default, hover, pressed, focus and disabled states, and the sidebar has collapsed and expanded versions.</p>
+            </article>
+          </div>
+        </div>
+
+        <figure class="cs-feature">
+          <div class="cs-shot cs-shot--natural"><img src="assets/clarus/ds-components.png" width="2352" height="5313" loading="lazy" alt="Components board: icons, logo, buttons in every state, status badges, citation chips, field rows, inputs, tabs, document rows, toasts, answer cards, chat messages, sidebar, document viewer, lease rows, banners, empty state, form fields, modal parts and pagination" /></div>
+          <figcaption><h3>Components</h3><p>From citation chips and answer cards to the sidebar, banners, modals and pagination, all on the same tokens.</p></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="cs-section reveal" id="results" aria-labelledby="results-title">
+      <div class="cs-wrap">
+        <div class="cs-results__head">
+          <h2 class="cs-h2" id="results-title">Results</h2>
+          <p class="cs-lead">
+            Success was measured on user satisfaction and on business impact. The project's numbers
+            aren't shown here, so this section lists what was tracked, not before-and-after figures.
+          </p>
+        </div>
+        <div class="cs-results__grid">
+          <article class="cs-result">
+            <p class="cs-result__label">Speed</p>
+            <p class="cs-result__value">Time to answer</p>
+            <p>Time spent searching and analysing documents, and how fast leases moved through abstraction and validation.</p>
+          </article>
+          <article class="cs-result">
+            <p class="cs-result__label">Quality</p>
+            <p class="cs-result__value">Accuracy &amp; citations</p>
+            <p>Answer accuracy and citation quality, checked by hand on a sample against the actual lease text.</p>
+          </article>
+          <article class="cs-result">
+            <p class="cs-result__label">Trust</p>
+            <p class="cs-result__value">Correction rate</p>
+            <p>How often users edited or rejected an answer, showing where search, extraction or the display of sources needed work.</p>
+          </article>
+          <article class="cs-result">
+            <p class="cs-result__label">Adoption</p>
+            <p class="cs-result__value">Usage over time</p>
+            <p>Adoption, how often the tool was used and how many documents went through it.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="cs-section cs-close reveal">
+      <div class="cs-wrap">
+        <blockquote class="cs-quote">
+          The hardest part wasn't the interface. It was holding a lot of product logic together and
+          keeping it <em>simple</em> for someone who just wants to know what the lease says, and where it says it.
+        </blockquote>
+        <div class="case-nav-footer">
+          <a href="index.html#work" class="case-nav-footer__link">← All Selected Work</a>
+          <a href="mailto:anasssta9@gmail.com" class="case-nav-footer__cta">Let's talk about your project →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BOTTOM LINKS -->
+  <footer class="bottom-links">
+    <div class="bottom-links__row">
+      <a href="mailto:anasssta9@gmail.com">anasssta9@gmail.com</a>
+      <a href="tel:+48577202312">+48 577 202 312</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="#" target="_blank" rel="noopener">Behance ↗</a>
+    </div>
+    <p class="bottom-links__copyright">© 2026 Anastasiia Liuta · Kraków, Poland</p>
+  </footer>
+
+  <script src="js/case.js" defer></script>
+</body>
+</html>
